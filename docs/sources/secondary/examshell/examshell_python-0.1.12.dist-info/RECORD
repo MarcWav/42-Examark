@@ -1,0 +1,16 @@
+examshell/__init__.py,sha256=BlInAQai1q44dgTOGzUEHgdIX7n9DiQjYzyvctJtyWI,88
+examshell/__main__.py,sha256=FPKQn40Rc3YrzxCFcWA-DNG7nhybyGrorxLJ0ooE5-E,112
+examshell/config.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+examshell/main.py,sha256=48FvwFpNInCGjEhlvwWOuETvlFMSdPDgZn2ZHz7_Uik,13698
+examshell/models.py,sha256=zM7QTi9Qyn9LcESxD3eBTp-KBIkXswdt0LmMhdyhnxo,1373
+examshell/task_generator.py,sha256=N76wXyXIBgqXcRKD23gk67_Ts7vUvBPdssgCpoo7pZ0,11174
+examshell/utils.py,sha256=wosWmWTL_OdqnCzOyZD3AUSQbduQAg_ywhucUxzsJuU,2648
+examshell/data/rank3.json,sha256=dINYv1Ll1DcLt9IruxIS2ULsgv550kgwqDPhiK0yiV8,50312
+examshell/data/rank4.json,sha256=YwboB2Ivz2yr-c-xsf5SNXlHSQOj7Jj09ftH37DwwhY,44856
+examshell/data/rank5.json,sha256=s7hgegFijC4xN5JKvIaHOc5xO2qlQQ_mnppVt4rAluQ,28155
+examshell_python-0.1.12.dist-info/licenses/LICENSE,sha256=RCJpKUGUIOyxuRFoD5pT7ZgwQV82ESFMeVfp7vmEEAU,1069
+examshell_python-0.1.12.dist-info/METADATA,sha256=OP7luvF5EiwNTgxQOPOyIS4T0KgA_nAg_Vto58Aa0gI,5495
+examshell_python-0.1.12.dist-info/WHEEL,sha256=YVMoNqKzERt-wjUZwJ33xBGAwnFl-4cqbYkTtWa4itE,91
+examshell_python-0.1.12.dist-info/entry_points.txt,sha256=Apx4jSyjUqcm0wNOxlHAyzlm7kDcMqvKCwrl943rCM8,51
+examshell_python-0.1.12.dist-info/top_level.txt,sha256=pGd6WjsN6GBAYngnGpYCfK3YDx5Qv4cztfkwE4nzhoU,10
+examshell_python-0.1.12.dist-info/RECORD,,

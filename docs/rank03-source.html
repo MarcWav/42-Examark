@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="manifest" href="manifest.webmanifest" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; script-src 'self'; base-uri 'self'; form-action 'self';" />
+  <title>Rank 03 Python | 42exam.net</title>
+  <meta name="description" content="Rank 03 Python practice for 42 School: 14 subjects with full briefs, function signatures, examples, and UI in nine languages." />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#8b7cff" />
+  <link rel="canonical" href="https://rank03.42exam.net/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Rank 03 Python | 42exam.net" />
+  <meta property="og:description" content="14 Python subjects: briefs, signatures, examples. Nine languages. Unofficial student resource." />
+  <meta property="og:url" content="https://rank03.42exam.net/" />
+  <meta property="og:site_name" content="42exam.net" />
+  <meta property="og:locale" content="en_US" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Rank 03 Python | 42exam.net" />
+  <meta name="twitter:description" content="14 Python subjects with briefs, signatures, and examples - nine languages." />
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📚</text></svg>" />
+
+  <script type="application/ld+json" id="ld-json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Rank 03 Python | 42exam.net",
+    "url": "https://rank03.42exam.net/",
+    "description": "Unofficial Rank 03 Python exam practice: subjects, signatures, examples, multilingual UI.",
+    "inLanguage": "en",
+    "isPartOf": { "@type": "WebSite", "name": "42exam.net", "url": "https://42exam.net/" }
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+  <div class="bg-grid" aria-hidden="true"></div>
+
+  <header>
+    <div class="header-inner">
+      <a class="logo" id="logo-home" href="https://42exam.net/" aria-label="42 Exam Rank03 Python · 42exam.net home">
+        <span class="logo-mark" aria-hidden="true">42</span>
+        <span class="logo-text-block" aria-hidden="true">
+          <span class="logo-brand" id="logo-brand"><span class="logo-b-42">42</span><span class="logo-b-exam"> Exam</span><span class="logo-b-rank"> | Rank03</span></span>
+          <span class="logo-sub" id="logo-sub">Python</span>
+        </span>
+      </a>
+      <div class="header-right">
+        <div class="lang-wheel-wrapper">
+          <button type="button" class="lang-wheel-trigger" id="lang-wheel-trigger" aria-label="Choose language" aria-haspopup="dialog">
+            <span class="lang-wheel-trigger-flag" id="lang-wheel-trigger-flag">🇬🇧</span>
+            <span class="lang-wheel-trigger-label" id="lang-wheel-trigger-label">EN</span>
+            <span class="lang-wheel-trigger-arrow">▼</span>
+          </button>
+          <div class="lang-switcher hidden" id="lang-switcher" style="display:none !important;">
+            <button type="button" class="lang-btn" data-locale="en" aria-label="English">EN</button>
+            <button type="button" class="lang-btn" data-locale="de" aria-label="Deutsch">DE</button>
+            <button type="button" class="lang-btn" data-locale="fr" aria-label="Français">FR</button>
+            <button type="button" class="lang-btn" data-locale="es" aria-label="Español">ES</button>
+            <button type="button" class="lang-btn" data-locale="it" aria-label="Italiano">IT</button>
+            <button type="button" class="lang-btn" data-locale="ru" aria-label="Русский">RU</button>
+            <button type="button" class="lang-btn" data-locale="tr" aria-label="Türkçe">TR</button>
+            <button type="button" class="lang-btn" data-locale="zh" aria-label="中文">ZH</button>
+            <button type="button" class="lang-btn" data-locale="ar" aria-label="العربية">AR</button>
+          </div>
+        </div>
+        <input type="search" id="search" autocomplete="off" spellcheck="false" enterkeyhint="search" />
+      </div>
+    </div>
+  </header>
+
+  <div class="page-i18n-root" id="page-i18n-root">
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <h1 id="hero-title">Rank 03 - Python subjects</h1>
+        <p class="hero-sub" id="hero-sub">Full briefs, signatures, and I/O examples - interface in nine languages.</p>
+        <div class="stats-row" id="stats-row" aria-label="At a glance">
+          <span class="badge" id="badge-count">14 subjects</span>
+          <span class="badge badge-pass" id="badge-pass">6 to validate (1 per level)</span>
+          <span class="badge" id="badge-python">Python 3</span>
+          <span class="badge" id="badge-more">More ranks on the hub</span>
+        </div>
+      </section>
+
+      <div class="filter-bar" id="filter-bar" role="region">
+        <div class="filter-row">
+          <span class="filter-group-label" id="filter-level-label"></span>
+          <div class="filter-chips" id="filter-level" role="group">
+            <button type="button" class="filter-chip is-active" data-level="all" aria-pressed="true">All levels</button>
+            <button type="button" class="filter-chip" data-level="1" aria-pressed="false">Level 1</button>
+            <button type="button" class="filter-chip" data-level="2" aria-pressed="false">Level 2</button>
+            <button type="button" class="filter-chip" data-level="3" aria-pressed="false">Level 3</button>
+            <button type="button" class="filter-chip" data-level="4" aria-pressed="false">Level 4</button>
+            <button type="button" class="filter-chip" data-level="5" aria-pressed="false">Level 5</button>
+            <button type="button" class="filter-chip" data-level="6" aria-pressed="false">Level 6</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid" id="grid"></div>
+      <p class="no-results hidden" id="no-results" role="status">No subjects match your search.</p>
+    </main>
+
+    <footer>
+      <p id="footer-text">Unofficial · For students · No rights reserved</p>
+      <p class="footer-links">
+        <a href="https://rank02.42exam.net/">Rank 02</a>
+        <span class="footer-sep" aria-hidden="true"> · </span>
+        <a href="https://rank03.42exam.net/">Rank 03</a>
+        <span class="footer-sep" aria-hidden="true"> · </span>
+        <a href="https://rank04.42exam.net/">Rank 04</a>
+        <span class="footer-sep" aria-hidden="true"> · </span>
+        <a href="https://rank05.42exam.net/">Rank 05</a>
+        <span class="footer-sep" aria-hidden="true"> · </span>
+        <a href="https://rank06.42exam.net/">Rank 06</a>
+      </p>
+      <p class="footer-version" id="footer-version"></p>
+    </footer>
+  </div>
+
+  <div class="modal-backdrop hidden" id="backdrop" aria-hidden="true">
+    <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <div class="modal-header">
+        <div>
+          <div class="modal-meta-row">
+            <span class="modal-num" id="modal-num"></span>
+            <span class="diff-pill" id="modal-diff"></span>
+          </div>
+          <h2 id="modal-title"></h2>
+          <code class="modal-file" id="modal-file"></code>
+        </div>
+        <button type="button" class="close-btn" id="close-btn" aria-label="Close">✕</button>
+      </div>
+      <div class="modal-body">
+        <div class="section-label" id="modal-label-assignment">Assignment</div>
+        <pre id="modal-desc"></pre>
+        <div class="section-label" id="modal-label-signature">Function signature</div>
+        <pre class="code-block" id="modal-sig"></pre>
+        <div class="modal-section-header">
+          <div class="section-label" id="modal-label-examples">Examples</div>
+          <button type="button" class="copy-all-btn" id="modal-copy-examples-btn" aria-label="Copy all examples">
+            <span class="copy-icon">📋</span> <span class="copy-label">Copy all</span>
+          </button>
+        </div>
+        <div id="modal-examples"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- GTA V Radial Language Wheel Overlay -->
+  <div class="lang-wheel-overlay" id="lang-wheel-overlay" role="dialog" aria-modal="true" aria-label="Select Language">
+    <div class="lang-wheel-card">
+      <div class="lang-wheel-title-hud">SELECT <span>LANGUAGE</span></div>
+      <button type="button" class="lang-wheel-close" id="lang-wheel-close" aria-label="Close">✕</button>
+
+      <div class="lang-wheel-ring-bg"></div>
+
+      <div class="lang-wheel-center">
+        <div class="lang-wheel-center-flag" id="lang-wheel-center-flag">🇬🇧</div>
+        <div class="lang-wheel-center-name" id="lang-wheel-center-name">ENGLISH</div>
+        <div class="lang-wheel-center-sub" id="lang-wheel-center-sub">CURRENTLY ACTIVE</div>
+      </div>
+
+      <!-- 9 Radial Sectors -->
+      <button type="button" class="lang-btn lang-wheel-sector sector-0" data-locale="en" data-name="English" data-flag="🇬🇧" style="--angle: 270deg;">
+        <span class="sector-flag">🇬🇧</span>
+        <span class="sector-code">EN</span>
+      </button>
+      <button type="button" class="lang-btn lang-wheel-sector sector-1" data-locale="de" data-name="Deutsch" data-flag="🇩🇪" style="--angle: 310deg;">
+        <span class="sector-flag">🇩🇪</span>
+        <span class="sector-code">DE</span>
+      </button>
+      <button type="button" class="lang-btn lang-wheel-sector sector-2" data-locale="fr" data-name="Français" data-flag="🇫🇷" style="--angle: 350deg;">
+        <span class="sector-flag">🇫🇷</span>
+        <span class="sector-code">FR</span>
+      </button>
+      <button type="button" class="lang-btn lang-wheel-sector sector-3" data-locale="es" data-name="Español" data-flag="🇪🇸" style="--angle: 30deg;">
+        <span class="sector-flag">🇪🇸</span>
+        <span class="sector-code">ES</span>
+      </button>
+      <button type="button" class="lang-btn lang-wheel-sector sector-4" data-locale="it" data-name="Italiano" data-flag="🇮🇹" style="--angle: 70deg;">
+        <span class="sector-flag">🇮🇹</span>
+        <span class="sector-code">IT</span>
+      </button>
+      <button type="button" class="lang-btn lang-wheel-sector sector-5" data-locale="ru" data-name="Русский" data-flag="🇷🇺" style="--angle: 110deg;">
+        <span class="sector-flag">🇷🇺</span>
+        <span class="sector-code">RU</span>
+      </button>
+      <button type="button" class="lang-btn lang-wheel-sector sector-6" data-locale="tr" data-name="Türkçe" data-flag="🇹🇷" style="--angle: 150deg;">
+        <span class="sector-flag">🇹🇷</span>
+        <span class="sector-code">TR</span>
+      </button>
+      <button type="button" class="lang-btn lang-wheel-sector sector-7" data-locale="zh" data-name="中文" data-flag="🇨🇳" style="--angle: 190deg;">
+        <span class="sector-flag">🇨🇳</span>
+        <span class="sector-code">ZH</span>
+      </button>
+      <button type="button" class="lang-btn lang-wheel-sector sector-8" data-locale="ar" data-name="العربية" data-flag="🇸🇦" style="--angle: 230deg;">
+        <span class="sector-flag">🇸🇦</span>
+        <span class="sector-code">AR</span>
+      </button>
+    </div>
+  </div>
+
+  <script src="js/site-version.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/rank-config.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/rank-app.js"></script>
+</body>
+</html>

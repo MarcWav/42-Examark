@@ -1,0 +1,18 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import crypto from 'node:crypto';
+import {spawnSync} from 'node:child_process';
+const pkg=JSON.parse(fs.readFileSync('package.json','utf8'));
+const tag=process.argv[2];
+if(tag!=='v'+pkg.version)throw Error('A tag deve corresponder à versão do package.json.');
+const run=args=>{const r=spawnSync('gh',args,{stdio:'inherit'});if(r.error)throw r.error;if(r.status!==0)throw Error('Falha em gh '+args[0]);};
+const files=[];
+const visit=dir=>{for(const entry of fs.readdirSync(dir,{withFileTypes:true})){const name=path.join(dir,entry.name);if(entry.isDirectory())visit(name);else if(/\.(exe|AppImage|tar\.gz)$/.test(name))files.push(name)}};
+visit('artifacts');
+const expected=['Windows-x64-Portatil.exe','Windows-x64-Instalador.exe','Linux-x64-Portatil.AppImage','Linux-x64-Portatil.tar.gz','Linux-arm64-Portatil.AppImage','Linux-arm64-Portatil.tar.gz'];
+if(files.length!==expected.length||!expected.every(suffix=>files.some(file=>path.basename(file)===`42-Exam-Trainer-${pkg.version}-${suffix}`)))throw Error('Conjunto de seis pacotes incompleto.');
+files.sort();
+fs.writeFileSync('artifacts/SHA256SUMS.txt',files.map(file=>crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex')+'  '+path.basename(file)).join('\n')+'\n');
+run(['release','create',tag,'--verify-tag','--draft','--title','42 Exam Trainer '+pkg.version+' · Windows e Linux','--notes-file','docs/release-1.3.md']);
+run(['release','upload',tag,...files,'artifacts/SHA256SUMS.txt']);
+run(['release','edit',tag,'--draft=false','--latest']);

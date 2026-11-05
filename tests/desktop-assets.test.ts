@@ -1,0 +1,11 @@
+import {test} from 'node:test';
+import assert from 'node:assert/strict';
+import {createRequire} from 'node:module';
+import fs from 'node:fs';
+import os from 'node:os';
+import path from 'node:path';
+const require=createRequire(import.meta.url);
+const {resolveAsset,createAssetHandler,CSP}=require('../electron/assets.cjs');
+test('desktop resolves the versioned worker URL used after upgrading from v1.1',()=>{const root=path.resolve('dist');assert.equal(resolveAsset(root,'trainer://app/python-worker.js?protocol=2'),path.join(root,'python-worker.js'))});
+test('desktop protocol only serves bundled paths on its own origin',()=>{const root=path.resolve('dist');assert.equal(resolveAsset(root,'trainer://app/'),path.join(root,'index.html'));assert.equal(resolveAsset(root,'trainer://app/runtime/pyodide.asm.wasm'),path.join(root,'runtime','pyodide.asm.wasm'));for(const bad of ['https://example.com/','trainer://other/index.html','trainer://app/%2e%2e%2fpackage.json','trainer://app/a%5c..%5csecret','trainer://app/%00','trainer://user@app/index.html','trainer://app/%ZZ'])assert.equal(resolveAsset(root,bad),null,bad)});
+test('desktop responses preserve wasm MIME and reject missing files and POST',async()=>{const root=fs.mkdtempSync(path.join(os.tmpdir(),'exam-assets-'));try{fs.writeFileSync(path.join(root,'test.wasm'),new Uint8Array([0,97,115,109]));const handle=createAssetHandler(root);const r=await handle({method:'GET',url:'trainer://app/test.wasm'});assert.equal(r.status,200);assert.equal(r.headers.get('Content-Type'),'application/wasm');assert.equal((await r.arrayBuffer()).byteLength,4);assert.match(CSP,/wasm-unsafe-eval/);assert.doesNotMatch(CSP,/script-src[^;]*'unsafe-eval'/);assert.equal((await handle({method:'GET',url:'trainer://app/missing'})).status,404);assert.equal((await handle({method:'POST',url:'trainer://app/test.wasm'})).status,405)}finally{fs.rmSync(root,{recursive:true,force:true})}});

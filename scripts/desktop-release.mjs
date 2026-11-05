@@ -1,0 +1,14 @@
+import {spawnSync} from 'node:child_process';
+import fs from 'node:fs';
+import path from 'node:path';
+const root=process.cwd();
+const run=(exe,args)=>{const result=spawnSync(exe,args,{cwd:root,stdio:'inherit',env:{...process.env,ELECTRON_BUILDER_CACHE:path.join(root,'.cache/builder-cache'),electron_config_cache:path.join(root,'.cache/electron-downloads'),ELECTRON_BUILDER_COMPRESSION_LEVEL:'3',CSC_IDENTITY_AUTO_DISCOVERY:'false'}});if(result.error)throw result.error;if(result.status!==0)process.exit(result.status??1)};
+if(process.platform!=='win32')throw Error('Este script gera os pacotes Windows no Windows.');
+if(!fs.existsSync('node_modules/electron/dist/electron.exe'))run(process.execPath,['node_modules/electron/install.js']);
+run(process.execPath,['scripts/create-icon.mjs']);
+run(process.execPath,['scripts/copy-runtime.mjs']);
+run(process.execPath,['node_modules/typescript/bin/tsc','--noEmit']);
+run(process.execPath,['node_modules/vite/bin/vite.js','build']);
+run(process.execPath,['scripts/stage-desktop.mjs']);
+run(process.execPath,['node_modules/electron-builder/cli.js','--config','electron-builder.cjs','--win','--x64','--publish','never',...process.argv.slice(2)]);
+run(process.execPath,['scripts/verify-release.mjs']);

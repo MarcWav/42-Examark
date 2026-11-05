@@ -1,0 +1,14 @@
+import {spawn} from 'node:child_process';
+import fs from 'node:fs';
+import path from 'node:path';
+import {createRequire} from 'node:module';
+import './export-learning.mjs';
+const require=createRequire(import.meta.url);
+const binary=require('electron');
+const report=path.resolve('docs/desktop-validation.json');
+const profile=fs.mkdtempSync(path.resolve('.cache/desktop-test-profile-'));
+const env={...process.env};delete env.ELECTRON_RUN_AS_NODE;
+const child=spawn(binary,['.',`--trainer-test-profile=${profile}`,`--trainer-test-report=${report}`],{cwd:process.cwd(),env,stdio:'inherit',windowsHide:true});
+const timer=setTimeout(()=>{child.kill();console.error('QA desktop excedeu 180 segundos.');process.exitCode=1},180000);
+child.on('error',error=>{clearTimeout(timer);console.error(error);process.exitCode=1});
+child.on('exit',code=>{clearTimeout(timer);if(code!==0){if(fs.existsSync(report))console.error(fs.readFileSync(report,'utf8'));process.exitCode=code||1;return}const result=JSON.parse(fs.readFileSync(report,'utf8'));console.log(`Desktop offline: ${result.referenceCases} casos passaram; ${result.checks.length} verificações. Relatório: ${report}`)});

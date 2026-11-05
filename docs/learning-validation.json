@@ -1,0 +1,85 @@
+{
+  "passed": true,
+  "traceCases": 127,
+  "events": 3457,
+  "exercises": [
+    {
+      "id": "bracket_validator",
+      "traceCases": 10
+    },
+    {
+      "id": "cryptic_sorter",
+      "traceCases": 7
+    },
+    {
+      "id": "echo_validator",
+      "traceCases": 11
+    },
+    {
+      "id": "mirror_matrix",
+      "traceCases": 7
+    },
+    {
+      "id": "hidenp",
+      "traceCases": 9
+    },
+    {
+      "id": "inter",
+      "traceCases": 7
+    },
+    {
+      "id": "number_base_converter",
+      "traceCases": 10
+    },
+    {
+      "id": "pattern_tracker",
+      "traceCases": 9
+    },
+    {
+      "id": "anagram",
+      "traceCases": 8
+    },
+    {
+      "id": "shadow_merge",
+      "traceCases": 7
+    },
+    {
+      "id": "string_permutation_checker",
+      "traceCases": 10
+    },
+    {
+      "id": "string_sculptor",
+      "traceCases": 8
+    },
+    {
+      "id": "twist_sequence",
+      "traceCases": 7
+    },
+    {
+      "id": "whisper_cipher",
+      "traceCases": 8
+    },
+    {
+      "id": "cryptic_sorter_xornic",
+      "traceCases": 2
+    },
+    {
+      "id": "string_sculptor_examshell",
+      "traceCases": 7
+    }
+  ],
+  "checks": [
+    "Pilha real: vazio → ( → ([ → ( → vazio",
+    "or em pilha vazia não executou pop",
+    "and evita índice em small vazia",
+    "Variantes de alternância produzem estados e saídas separados",
+    "Tipo incorreto distingue bool de int",
+    "Valor incorreto mantém retorno observado",
+    "Exceção não inventa retorno None",
+    "Sintaxe impede execução sem resultados inventados",
+    "Teste malformado é falha do avaliador",
+    "Saída extra é separada do retorno",
+    "Restrição retorna o resultado real da inspeção AST",
+    "IDs, metadados e tempo acompanham o caso efetivamente executado"
+  ]
+}

@@ -1,0 +1,4304 @@
+{
+  "bracket_validator": [
+    {
+      "input": "bracket_validator(\"\")",
+      "output": "True",
+      "hidden": true
+    },
+    {
+      "input": "bracket_validator(\"a\")",
+      "output": "True",
+      "hidden": true
+    },
+    {
+      "input": "bracket_validator(\"([)]\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "bracket_validator(\")(\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "bracket_validator(\"(()\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "bracket_validator(\"[{}]\")",
+      "output": "True",
+      "hidden": true
+    },
+    {
+      "input": "bracket_validator(\"{a[b(c)d]e}\")",
+      "output": "True",
+      "hidden": true
+    },
+    {
+      "input": "bracket_validator(\"{\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "bracket_validator(\"(b[){]a}(b[){\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "bracket_validator(\"[){]a}(b[){]a\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "bracket_validator(\"[){]a}(\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "bracket_validator(\"[){]a}(b[\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "bracket_validator(\"(b[){\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "bracket_validator(\"{]a\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "bracket_validator(\"{]a}(b[){]a\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "bracket_validator(\"{]a}(b[\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "bracket_validator(\"(b[\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "bracket_validator(\"a}(\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "bracket_validator(\"[){]a}(b[){\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "bracket_validator(\"a}(b[){\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "bracket_validator(\"{]a}(b[){]a\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "bracket_validator(\"[){]a}(b[){\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "bracket_validator(\"(\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "bracket_validator(\"a}(b[){]a}(\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "bracket_validator(\"(\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "bracket_validator(\"[){]a}(b[\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "bracket_validator(\"{]a}(b[\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "bracket_validator(\"[){]a\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "bracket_validator(\"a}(b[){]a}(\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "bracket_validator(\"[){]a}(b[){]a\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "bracket_validator(\"(b[\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "bracket_validator(\"a}(b[\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "bracket_validator(\"a}(b[\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "bracket_validator(\"a}(b[){\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "bracket_validator(\"(b[){]a\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "bracket_validator(\"{]a}(b[){\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "bracket_validator(\"(\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "bracket_validator(\"[){]a}(\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "bracket_validator(\"[){\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "bracket_validator(\"a}(b[){\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "bracket_validator(\"{\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "bracket_validator(\"[){]a}(b[){\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "bracket_validator(\"[\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "bracket_validator(\"{]a}(b[){]a}(\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "bracket_validator(\"[){]a\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "bracket_validator(\"(b[){]a}(\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "bracket_validator(\"{]a}(b[){]a}(\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "bracket_validator(\"(b[){]a}(\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "bracket_validator(\"[){]a}(b[){]a\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "bracket_validator(\"[){\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "bracket_validator(\"[){]a}(b[){]a\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "bracket_validator(\"[){]a}(\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "bracket_validator(\"a}(b[){\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "bracket_validator(\"(b[){]a}(b[\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "bracket_validator(\"(\")",
+      "output": "False",
+      "hidden": true
+    }
+  ],
+  "cryptic_sorter": [
+    {
+      "input": "cryptic_sorter([])",
+      "output": "[]",
+      "hidden": true
+    },
+    {
+      "input": "cryptic_sorter([\"aaa\",\"AAA\",\"bbb\",\"BBB\"])",
+      "output": "[\"aaa\",\"AAA\",\"bbb\",\"BBB\"]",
+      "hidden": true
+    },
+    {
+      "input": "cryptic_sorter([\"a\",\"A\",\"a\",\"A\"])",
+      "output": "[\"a\",\"A\",\"a\",\"A\"]",
+      "hidden": true
+    },
+    {
+      "input": "cryptic_sorter([\"!\",\"a\",\"1\",\"B\"])",
+      "output": "[\"!\",\"1\",\"a\",\"B\"]",
+      "hidden": true
+    },
+    {
+      "input": "cryptic_sorter([\"?a2\",\"b\",\"B1?\",\"2\",\"\",\"!\",\"1?a2\"])",
+      "output": "[\"\",\"!\",\"2\",\"b\",\"?a2\",\"B1?\",\"1?a2\"]",
+      "hidden": true
+    },
+    {
+      "input": "cryptic_sorter([\"?a\",\"Ab!B\",\"?\"])",
+      "output": "[\"?\",\"?a\",\"Ab!B\"]",
+      "hidden": true
+    },
+    {
+      "input": "cryptic_sorter([\"2A\"])",
+      "output": "[\"2A\"]",
+      "hidden": true
+    },
+    {
+      "input": "cryptic_sorter([\"b!B\",\"?\",\"\"])",
+      "output": "[\"\",\"?\",\"b!B\"]",
+      "hidden": true
+    },
+    {
+      "input": "cryptic_sorter([\"\"])",
+      "output": "[\"\"]",
+      "hidden": true
+    },
+    {
+      "input": "cryptic_sorter([\"?\",\"\",\"A\",\"!B1\",\"a2\",\"b!\",\"\"])",
+      "output": "[\"\",\"\",\"?\",\"A\",\"a2\",\"b!\",\"!B1\"]",
+      "hidden": true
+    },
+    {
+      "input": "cryptic_sorter([\"2Ab!\"])",
+      "output": "[\"2Ab!\"]",
+      "hidden": true
+    },
+    {
+      "input": "cryptic_sorter([\"2Ab!\",\"\",\"?a\",\"Ab!\",\"\",\"?\",\"2Ab\",\"B\",\"\"])",
+      "output": "[\"\",\"\",\"\",\"?\",\"B\",\"?a\",\"2Ab\",\"Ab!\",\"2Ab!\"]",
+      "hidden": true
+    },
+    {
+      "input": "cryptic_sorter([\"B1?a\",\"Ab!\",\"1?\",\"2Ab!\",\"1?\",\"2\",\"b!\",\"\",\"?a2A\"])",
+      "output": "[\"\",\"2\",\"1?\",\"1?\",\"b!\",\"Ab!\",\"2Ab!\",\"?a2A\",\"B1?a\"]",
+      "hidden": true
+    },
+    {
+      "input": "cryptic_sorter([\"B1?\",\"2Ab\",\"B1?\",\"2\",\"b!B1\",\"a2A\",\"!B\",\"?a\",\"Ab!B\"])",
+      "output": "[\"2\",\"!B\",\"?a\",\"2Ab\",\"a2A\",\"B1?\",\"B1?\",\"Ab!B\",\"b!B1\"]",
+      "hidden": true
+    },
+    {
+      "input": "cryptic_sorter([\"b!B\",\"\",\"a2A\",\"!\",\"1?a2\",\"\",\"!B\"])",
+      "output": "[\"\",\"\",\"!\",\"!B\",\"a2A\",\"b!B\",\"1?a2\"]",
+      "hidden": true
+    },
+    {
+      "input": "cryptic_sorter([\"?a2\",\"b!B1\",\"a2Ab\",\"B1?\",\"2Ab\",\"B1\",\"a2\"])",
+      "output": "[\"a2\",\"B1\",\"2Ab\",\"?a2\",\"B1?\",\"a2Ab\",\"b!B1\"]",
+      "hidden": true
+    },
+    {
+      "input": "cryptic_sorter([\"?a2\",\"b!B\",\"?a2\",\"b!B\",\"?a\",\"A\",\"!\"])",
+      "output": "[\"!\",\"A\",\"?a\",\"?a2\",\"?a2\",\"b!B\",\"b!B\"]",
+      "hidden": true
+    },
+    {
+      "input": "cryptic_sorter([\"\",\"\",\"b\",\"B\",\"\"])",
+      "output": "[\"\",\"\",\"\",\"b\",\"B\"]",
+      "hidden": true
+    },
+    {
+      "input": "cryptic_sorter([\"?a\",\"Ab!\",\"1?a\"])",
+      "output": "[\"?a\",\"1?a\",\"Ab!\"]",
+      "hidden": true
+    },
+    {
+      "input": "cryptic_sorter([\"b\",\"\",\"1\",\"\",\"2Ab!\",\"1?\",\"2A\",\"!\",\"1?a2\",\"b!B1\",\"a\"])",
+      "output": "[\"\",\"\",\"!\",\"1\",\"a\",\"b\",\"1?\",\"2A\",\"1?a2\",\"2Ab!\",\"b!B1\"]",
+      "hidden": true
+    },
+    {
+      "input": "cryptic_sorter([\"b!\",\"1?a\",\"Ab\"])",
+      "output": "[\"Ab\",\"b!\",\"1?a\"]",
+      "hidden": true
+    },
+    {
+      "input": "cryptic_sorter([\"b!B\",\"?a2A\",\"!B1?\",\"\",\"Ab!\",\"1?\",\"2Ab!\",\"\",\"?a2\",\"\",\"\"])",
+      "output": "[\"\",\"\",\"\",\"\",\"1?\",\"?a2\",\"Ab!\",\"b!B\",\"!B1?\",\"2Ab!\",\"?a2A\"]",
+      "hidden": true
+    },
+    {
+      "input": "cryptic_sorter([\"B1\",\"\",\"2A\",\"!B1\",\"a\"])",
+      "output": "[\"\",\"a\",\"2A\",\"B1\",\"!B1\"]",
+      "hidden": true
+    },
+    {
+      "input": "cryptic_sorter([\"\",\"1?a\",\"\",\"b!\",\"1?a2\"])",
+      "output": "[\"\",\"\",\"b!\",\"1?a\",\"1?a2\"]",
+      "hidden": true
+    },
+    {
+      "input": "cryptic_sorter([\"2Ab!\",\"\",\"?a\",\"\",\"b!B\",\"?a2A\",\"!\",\"1?a2\",\"b!B1\"])",
+      "output": "[\"\",\"\",\"!\",\"?a\",\"b!B\",\"1?a2\",\"2Ab!\",\"?a2A\",\"b!B1\"]",
+      "hidden": true
+    },
+    {
+      "input": "cryptic_sorter([\"b!B\",\"?a2A\",\"!B1?\"])",
+      "output": "[\"b!B\",\"!B1?\",\"?a2A\"]",
+      "hidden": true
+    },
+    {
+      "input": "cryptic_sorter([\"2A\",\"!B\",\"?a\",\"Ab!\",\"1?a\"])",
+      "output": "[\"!B\",\"2A\",\"?a\",\"1?a\",\"Ab!\"]",
+      "hidden": true
+    },
+    {
+      "input": "cryptic_sorter([\"B1?\"])",
+      "output": "[\"B1?\"]",
+      "hidden": true
+    },
+    {
+      "input": "cryptic_sorter([\"B1\",\"a2A\",\"!B\",\"?\",\"2Ab!\",\"1\",\"\",\"2A\",\"!\"])",
+      "output": "[\"\",\"!\",\"1\",\"?\",\"!B\",\"2A\",\"B1\",\"a2A\",\"2Ab!\"]",
+      "hidden": true
+    },
+    {
+      "input": "cryptic_sorter([\"\"])",
+      "output": "[\"\"]",
+      "hidden": true
+    },
+    {
+      "input": "cryptic_sorter([\"?a\",\"A\",\"!B1\",\"a2A\",\"\",\"B\",\"?a\"])",
+      "output": "[\"\",\"A\",\"B\",\"?a\",\"?a\",\"!B1\",\"a2A\"]",
+      "hidden": true
+    },
+    {
+      "input": "cryptic_sorter([\"\",\"A\",\"!B1\",\"a2\",\"b!B\",\"?a\",\"Ab\",\"B1?\",\"2Ab\"])",
+      "output": "[\"\",\"A\",\"?a\",\"a2\",\"Ab\",\"!B1\",\"2Ab\",\"b!B\",\"B1?\"]",
+      "hidden": true
+    },
+    {
+      "input": "cryptic_sorter([\"?a\",\"Ab!\",\"1?a\",\"Ab\",\"\",\"1?a\",\"Ab!B\"])",
+      "output": "[\"\",\"?a\",\"Ab\",\"1?a\",\"1?a\",\"Ab!\",\"Ab!B\"]",
+      "hidden": true
+    },
+    {
+      "input": "cryptic_sorter([\"b!\",\"1\",\"a\",\"A\",\"\",\"B1?\",\"2\"])",
+      "output": "[\"\",\"1\",\"2\",\"a\",\"A\",\"b!\",\"B1?\"]",
+      "hidden": true
+    },
+    {
+      "input": "cryptic_sorter([\"b!\",\"1?a\",\"\",\"b\",\"B1?a\",\"A\",\"\",\"B1?a\",\"A\",\"!\",\"1\"])",
+      "output": "[\"\",\"\",\"!\",\"1\",\"A\",\"A\",\"b\",\"b!\",\"1?a\",\"B1?a\",\"B1?a\"]",
+      "hidden": true
+    },
+    {
+      "input": "cryptic_sorter([\"\",\"a2\",\"b!B\",\"?\",\"2Ab!\",\"1\",\"a2A\"])",
+      "output": "[\"\",\"1\",\"?\",\"a2\",\"a2A\",\"b!B\",\"2Ab!\"]",
+      "hidden": true
+    },
+    {
+      "input": "cryptic_sorter([\"?a2\",\"\",\"\",\"\",\"1\",\"a2\",\"b\"])",
+      "output": "[\"\",\"\",\"\",\"1\",\"b\",\"a2\",\"?a2\"]",
+      "hidden": true
+    },
+    {
+      "input": "cryptic_sorter([\"?a2A\",\"!B1?\",\"\",\"Ab!\",\"\",\"?a2A\",\"!\",\"1?a\",\"Ab\",\"B\",\"?a\"])",
+      "output": "[\"\",\"\",\"!\",\"B\",\"?a\",\"Ab\",\"1?a\",\"Ab!\",\"!B1?\",\"?a2A\",\"?a2A\"]",
+      "hidden": true
+    },
+    {
+      "input": "cryptic_sorter([\"?\",\"\",\"Ab!\",\"1?a\",\"Ab\",\"B\",\"?a\",\"Ab\",\"B\",\"?\",\"2A\"])",
+      "output": "[\"\",\"?\",\"?\",\"B\",\"B\",\"2A\",\"?a\",\"Ab\",\"Ab\",\"1?a\",\"Ab!\"]",
+      "hidden": true
+    },
+    {
+      "input": "cryptic_sorter([\"\",\"\",\"?a\",\"Ab\",\"\"])",
+      "output": "[\"\",\"\",\"\",\"?a\",\"Ab\"]",
+      "hidden": true
+    },
+    {
+      "input": "cryptic_sorter([\"\",\"!B1\",\"a2\",\"b!\",\"1\",\"a\",\"A\"])",
+      "output": "[\"\",\"1\",\"a\",\"A\",\"a2\",\"b!\",\"!B1\"]",
+      "hidden": true
+    },
+    {
+      "input": "cryptic_sorter([\"2A\",\"!\",\"1\",\"a\",\"Ab!\"])",
+      "output": "[\"!\",\"1\",\"a\",\"2A\",\"Ab!\"]",
+      "hidden": true
+    },
+    {
+      "input": "cryptic_sorter([\"b!B1\",\"a\",\"Ab\",\"B\",\"?a2A\",\"!B\",\"?a\"])",
+      "output": "[\"a\",\"B\",\"!B\",\"?a\",\"Ab\",\"?a2A\",\"b!B1\"]",
+      "hidden": true
+    },
+    {
+      "input": "cryptic_sorter([\"b!B\",\"\",\"a2\",\"b!\",\"1?a\",\"Ab!\",\"1?\",\"2A\",\"\",\"B1?\",\"2Ab!\"])",
+      "output": "[\"\",\"\",\"1?\",\"2A\",\"a2\",\"b!\",\"1?a\",\"Ab!\",\"b!B\",\"B1?\",\"2Ab!\"]",
+      "hidden": true
+    },
+    {
+      "input": "cryptic_sorter([\"b!\",\"\",\"?\",\"2\",\"b!B1\",\"\",\"\"])",
+      "output": "[\"\",\"\",\"\",\"2\",\"?\",\"b!\",\"b!B1\"]",
+      "hidden": true
+    },
+    {
+      "input": "cryptic_sorter([\"2A\",\"!B1?\",\"2\",\"b!B1\",\"a\",\"\",\"\",\"!B1?\",\"2\"])",
+      "output": "[\"\",\"\",\"2\",\"2\",\"a\",\"2A\",\"!B1?\",\"!B1?\",\"b!B1\"]",
+      "hidden": true
+    },
+    {
+      "input": "cryptic_sorter([\"?\",\"2\",\"b\",\"\",\"\",\"?\",\"2Ab!\"])",
+      "output": "[\"\",\"\",\"2\",\"?\",\"?\",\"b\",\"2Ab!\"]",
+      "hidden": true
+    },
+    {
+      "input": "cryptic_sorter([\"2Ab!\",\"\",\"?a2A\",\"!\",\"1?a2\"])",
+      "output": "[\"\",\"!\",\"1?a2\",\"2Ab!\",\"?a2A\"]",
+      "hidden": true
+    },
+    {
+      "input": "cryptic_sorter([\"\",\"!\",\"1?a2\",\"b!B1\",\"\",\"\",\"A\"])",
+      "output": "[\"\",\"\",\"\",\"!\",\"A\",\"1?a2\",\"b!B1\"]",
+      "hidden": true
+    },
+    {
+      "input": "cryptic_sorter([\"\",\"\",\"2\",\"b!\",\"1?a2\",\"b!\",\"1?\"])",
+      "output": "[\"\",\"\",\"2\",\"1?\",\"b!\",\"b!\",\"1?a2\"]",
+      "hidden": true
+    },
+    {
+      "input": "cryptic_sorter([\"B1?a\",\"Ab!\",\"1?a\",\"Ab!\",\"\"])",
+      "output": "[\"\",\"1?a\",\"Ab!\",\"Ab!\",\"B1?a\"]",
+      "hidden": true
+    },
+    {
+      "input": "cryptic_sorter([\"b!\",\"1?\",\"2Ab!\",\"1?a\",\"\",\"b!B\",\"?a2A\"])",
+      "output": "[\"\",\"1?\",\"b!\",\"1?a\",\"b!B\",\"2Ab!\",\"?a2A\"]",
+      "hidden": true
+    }
+  ],
+  "echo_validator": [
+    {
+      "input": "echo_validator(\"\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "echo_validator(\"a\")",
+      "output": "True",
+      "hidden": true
+    },
+    {
+      "input": "echo_validator(\"A!b,a\")",
+      "output": "True",
+      "hidden": true
+    },
+    {
+      "input": "echo_validator(\"ab\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "echo_validator(\"Aa\")",
+      "output": "True",
+      "hidden": true
+    },
+    {
+      "input": "echo_validator(\"abccba\")",
+      "output": "True",
+      "hidden": true
+    },
+    {
+      "input": "echo_validator(\"baxAbaBAbaBAbaBA\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "echo_validator(\"1!BaB!B!Ba1Aa\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "echo_validator(\"B BA121a?AbAa\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "echo_validator(\"AxaBAbaBAbaBAba\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "echo_validator(\"?212a\")",
+      "output": "True",
+      "hidden": true
+    },
+    {
+      "input": "echo_validator(\"bAB 1 BAa\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "echo_validator(\"AbaBAbaBAxa\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "echo_validator(\"BaBAb!Ba1abaa\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "echo_validator(\"a\")",
+      "output": "True",
+      "hidden": true
+    },
+    {
+      "input": "echo_validator(\"baBAxaBAba\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "echo_validator(\"3!3 B!3 baa\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "echo_validator(\"1Aa\")",
+      "output": "True",
+      "hidden": true
+    },
+    {
+      "input": "echo_validator(\"AbaBAbaBAxaBAbaBA\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "echo_validator(\"a\")",
+      "output": "True",
+      "hidden": true
+    },
+    {
+      "input": "echo_validator(\"ba3!1aB a\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "echo_validator(\"AbaBAbaBAxaBAbaBAbaBAba\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "echo_validator(\"1a3aa\")",
+      "output": "True",
+      "hidden": true
+    },
+    {
+      "input": "echo_validator(\"?21 ?aa\")",
+      "output": "True",
+      "hidden": true
+    },
+    {
+      "input": "echo_validator(\"AbaBAbaBAbaxAbaBAbaBAba\")",
+      "output": "True",
+      "hidden": true
+    },
+    {
+      "input": "echo_validator(\"1 b2b a\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "echo_validator(\"?!?!a\")",
+      "output": "True",
+      "hidden": true
+    },
+    {
+      "input": "echo_validator(\"BAbaxA\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "echo_validator(\"? ?2B!Baa\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "echo_validator(\"? 1A1aB baB2a\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "echo_validator(\"AbaBAbaBAbaxAbaBAbaBAbaBA\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "echo_validator(\"1a3!Ba3!1 a\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "echo_validator(\"baB 3AB2baa\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "echo_validator(\"BAbaBAbaBAbaxAbaBAba\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "echo_validator(\"bA1!?A1aa\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "echo_validator(\"?!12b a\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "echo_validator(\"aBAxaBAbaBAba\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "echo_validator(\"b a\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "echo_validator(\"b 3A1!?Aa\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "echo_validator(\"AxaBAbaBA\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "echo_validator(\"?A?2?2a\")",
+      "output": "True",
+      "hidden": true
+    },
+    {
+      "input": "echo_validator(\"1ABA1a? a\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "echo_validator(\"aBAbaxAbaBAbaBAba\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "echo_validator(\"3AB a\")",
+      "output": "True",
+      "hidden": true
+    },
+    {
+      "input": "echo_validator(\"1ABaa\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "echo_validator(\"AbaBAxaBAba\")",
+      "output": "True",
+      "hidden": true
+    },
+    {
+      "input": "echo_validator(\"B bab!?!b a\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "echo_validator(\"12Baa\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "echo_validator(\"AbaBAbaxAbaBAba\")",
+      "output": "True",
+      "hidden": true
+    },
+    {
+      "input": "echo_validator(\"bA?Ab2baa\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "echo_validator(\"3A3A?aa\")",
+      "output": "True",
+      "hidden": true
+    },
+    {
+      "input": "echo_validator(\"BAxaBAba\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "echo_validator(\"123!a\")",
+      "output": "True",
+      "hidden": true
+    },
+    {
+      "input": "echo_validator(\"?2Ba12a\")",
+      "output": "False",
+      "hidden": true
+    }
+  ],
+  "mirror_matrix": [
+    {
+      "input": "mirror_matrix([])",
+      "output": "[]",
+      "hidden": true
+    },
+    {
+      "input": "mirror_matrix([[]])",
+      "output": "[[]]",
+      "hidden": true
+    },
+    {
+      "input": "mirror_matrix([[1,2,3],[4,5,6]])",
+      "output": "[[3,2,1],[6,5,4]]",
+      "hidden": true
+    },
+    {
+      "input": "mirror_matrix([[-2,-1,0],[0,-1,-2]])",
+      "output": "[[0,-1,-2],[-2,-1,0]]",
+      "hidden": true
+    },
+    {
+      "input": "mirror_matrix([[-12,15,3,-15,15,-12,-9,13,2,-5],[10,4,-12,8,-7,-13,-13,4,9,-4,9],[-13,1,9,2,3,11,11,-2,-3,1,-5]])",
+      "output": "[[-5,2,13,-9,-12,15,-15,3,15,-12],[9,-4,9,4,-13,-13,-7,8,-12,4,10],[-5,1,-3,-2,11,11,3,2,9,1,-13]]",
+      "hidden": true
+    },
+    {
+      "input": "mirror_matrix([[-1,-10,-10],[4,14,-13,0,5,8,-9,12,14,-9,-11,10,-10,-6],[-3,13,5,8,-10,0,-15,12,8,-13,7,-12],[15,-7,-14],[-15,11]])",
+      "output": "[[-10,-10,-1],[-6,-10,10,-11,-9,14,12,-9,8,5,0,-13,14,4],[-12,7,-13,8,12,-15,0,-10,8,5,13,-3],[-14,-7,15],[11,-15]]",
+      "hidden": true
+    },
+    {
+      "input": "mirror_matrix([[-3,-9,-12],[13,-1],[-13,-7,5,9,-4,2],[-4,-6,9]])",
+      "output": "[[-12,-9,-3],[-1,13],[2,-4,9,5,-7,-13],[9,-6,-4]]",
+      "hidden": true
+    },
+    {
+      "input": "mirror_matrix([[-8,0],[-11,11,-14,15,-9,-10,1,-1,-3],[8,14,-15,14,-12,12,8,13],[9,-3,-11,12,-12,14,-10,6,-4,3,-12,3],[14,10,-14,6,5,2,0,15,-5,15,-3,3,-13]])",
+      "output": "[[0,-8],[-3,-1,1,-10,-9,15,-14,11,-11],[13,8,12,-12,14,-15,14,8],[3,-12,3,-4,6,-10,14,-12,12,-11,-3,9],[-13,3,-3,15,-5,15,0,2,5,6,-14,10,14]]",
+      "hidden": true
+    },
+    {
+      "input": "mirror_matrix([[3,-7,-10,8,-9,9,5,14,9,8],[-4,4,0,3,0,-6,14],[-8,-11,-10,-11]])",
+      "output": "[[8,9,14,5,9,-9,8,-10,-7,3],[14,-6,0,3,0,4,-4],[-11,-10,-11,-8]]",
+      "hidden": true
+    },
+    {
+      "input": "mirror_matrix([[4,2,-15,-12,5,-7,-9,4,7,14],[8,-6],[14,-12,-2,4],[-13,6,6,-1,-6,-13,-10,13,-3,-8,-4,7],[11]])",
+      "output": "[[14,7,4,-9,-7,5,-12,-15,2,4],[-6,8],[4,-2,-12,14],[7,-4,-8,-3,13,-10,-13,-6,-1,6,6,-13],[11]]",
+      "hidden": true
+    },
+    {
+      "input": "mirror_matrix([[-13,9,-2,-4,13,-1,-14,0,15],[4,-14,-4,7,-9,3,-9,7],[1,4,-10],[]])",
+      "output": "[[15,0,-14,-1,13,-4,-2,9,-13],[7,-9,3,-9,7,-4,-14,4],[-10,4,1],[]]",
+      "hidden": true
+    },
+    {
+      "input": "mirror_matrix([[-15,12,1],[6,11,-6,-2,7,10,14,9,-8,9],[0,-6,12,-6,-8,-13,2,13,-6,-3,6,-6,14],[-5,15,8,-6,4,-7,-7],[]])",
+      "output": "[[1,12,-15],[9,-8,9,14,10,7,-2,-6,11,6],[14,-6,6,-3,-6,13,2,-13,-8,-6,12,-6,0],[-7,-7,4,-6,8,15,-5],[]]",
+      "hidden": true
+    },
+    {
+      "input": "mirror_matrix([[-10,-2,11,8,-6,-7,0,-7,5,14,5,-8,-7]])",
+      "output": "[[-7,-8,5,14,5,-7,0,-7,-6,8,11,-2,-10]]",
+      "hidden": true
+    },
+    {
+      "input": "mirror_matrix([[-4,-4,15,-10,-4,12,12,-3,-12,1,-6,6,-8,8]])",
+      "output": "[[8,-8,6,-6,1,-12,-3,12,12,-4,-10,15,-4,-4]]",
+      "hidden": true
+    },
+    {
+      "input": "mirror_matrix([[],[2,12,-13,-1,0,10,-12],[-2,-1,-9,11,14,-14,-8,12,-8,-5],[9,13,-2,-11,-6,5,-14,-6,3,10,11,-1,15,-14]])",
+      "output": "[[],[-12,10,0,-1,-13,12,2],[-5,-8,12,-8,-14,14,11,-9,-1,-2],[-14,15,-1,11,10,3,-6,-14,5,-6,-11,-2,13,9]]",
+      "hidden": true
+    },
+    {
+      "input": "mirror_matrix([[-10,-14,-13,3,-7,4,-4,5]])",
+      "output": "[[5,-4,4,-7,3,-13,-14,-10]]",
+      "hidden": true
+    },
+    {
+      "input": "mirror_matrix([[-12,-10,8,6,15]])",
+      "output": "[[15,6,8,-10,-12]]",
+      "hidden": true
+    },
+    {
+      "input": "mirror_matrix([[0],[-6,5,15,2,8,2,-3,-13],[11,-12,-3,-5]])",
+      "output": "[[0],[-13,-3,2,8,2,15,5,-6],[-5,-3,-12,11]]",
+      "hidden": true
+    },
+    {
+      "input": "mirror_matrix([[-2,-15,12],[11,-13,0,-9,0,-4,12,4,4,8],[-8,-5,6,-4,-9],[-8,3,-12,-5,-9,9,9,-5,-12,7,-6,-3]])",
+      "output": "[[12,-15,-2],[8,4,4,12,-4,0,-9,0,-13,11],[-9,-4,6,-5,-8],[-3,-6,7,-12,-5,9,9,-9,-5,-12,3,-8]]",
+      "hidden": true
+    },
+    {
+      "input": "mirror_matrix([[-10,-6,3,14,1],[-7,9,5,-9,9,-10,6,-6],[2,6,11,-14]])",
+      "output": "[[1,14,3,-6,-10],[-6,6,-10,9,-9,5,9,-7],[-14,11,6,2]]",
+      "hidden": true
+    },
+    {
+      "input": "mirror_matrix([[15,-5,-12,11,14,3,6,2,-11,14,-11],[3,-10]])",
+      "output": "[[-11,14,-11,2,6,3,14,11,-12,-5,15],[-10,3]]",
+      "hidden": true
+    },
+    {
+      "input": "mirror_matrix([[-12,-11,12,0,-10,11,0],[-9,12,15,-11,-5,-4,-15,-13,-11,7,14],[-11,13,14,4,-11,13,6,4,9,-10]])",
+      "output": "[[0,11,-10,0,12,-11,-12],[14,7,-11,-13,-15,-4,-5,-11,15,12,-9],[-10,9,4,6,13,-11,4,14,13,-11]]",
+      "hidden": true
+    },
+    {
+      "input": "mirror_matrix([[9,-1,-11,-1,-13,-1,3,10,14,-2,7,5,5,12],[],[7,-5,-2,-5,4,9,-10,-6,15]])",
+      "output": "[[12,5,5,7,-2,14,10,3,-1,-13,-1,-11,-1,9],[],[15,-6,-10,9,4,-5,-2,-5,7]]",
+      "hidden": true
+    },
+    {
+      "input": "mirror_matrix([[-7,10,-5,5]])",
+      "output": "[[5,-5,10,-7]]",
+      "hidden": true
+    },
+    {
+      "input": "mirror_matrix([[-12,-3,2,-5],[],[],[-13,6,-12,6,9,0,0,-3,12,8,-11,1]])",
+      "output": "[[-5,2,-3,-12],[],[],[1,-11,8,12,-3,0,0,9,6,-12,6,-13]]",
+      "hidden": true
+    },
+    {
+      "input": "mirror_matrix([[-2,4,5,7,12,-7,-8,-11,0,13,4,-3],[-4,3,-1,11],[-12,13,2,7,-10],[9,-13,-15,14,-9,-6,13]])",
+      "output": "[[-3,4,13,0,-11,-8,-7,12,7,5,4,-2],[11,-1,3,-4],[-10,7,2,13,-12],[13,-6,-9,14,-15,-13,9]]",
+      "hidden": true
+    },
+    {
+      "input": "mirror_matrix([[15,-4,0,2,-9,4,-6,10,-11,7,-12],[9,3,-4,-15,4,-9,10,-8,10,-9,13,-2,11,-1],[1,-13,-11,-6,-2,14,11,7,0]])",
+      "output": "[[-12,7,-11,10,-6,4,-9,2,0,-4,15],[-1,11,-2,13,-9,10,-8,10,-9,4,-15,-4,3,9],[0,7,11,14,-2,-6,-11,-13,1]]",
+      "hidden": true
+    },
+    {
+      "input": "mirror_matrix([[-6,-9,0],[13,0,-15,-7,13,-15,-3,-12,-4,-8,14,-9,8,-9],[8,-3,8,-12,-8,8,-3,7,-15,-2,15,4]])",
+      "output": "[[0,-9,-6],[-9,8,-9,14,-8,-4,-12,-3,-15,13,-7,-15,0,13],[4,15,-2,-15,7,-3,8,-8,-12,8,-3,8]]",
+      "hidden": true
+    },
+    {
+      "input": "mirror_matrix([[],[-4,10,-2,-1,11,12,8,-4]])",
+      "output": "[[],[-4,8,12,11,-1,-2,10,-4]]",
+      "hidden": true
+    },
+    {
+      "input": "mirror_matrix([[0,9,15,15,9,-15,2,-11,-7,13,5,-14,-3,-10],[0,9,-9,-14,13],[-5,15,-12,6,-5,10,13],[-7,0,13,-2,-7,8,2,-7,2,-3]])",
+      "output": "[[-10,-3,-14,5,13,-7,-11,2,-15,9,15,15,9,0],[13,-14,-9,9,0],[13,10,-5,6,-12,15,-5],[-3,2,-7,2,8,-7,-2,13,0,-7]]",
+      "hidden": true
+    },
+    {
+      "input": "mirror_matrix([[3,-6,14,-6,4,0,13,-2],[-4,-13,-1,-14,-1,13,-13],[7]])",
+      "output": "[[-2,13,0,4,-6,14,-6,3],[-13,13,-1,-14,-1,-13,-4],[7]]",
+      "hidden": true
+    },
+    {
+      "input": "mirror_matrix([[14,11,10,10,-1,-2,2],[-12,2,-1,12,8,-2,10,-6,2,11,-9,-9,-2],[5,-10],[9,-11],[-4,-9,-6,9,-5,3,-2,-7,0,-1,-13]])",
+      "output": "[[2,-2,-1,10,10,11,14],[-2,-9,-9,11,2,-6,10,-2,8,12,-1,2,-12],[-10,5],[-11,9],[-13,-1,0,-7,-2,3,-5,9,-6,-9,-4]]",
+      "hidden": true
+    },
+    {
+      "input": "mirror_matrix([[3,2,0,0,10,-2,-8,9,14,14]])",
+      "output": "[[14,14,9,-8,-2,10,0,0,2,3]]",
+      "hidden": true
+    },
+    {
+      "input": "mirror_matrix([[-8,8,6,-13,15,-13,-10],[],[1,-1,-15,4,6,-15,-10,14,9,-1,0,-5]])",
+      "output": "[[-10,-13,15,-13,6,8,-8],[],[-5,0,-1,9,14,-10,-15,6,4,-15,-1,1]]",
+      "hidden": true
+    },
+    {
+      "input": "mirror_matrix([[-10,1,-4,7,9,5],[6],[-13,-5,-8,7,-5,-9,-14,-4,6],[-3,6,-8,7,10,-15,10,-11]])",
+      "output": "[[5,9,7,-4,1,-10],[6],[6,-4,-14,-9,-5,7,-8,-5,-13],[-11,10,-15,10,7,-8,6,-3]]",
+      "hidden": true
+    },
+    {
+      "input": "mirror_matrix([[1,-14,-10,8,-10,-15,14,6,9,14,5,-3,14,8],[13,15]])",
+      "output": "[[8,14,-3,5,14,9,6,14,-15,-10,8,-10,-14,1],[15,13]]",
+      "hidden": true
+    },
+    {
+      "input": "mirror_matrix([[4,-8,0],[11,-15,2,7,-13,-8,0,-3,-5,-8,14],[3,5,10,1,10,14]])",
+      "output": "[[0,-8,4],[14,-8,-5,-3,0,-8,-13,7,2,-15,11],[14,10,1,10,5,3]]",
+      "hidden": true
+    },
+    {
+      "input": "mirror_matrix([[-11,11,12,-5,-8,3]])",
+      "output": "[[3,-8,-5,12,11,-11]]",
+      "hidden": true
+    },
+    {
+      "input": "mirror_matrix([[4,6,4,7,-3,-3],[15,13,-1],[8,11,8,8,13,-4,3,-12,-9,7,-14,10,-2,-2]])",
+      "output": "[[-3,-3,7,4,6,4],[-1,13,15],[-2,-2,10,-14,7,-9,-12,3,-4,13,8,8,11,8]]",
+      "hidden": true
+    },
+    {
+      "input": "mirror_matrix([[-15,-3,-14,12,-12,13,9,5,11,-1],[-2,13,14,6,-15],[-6,4,4,5,-4,6,7,14,-9,-4,-5,11],[4,14,-9,15,-9,-14,14],[10,9,-1,10,12,6,4,-13,-15,1,-3]])",
+      "output": "[[-1,11,5,9,13,-12,12,-14,-3,-15],[-15,6,14,13,-2],[11,-5,-4,-9,14,7,6,-4,5,4,4,-6],[14,-14,-9,15,-9,14,4],[-3,1,-15,-13,4,6,12,10,-1,9,10]]",
+      "hidden": true
+    },
+    {
+      "input": "mirror_matrix([[-1,-13,1,-10,2,-11,0,1,-4,-3,3,-4,8],[-6,4,12,-8,7,-5,3,-9]])",
+      "output": "[[8,-4,3,-3,-4,1,0,-11,2,-10,1,-13,-1],[-9,3,-5,7,-8,12,4,-6]]",
+      "hidden": true
+    },
+    {
+      "input": "mirror_matrix([[-15,-9,0,5,11,-10],[-9,-1,-2,4,6,-12,7,-3,-4,15],[1,1,6,5,1,13,10,12,5,15,11,2,-7,13]])",
+      "output": "[[-10,11,5,0,-9,-15],[15,-4,-3,7,-12,6,4,-2,-1,-9],[13,-7,2,11,15,5,12,10,13,1,5,6,1,1]]",
+      "hidden": true
+    },
+    {
+      "input": "mirror_matrix([[2,6,-12,10]])",
+      "output": "[[10,-12,6,2]]",
+      "hidden": true
+    },
+    {
+      "input": "mirror_matrix([[-6,-10,-4,-2],[-8,7,-5,4,-1,2,-9,0,12,-7,-7,-1,-1,-4],[12,7,4,12],[12,15,15,-5,13,-15],[1,5]])",
+      "output": "[[-2,-4,-10,-6],[-4,-1,-1,-7,-7,12,0,-9,2,-1,4,-5,7,-8],[12,4,7,12],[-15,13,-5,15,15,12],[5,1]]",
+      "hidden": true
+    },
+    {
+      "input": "mirror_matrix([[1,-4,7,9,15],[-15,1,-13,6,-8,2,0,5,2,7,-3,-1]])",
+      "output": "[[15,9,7,-4,1],[-1,-3,7,2,5,0,2,-8,6,-13,1,-15]]",
+      "hidden": true
+    },
+    {
+      "input": "mirror_matrix([[-14,12,-15,-7,1,13,10,-14,0,11],[15,1,14,1,-2,-4,10,-5,-6,9,-13,4],[-1,-12,-7,-10],[-10,13]])",
+      "output": "[[11,0,-14,10,13,1,-7,-15,12,-14],[4,-13,9,-6,-5,10,-4,-2,1,14,1,15],[-10,-7,-12,-1],[13,-10]]",
+      "hidden": true
+    },
+    {
+      "input": "mirror_matrix([[5,5,-8,-4,-7]])",
+      "output": "[[-7,-4,-8,5,5]]",
+      "hidden": true
+    },
+    {
+      "input": "mirror_matrix([[-8,-4,14,-8],[13,-2,1,15,9,-10,-9,15,-4,1,-9,14,8],[-12,5,10,-8,-8,1,-2,-8,9,-15],[-3,-13,-5,12,-14,-9,-6,14,-3,7,9,5,10,9]])",
+      "output": "[[-8,14,-4,-8],[8,14,-9,1,-4,15,-9,-10,9,15,1,-2,13],[-15,9,-8,-2,1,-8,-8,10,5,-12],[9,10,5,9,7,-3,14,-6,-9,-14,12,-5,-13,-3]]",
+      "hidden": true
+    },
+    {
+      "input": "mirror_matrix([[-9,14,-14,10],[-4,6,-5,-13],[-15,14,1,-12,-12,3,-7]])",
+      "output": "[[10,-14,14,-9],[-13,-5,6,-4],[-7,3,-12,-12,1,14,-15]]",
+      "hidden": true
+    },
+    {
+      "input": "mirror_matrix([[15,-3,-9,9,-13,11],[-15,2,-2,3,11,0,-6,-1,2,-6,-3,4,8],[10],[-12,0,6,0,-11,6,-7],[9,15,3,10,-13,9]])",
+      "output": "[[11,-13,9,-9,-3,15],[8,4,-3,-6,2,-1,-6,0,11,3,-2,2,-15],[10],[-7,6,-11,0,6,0,-12],[9,-13,10,3,15,9]]",
+      "hidden": true
+    },
+    {
+      "input": "mirror_matrix([[0,-9,15,11,-12,-2,1,-6,9,-7,14,4,4,-9],[-3,13,-11,-3,7,13,-5,-1],[-13,3,-11,5,-6,-9,13],[-8,-3,9,5,-11,10,11,-14]])",
+      "output": "[[-9,4,4,14,-7,9,-6,1,-2,-12,11,15,-9,0],[-1,-5,13,7,-3,-11,13,-3],[13,-9,-6,5,-11,3,-13],[-14,11,10,-11,5,9,-3,-8]]",
+      "hidden": true
+    },
+    {
+      "input": "mirror_matrix([[-1,13,14,-7,8,-13,-2,-6,-8,-11,2]])",
+      "output": "[[2,-11,-8,-6,-2,-13,8,-7,14,13,-1]]",
+      "hidden": true
+    }
+  ],
+  "hidenp": [
+    {
+      "input": "hidenp(\"\", \"\")",
+      "output": "True",
+      "hidden": true
+    },
+    {
+      "input": "hidenp(\"\", \"a\")",
+      "output": "True",
+      "hidden": true
+    },
+    {
+      "input": "hidenp(\"a\", \"\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "hidenp(\"A\", \"a\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "hidenp(\"aa\", \"a\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "hidenp(\"abc\", \"acb\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "hidenp(\"a a\", \"a-- a\")",
+      "output": "True",
+      "hidden": true
+    },
+    {
+      "input": "hidenp(\"bab\", \"bab 3 ?!1!?!\")",
+      "output": "True",
+      "hidden": true
+    },
+    {
+      "input": "hidenp(\"2? ?ABA\", \"1!BaB!B!Ba1A\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "hidenp(\"23a1!\", \"B BA121a?AbA\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "hidenp(\"1a?\", \"1a?21A\")",
+      "output": "True",
+      "hidden": true
+    },
+    {
+      "input": "hidenp(\"2\", \"?212\")",
+      "output": "True",
+      "hidden": true
+    },
+    {
+      "input": "hidenp(\"A3 ?aBA121!3!\", \"bAB 1 BA\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "hidenp(\"bab\", \"bab b 1!3A3A\")",
+      "output": "True",
+      "hidden": true
+    },
+    {
+      "input": "hidenp(\"AB2Ba?!\", \"BaBAb!Ba1aba\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "hidenp(\" ?a1a?a\", \"\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "hidenp(\"1!3\", \"1!32?a?2\")",
+      "output": "True",
+      "hidden": true
+    },
+    {
+      "input": "hidenp(\"!?AbA\", \"3!3 B!3 ba\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "hidenp(\" B!3A\", \"1A\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "hidenp(\"?AB\", \"?ABaBA3!12\")",
+      "output": "True",
+      "hidden": true
+    },
+    {
+      "input": "hidenp(\" 1 1 bAB!\", \"\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "hidenp(\" 3AB!? \", \"ba3!1aB \")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "hidenp(\"\", \"\")",
+      "output": "True",
+      "hidden": true
+    },
+    {
+      "input": "hidenp(\"!1!b2323232\", \"1a3a\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "hidenp(\" 3 3!B B2B \", \"?21 ?a\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "hidenp(\"?2b\", \"?2b 323 \")",
+      "output": "True",
+      "hidden": true
+    },
+    {
+      "input": "hidenp(\"aB ? b!1A\", \"1 b2b \")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "hidenp(\"a12\", \"?!?!\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "hidenp(\"12\", \"12\")",
+      "output": "True",
+      "hidden": true
+    },
+    {
+      "input": "hidenp(\"2ba\", \"? ?2B!Ba\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "hidenp(\"2\", \"? 1A1aB baB2\")",
+      "output": "True",
+      "hidden": true
+    },
+    {
+      "input": "hidenp(\"b!?\", \"b!? 32b!b!BA\")",
+      "output": "True",
+      "hidden": true
+    },
+    {
+      "input": "hidenp(\"!bab!B!bAb23!\", \"1a3!Ba3!1 \")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "hidenp(\" 1a3!ba12\", \"baB 3AB2ba\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "hidenp(\"?2B\", \"?2Ba3A\")",
+      "output": "True",
+      "hidden": true
+    },
+    {
+      "input": "hidenp(\"a?!32b!?A1!\", \"bA1!?A1a\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "hidenp(\" \", \"?!12b \")",
+      "output": "True",
+      "hidden": true
+    },
+    {
+      "input": "hidenp(\"B!b\", \"B!b2\")",
+      "output": "True",
+      "hidden": true
+    },
+    {
+      "input": "hidenp(\"A323 1a\", \"b \")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "hidenp(\" Ba\", \"b 3A1!?A\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "hidenp(\"Ba3\", \"Ba3A\")",
+      "output": "True",
+      "hidden": true
+    },
+    {
+      "input": "hidenp(\"23AbA3a?!bA\", \"?A?2?2\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "hidenp(\"A3 b!1!1a?2\", \"1ABA1a? \")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "hidenp(\"bA?\", \"bA?!\")",
+      "output": "True",
+      "hidden": true
+    },
+    {
+      "input": "hidenp(\" B!?2B \", \"3AB \")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "hidenp(\"2B!?A\", \"1ABa\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "hidenp(\"? B\", \"? B 1a\")",
+      "output": "True",
+      "hidden": true
+    },
+    {
+      "input": "hidenp(\"!1!\", \"B bab!?!b \")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "hidenp(\"a1a\", \"12Ba\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "hidenp(\"3!?\", \"3!?A32B 1A\")",
+      "output": "True",
+      "hidden": true
+    },
+    {
+      "input": "hidenp(\" b!b2BA?2?a\", \"bA?Ab2ba\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "hidenp(\"a\", \"3A3A?a\")",
+      "output": "True",
+      "hidden": true
+    },
+    {
+      "input": "hidenp(\"1A\", \"1A\")",
+      "output": "True",
+      "hidden": true
+    },
+    {
+      "input": "hidenp(\" B2b b!3!b232\", \"123!\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "hidenp(\"aBA3ABA3aBA?A\", \"?2Ba12\")",
+      "output": "False",
+      "hidden": true
+    }
+  ],
+  "inter": [
+    {
+      "input": "inter(\"\", \"\")",
+      "output": "\"\"",
+      "hidden": true
+    },
+    {
+      "input": "inter(\"ab\", \"ba\")",
+      "output": "\"ab\"",
+      "hidden": true
+    },
+    {
+      "input": "inter(\"aaa\", \"aa\")",
+      "output": "\"a\"",
+      "hidden": true
+    },
+    {
+      "input": "inter(\"A a\", \"a A\")",
+      "output": "\"A a\"",
+      "hidden": true
+    },
+    {
+      "input": "inter(\"!?!!\", \"?!\")",
+      "output": "\"!?\"",
+      "hidden": true
+    },
+    {
+      "input": "inter(\"bab 3 ?!1!?!\", \"!?!1!? 3 bab\")",
+      "output": "\"ba 3?!1\"",
+      "hidden": true
+    },
+    {
+      "input": "inter(\"1!BaB!B!Ba1A\", \"2? ?ABA\")",
+      "output": "\"BA\"",
+      "hidden": true
+    },
+    {
+      "input": "inter(\"B BA121a?AbA\", \"23a1!\")",
+      "output": "\"12a\"",
+      "hidden": true
+    },
+    {
+      "input": "inter(\"1a?21A\", \"A12?a1\")",
+      "output": "\"1a?2A\"",
+      "hidden": true
+    },
+    {
+      "input": "inter(\"?212\", \"2\")",
+      "output": "\"2\"",
+      "hidden": true
+    },
+    {
+      "input": "inter(\"bAB 1 BA\", \"A3 ?aBA121!3!\")",
+      "output": "\"AB 1\"",
+      "hidden": true
+    },
+    {
+      "input": "inter(\"bab b 1!3A3A\", \"A3A3!1 b bab\")",
+      "output": "\"ba 1!3A\"",
+      "hidden": true
+    },
+    {
+      "input": "inter(\"BaBAb!Ba1aba\", \"AB2Ba?!\")",
+      "output": "\"BaA!\"",
+      "hidden": true
+    },
+    {
+      "input": "inter(\"\", \" ?a1a?a\")",
+      "output": "\"\"",
+      "hidden": true
+    },
+    {
+      "input": "inter(\"1!32?a?2\", \"2?a?23!1\")",
+      "output": "\"1!32?a\"",
+      "hidden": true
+    },
+    {
+      "input": "inter(\"3!3 B!3 ba\", \"!?AbA\")",
+      "output": "\"!b\"",
+      "hidden": true
+    },
+    {
+      "input": "inter(\"1A\", \" B!3A\")",
+      "output": "\"A\"",
+      "hidden": true
+    },
+    {
+      "input": "inter(\"?ABaBA3!12\", \"21!3ABaBA?\")",
+      "output": "\"?ABa3!12\"",
+      "hidden": true
+    },
+    {
+      "input": "inter(\"\", \" 1 1 bAB!\")",
+      "output": "\"\"",
+      "hidden": true
+    },
+    {
+      "input": "inter(\"ba3!1aB \", \" 3AB!? \")",
+      "output": "\"3!B \"",
+      "hidden": true
+    },
+    {
+      "input": "inter(\"\", \"\")",
+      "output": "\"\"",
+      "hidden": true
+    },
+    {
+      "input": "inter(\"1a3a\", \"!1!b2323232\")",
+      "output": "\"13\"",
+      "hidden": true
+    },
+    {
+      "input": "inter(\"?21 ?a\", \" 3 3!B B2B \")",
+      "output": "\"2 \"",
+      "hidden": true
+    },
+    {
+      "input": "inter(\"?2b 323 \", \" 323 b2?\")",
+      "output": "\"?2b 3\"",
+      "hidden": true
+    },
+    {
+      "input": "inter(\"1 b2b \", \"aB ? b!1A\")",
+      "output": "\"1 b\"",
+      "hidden": true
+    },
+    {
+      "input": "inter(\"?!?!\", \"a12\")",
+      "output": "\"\"",
+      "hidden": true
+    },
+    {
+      "input": "inter(\"12\", \"21\")",
+      "output": "\"12\"",
+      "hidden": true
+    },
+    {
+      "input": "inter(\"? ?2B!Ba\", \"2ba\")",
+      "output": "\"2a\"",
+      "hidden": true
+    },
+    {
+      "input": "inter(\"? 1A1aB baB2\", \"2\")",
+      "output": "\"2\"",
+      "hidden": true
+    },
+    {
+      "input": "inter(\"b!? 32b!b!BA\", \"AB!b!b23 ?!b\")",
+      "output": "\"b!? 32BA\"",
+      "hidden": true
+    },
+    {
+      "input": "inter(\"1a3!Ba3!1 \", \"!bab!B!bAb23!\")",
+      "output": "\"a3!B\"",
+      "hidden": true
+    },
+    {
+      "input": "inter(\"baB 3AB2ba\", \" 1a3!ba12\")",
+      "output": "\"ba 32\"",
+      "hidden": true
+    },
+    {
+      "input": "inter(\"?2Ba3A\", \"A3aB2?\")",
+      "output": "\"?2Ba3A\"",
+      "hidden": true
+    },
+    {
+      "input": "inter(\"bA1!?A1a\", \"a?!32b!?A1!\")",
+      "output": "\"bA1!?a\"",
+      "hidden": true
+    },
+    {
+      "input": "inter(\"?!12b \", \" \")",
+      "output": "\" \"",
+      "hidden": true
+    },
+    {
+      "input": "inter(\"B!b2\", \"2b!B\")",
+      "output": "\"B!b2\"",
+      "hidden": true
+    },
+    {
+      "input": "inter(\"b \", \"A323 1a\")",
+      "output": "\" \"",
+      "hidden": true
+    },
+    {
+      "input": "inter(\"b 3A1!?A\", \" Ba\")",
+      "output": "\" \"",
+      "hidden": true
+    },
+    {
+      "input": "inter(\"Ba3A\", \"A3aB\")",
+      "output": "\"Ba3A\"",
+      "hidden": true
+    },
+    {
+      "input": "inter(\"?A?2?2\", \"23AbA3a?!bA\")",
+      "output": "\"?A2\"",
+      "hidden": true
+    },
+    {
+      "input": "inter(\"1ABA1a? \", \"A3 b!1!1a?2\")",
+      "output": "\"1Aa? \"",
+      "hidden": true
+    },
+    {
+      "input": "inter(\"bA?!\", \"!?Ab\")",
+      "output": "\"bA?!\"",
+      "hidden": true
+    },
+    {
+      "input": "inter(\"3AB \", \" B!?2B \")",
+      "output": "\"B \"",
+      "hidden": true
+    },
+    {
+      "input": "inter(\"1ABa\", \"2B!?A\")",
+      "output": "\"AB\"",
+      "hidden": true
+    },
+    {
+      "input": "inter(\"? B 1a\", \"a1 B ?\")",
+      "output": "\"? B1a\"",
+      "hidden": true
+    },
+    {
+      "input": "inter(\"B bab!?!b \", \"!1!\")",
+      "output": "\"!\"",
+      "hidden": true
+    },
+    {
+      "input": "inter(\"12Ba\", \"a1a\")",
+      "output": "\"1a\"",
+      "hidden": true
+    },
+    {
+      "input": "inter(\"3!?A32B 1A\", \"A1 B23A?!3\")",
+      "output": "\"3!?A2B 1\"",
+      "hidden": true
+    },
+    {
+      "input": "inter(\"bA?Ab2ba\", \" b!b2BA?2?a\")",
+      "output": "\"bA?2a\"",
+      "hidden": true
+    },
+    {
+      "input": "inter(\"3A3A?a\", \"a\")",
+      "output": "\"a\"",
+      "hidden": true
+    },
+    {
+      "input": "inter(\"1A\", \"A1\")",
+      "output": "\"1A\"",
+      "hidden": true
+    },
+    {
+      "input": "inter(\"123!\", \" B2b b!3!b232\")",
+      "output": "\"23!\"",
+      "hidden": true
+    },
+    {
+      "input": "inter(\"?2Ba12\", \"aBA3ABA3aBA?A\")",
+      "output": "\"?Ba\"",
+      "hidden": true
+    }
+  ],
+  "number_base_converter": [
+    {
+      "input": "number_base_converter(\"0\", 2, 36)",
+      "output": "\"0\"",
+      "hidden": true
+    },
+    {
+      "input": "number_base_converter(\"000\", 10, 2)",
+      "output": "\"0\"",
+      "hidden": true
+    },
+    {
+      "input": "number_base_converter(\"G\", 16, 10)",
+      "output": "\"ERROR\"",
+      "hidden": true
+    },
+    {
+      "input": "number_base_converter(\"2\", 2, 10)",
+      "output": "\"ERROR\"",
+      "hidden": true
+    },
+    {
+      "input": "number_base_converter(\"1\", 37, 2)",
+      "output": "\"ERROR\"",
+      "hidden": true
+    },
+    {
+      "input": "number_base_converter(\"1\", 2, 1)",
+      "output": "\"ERROR\"",
+      "hidden": true
+    },
+    {
+      "input": "number_base_converter(\"Z\", 36, 2)",
+      "output": "\"100011\"",
+      "hidden": true
+    },
+    {
+      "input": "number_base_converter(\"2B3I\", 29, 31)",
+      "output": "\"1TF9\"",
+      "hidden": true
+    },
+    {
+      "input": "number_base_converter(\"2032323233\", 4, 35)",
+      "output": "\"DMWA\"",
+      "hidden": true
+    },
+    {
+      "input": "number_base_converter(\"15BM0\", 24, 27)",
+      "output": "\"KJ96\"",
+      "hidden": true
+    },
+    {
+      "input": "number_base_converter(\"F263\", 19, 6)",
+      "output": "\"2120112\"",
+      "hidden": true
+    },
+    {
+      "input": "number_base_converter(\"42H96\", 20, 11)",
+      "output": "\"413125\"",
+      "hidden": true
+    },
+    {
+      "input": "number_base_converter(\"A3AB\", 27, 34)",
+      "output": "\"52DO\"",
+      "hidden": true
+    },
+    {
+      "input": "number_base_converter(\"281701\", 12, 17)",
+      "output": "\"7GA88\"",
+      "hidden": true
+    },
+    {
+      "input": "number_base_converter(\"1EJH1\", 27, 5)",
+      "output": "\"202240224\"",
+      "hidden": true
+    },
+    {
+      "input": "number_base_converter(\"D3532\", 14, 3)",
+      "output": "\"221211202102\"",
+      "hidden": true
+    },
+    {
+      "input": "number_base_converter(\"11010001010110000100\", 2, 2)",
+      "output": "\"11010001010110000100\"",
+      "hidden": true
+    },
+    {
+      "input": "number_base_converter(\"11212605\", 7, 2)",
+      "output": "\"11101110110100010000\"",
+      "hidden": true
+    },
+    {
+      "input": "number_base_converter(\"AO48\", 32, 25)",
+      "output": "\"MDKH\"",
+      "hidden": true
+    },
+    {
+      "input": "number_base_converter(\"2ORA\", 35, 13)",
+      "output": "\"40B02\"",
+      "hidden": true
+    },
+    {
+      "input": "number_base_converter(\"10DCAC\", 14, 26)",
+      "output": "\"16K1M\"",
+      "hidden": true
+    },
+    {
+      "input": "number_base_converter(\"2L2LB\", 23, 6)",
+      "output": "\"25301113\"",
+      "hidden": true
+    },
+    {
+      "input": "number_base_converter(\"1BAMM\", 25, 18)",
+      "output": "\"57B30\"",
+      "hidden": true
+    },
+    {
+      "input": "number_base_converter(\"451994\", 10, 36)",
+      "output": "\"9ORE\"",
+      "hidden": true
+    },
+    {
+      "input": "number_base_converter(\"2250346\", 8, 19)",
+      "output": "\"4D047\"",
+      "hidden": true
+    },
+    {
+      "input": "number_base_converter(\"63I5H\", 19, 24)",
+      "output": "\"2ACH1\"",
+      "hidden": true
+    },
+    {
+      "input": "number_base_converter(\"7LHL\", 31, 18)",
+      "output": "\"235B0\"",
+      "hidden": true
+    },
+    {
+      "input": "number_base_converter(\"ORPD\", 30, 31)",
+      "output": "\"MIBM\"",
+      "hidden": true
+    },
+    {
+      "input": "number_base_converter(\"1G2A1\", 22, 29)",
+      "output": "\"GIFG\"",
+      "hidden": true
+    },
+    {
+      "input": "number_base_converter(\"86982\", 13, 16)",
+      "output": "\"3B661\"",
+      "hidden": true
+    },
+    {
+      "input": "number_base_converter(\"2CKM\", 29, 23)",
+      "output": "\"4K9H\"",
+      "hidden": true
+    },
+    {
+      "input": "number_base_converter(\"31DC6\", 23, 5)",
+      "output": "\"204440344\"",
+      "hidden": true
+    },
+    {
+      "input": "number_base_converter(\"17073\", 11, 13)",
+      "output": "\"AC31\"",
+      "hidden": true
+    },
+    {
+      "input": "number_base_converter(\"I5OT\", 33, 17)",
+      "output": "\"7DFG9\"",
+      "hidden": true
+    },
+    {
+      "input": "number_base_converter(\"531034\", 8, 17)",
+      "output": "\"21G54\"",
+      "hidden": true
+    },
+    {
+      "input": "number_base_converter(\"DN1S\", 34, 12)",
+      "output": "\"21B142\"",
+      "hidden": true
+    },
+    {
+      "input": "number_base_converter(\"5W9B\", 36, 20)",
+      "output": "\"1E7E7\"",
+      "hidden": true
+    },
+    {
+      "input": "number_base_converter(\"19287\", 20, 9)",
+      "output": "\"384512\"",
+      "hidden": true
+    },
+    {
+      "input": "number_base_converter(\"111121200021\", 3, 4)",
+      "output": "\"1001130010\"",
+      "hidden": true
+    },
+    {
+      "input": "number_base_converter(\"453015\", 11, 15)",
+      "output": "\"E3B48\"",
+      "hidden": true
+    },
+    {
+      "input": "number_base_converter(\"1ABB31\", 13, 25)",
+      "output": "\"1IHIJ\"",
+      "hidden": true
+    },
+    {
+      "input": "number_base_converter(\"99104\", 16, 16)",
+      "output": "\"99104\"",
+      "hidden": true
+    },
+    {
+      "input": "number_base_converter(\"1K2J1\", 24, 34)",
+      "output": "\"FHJ7\"",
+      "hidden": true
+    },
+    {
+      "input": "number_base_converter(\"42A253\", 11, 32)",
+      "output": "\"KUVO\"",
+      "hidden": true
+    },
+    {
+      "input": "number_base_converter(\"H6J5\", 23, 3)",
+      "output": "\"101200200122\"",
+      "hidden": true
+    },
+    {
+      "input": "number_base_converter(\"4514155\", 6, 6)",
+      "output": "\"4514155\"",
+      "hidden": true
+    },
+    {
+      "input": "number_base_converter(\"15I4I\", 20, 22)",
+      "output": "\"JA6E\"",
+      "hidden": true
+    },
+    {
+      "input": "number_base_converter(\"JCH9\", 34, 15)",
+      "output": "\"100840\"",
+      "hidden": true
+    },
+    {
+      "input": "number_base_converter(\"3010102101\", 4, 14)",
+      "output": "\"16CDD7\"",
+      "hidden": true
+    },
+    {
+      "input": "number_base_converter(\"3LMC\", 32, 14)",
+      "output": "\"31CCC\"",
+      "hidden": true
+    },
+    {
+      "input": "number_base_converter(\"145B88\", 13, 9)",
+      "output": "\"838721\"",
+      "hidden": true
+    },
+    {
+      "input": "number_base_converter(\"26JI7\", 22, 33)",
+      "output": "\"F2N7\"",
+      "hidden": true
+    },
+    {
+      "input": "number_base_converter(\"17HGJ\", 27, 22)",
+      "output": "\"2K150\"",
+      "hidden": true
+    },
+    {
+      "input": "number_base_converter(\"121120011202\", 3, 3)",
+      "output": "\"121120011202\"",
+      "hidden": true
+    },
+    {
+      "input": "number_base_converter(\"164B53\", 13, 12)",
+      "output": "\"2282A6\"",
+      "hidden": true
+    }
+  ],
+  "pattern_tracker": [
+    {
+      "input": "pattern_tracker(\"\")",
+      "output": "0",
+      "hidden": true
+    },
+    {
+      "input": "pattern_tracker(\"123\")",
+      "output": "2",
+      "hidden": true
+    },
+    {
+      "input": "pattern_tracker(\"90\")",
+      "output": "0",
+      "hidden": true
+    },
+    {
+      "input": "pattern_tracker(\"12a23\")",
+      "output": "2",
+      "hidden": true
+    },
+    {
+      "input": "pattern_tracker(\"112233\")",
+      "output": "2",
+      "hidden": true
+    },
+    {
+      "input": "pattern_tracker(\"1 2\")",
+      "output": "0",
+      "hidden": true
+    },
+    {
+      "input": "pattern_tracker(\"0123456789\")",
+      "output": "9",
+      "hidden": true
+    },
+    {
+      "input": "pattern_tracker(\"376544085x469534x800607859\")",
+      "output": "2",
+      "hidden": true
+    },
+    {
+      "input": "pattern_tracker(\"224953732\")",
+      "output": "0",
+      "hidden": true
+    },
+    {
+      "input": "pattern_tracker(\"880525660484z063x1280z7x1094755\")",
+      "output": "2",
+      "hidden": true
+    },
+    {
+      "input": "pattern_tracker(\"939295\")",
+      "output": "0",
+      "hidden": true
+    },
+    {
+      "input": "pattern_tracker(\"3236519888843387709x319\")",
+      "output": "1",
+      "hidden": true
+    },
+    {
+      "input": "pattern_tracker(\"43168y953z842440186x3z5165y087265118\")",
+      "output": "1",
+      "hidden": true
+    },
+    {
+      "input": "pattern_tracker(\"4425129098895x99362\")",
+      "output": "2",
+      "hidden": true
+    },
+    {
+      "input": "pattern_tracker(\"22x8157\")",
+      "output": "0",
+      "hidden": true
+    },
+    {
+      "input": "pattern_tracker(\"9545x6382y74185781y\")",
+      "output": "2",
+      "hidden": true
+    },
+    {
+      "input": "pattern_tracker(\"1x4x\")",
+      "output": "0",
+      "hidden": true
+    },
+    {
+      "input": "pattern_tracker(\"332zx484755987xx51834278160\")",
+      "output": "2",
+      "hidden": true
+    },
+    {
+      "input": "pattern_tracker(\"566359031645587136764\")",
+      "output": "3",
+      "hidden": true
+    },
+    {
+      "input": "pattern_tracker(\"xx02018\")",
+      "output": "1",
+      "hidden": true
+    },
+    {
+      "input": "pattern_tracker(\"5\")",
+      "output": "0",
+      "hidden": true
+    },
+    {
+      "input": "pattern_tracker(\"9133489z942z3007548713892797844143068\")",
+      "output": "4",
+      "hidden": true
+    },
+    {
+      "input": "pattern_tracker(\"7814971745609719099y7360x642449\")",
+      "output": "3",
+      "hidden": true
+    },
+    {
+      "input": "pattern_tracker(\"922966y1296x5\")",
+      "output": "1",
+      "hidden": true
+    },
+    {
+      "input": "pattern_tracker(\"3x78x49zx63z6\")",
+      "output": "1",
+      "hidden": true
+    },
+    {
+      "input": "pattern_tracker(\"z4794\")",
+      "output": "0",
+      "hidden": true
+    },
+    {
+      "input": "pattern_tracker(\"z09552x6y016547x449670z9y\")",
+      "output": "2",
+      "hidden": true
+    },
+    {
+      "input": "pattern_tracker(\"101x78y6270958213040913x8501354918137\")",
+      "output": "3",
+      "hidden": true
+    },
+    {
+      "input": "pattern_tracker(\"57874717313x03548y78y9x9410116047\")",
+      "output": "3",
+      "hidden": true
+    },
+    {
+      "input": "pattern_tracker(\"6y54825348712z324x2414152282782689\")",
+      "output": "4",
+      "hidden": true
+    },
+    {
+      "input": "pattern_tracker(\"03243089993767292y3749173966\")",
+      "output": "2",
+      "hidden": true
+    },
+    {
+      "input": "pattern_tracker(\"882\")",
+      "output": "0",
+      "hidden": true
+    },
+    {
+      "input": "pattern_tracker(\"6972y71\")",
+      "output": "0",
+      "hidden": true
+    },
+    {
+      "input": "pattern_tracker(\"819845x7\")",
+      "output": "1",
+      "hidden": true
+    },
+    {
+      "input": "pattern_tracker(\"2578y9329343y8yx79x59907564\")",
+      "output": "3",
+      "hidden": true
+    },
+    {
+      "input": "pattern_tracker(\"77x\")",
+      "output": "0",
+      "hidden": true
+    },
+    {
+      "input": "pattern_tracker(\"054062910yy099070060\")",
+      "output": "0",
+      "hidden": true
+    },
+    {
+      "input": "pattern_tracker(\"424xz4371153624y1557239092850306329\")",
+      "output": "1",
+      "hidden": true
+    },
+    {
+      "input": "pattern_tracker(\"16518040501084332343989009y211z87387971\")",
+      "output": "4",
+      "hidden": true
+    },
+    {
+      "input": "pattern_tracker(\"091z639z36660y244z6852x0z7469\")",
+      "output": "0",
+      "hidden": true
+    },
+    {
+      "input": "pattern_tracker(\"0977664x614226z376x08y\")",
+      "output": "0",
+      "hidden": true
+    },
+    {
+      "input": "pattern_tracker(\"7004090\")",
+      "output": "0",
+      "hidden": true
+    },
+    {
+      "input": "pattern_tracker(\"4x5z31766162438446z543y23\")",
+      "output": "1",
+      "hidden": true
+    },
+    {
+      "input": "pattern_tracker(\"4518091244394y1568290183\")",
+      "output": "4",
+      "hidden": true
+    },
+    {
+      "input": "pattern_tracker(\"42837y162x131475723823206026437290\")",
+      "output": "2",
+      "hidden": true
+    },
+    {
+      "input": "pattern_tracker(\"451550599772219z70\")",
+      "output": "1",
+      "hidden": true
+    },
+    {
+      "input": "pattern_tracker(\"\")",
+      "output": "0",
+      "hidden": true
+    },
+    {
+      "input": "pattern_tracker(\"827729014471091x989753y0\")",
+      "output": "2",
+      "hidden": true
+    },
+    {
+      "input": "pattern_tracker(\"46z53xx9909480\")",
+      "output": "0",
+      "hidden": true
+    },
+    {
+      "input": "pattern_tracker(\"139019y641497\")",
+      "output": "1",
+      "hidden": true
+    },
+    {
+      "input": "pattern_tracker(\"x3964764813636739\")",
+      "output": "1",
+      "hidden": true
+    },
+    {
+      "input": "pattern_tracker(\"41696z7z699404z\")",
+      "output": "0",
+      "hidden": true
+    },
+    {
+      "input": "pattern_tracker(\"8x43455x747053853\")",
+      "output": "2",
+      "hidden": true
+    },
+    {
+      "input": "pattern_tracker(\"4311388642136707600816882\")",
+      "output": "1",
+      "hidden": true
+    },
+    {
+      "input": "pattern_tracker(\"9080074269412523921709367\")",
+      "output": "3",
+      "hidden": true
+    }
+  ],
+  "anagram": [
+    {
+      "input": "anagram(\"\", \"\")",
+      "output": "True",
+      "hidden": true
+    },
+    {
+      "input": "anagram(\"aa\", \"a\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "anagram(\"Dormitory\", \"Dirty Room\")",
+      "output": "True",
+      "hidden": true
+    },
+    {
+      "input": "anagram(\"a A\", \"aa\")",
+      "output": "True",
+      "hidden": true
+    },
+    {
+      "input": "anagram(\"abc\", \"abC\")",
+      "output": "True",
+      "hidden": true
+    },
+    {
+      "input": "anagram(\"a  BBa \", \" aBB  a\")",
+      "output": "True",
+      "hidden": true
+    },
+    {
+      "input": "anagram(\"AAba  BBa\", \"bab B\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "anagram(\"abB Ba b Aa\", \"b\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "anagram(\"bAbBBaB\", \"BaBBbAb\")",
+      "output": "True",
+      "hidden": true
+    },
+    {
+      "input": "anagram(\" BABAa \", \"AbBBAA Aa\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "anagram(\"bbBABa a \", \" \")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "anagram(\"a\", \"a\")",
+      "output": "True",
+      "hidden": true
+    },
+    {
+      "input": "anagram(\"  aAab \", \"  ab  bAa\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "anagram(\" AAabAbab\", \"AAa\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "anagram(\"b AbaaB B\", \"B BaabA b\")",
+      "output": "True",
+      "hidden": true
+    },
+    {
+      "input": "anagram(\"b\", \"BAA\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "anagram(\"aaBB bbbB\", \" B AbAabBAb\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "anagram(\" ABaa  \", \"  aaBA \")",
+      "output": "True",
+      "hidden": true
+    },
+    {
+      "input": "anagram(\"AbABa b\", \"ABBAbb  bb bB\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "anagram(\"aa ba\", \" A Bb\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "anagram(\"aaAbbbA\", \"AbbbAaa\")",
+      "output": "True",
+      "hidden": true
+    },
+    {
+      "input": "anagram(\"bbAAbaaaBBa\", \"aAaB ABbA\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "anagram(\"a ABAaAab\", \" \")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "anagram(\"Aba AB \", \" BA abA\")",
+      "output": "True",
+      "hidden": true
+    },
+    {
+      "input": "anagram(\"bAbBAbbBbbBaA\", \"BbAb  a\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "anagram(\"b\", \" A Aaaa\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "anagram(\"aB Ba\", \"aB Ba\")",
+      "output": "True",
+      "hidden": true
+    },
+    {
+      "input": "anagram(\"Aa AABBb \", \" BBBbAaaAAaA \")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "anagram(\" BbAbaabaaB B\", \"bb a ba B\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "anagram(\"bAa\", \"aAb\")",
+      "output": "True",
+      "hidden": true
+    },
+    {
+      "input": "anagram(\" AbAaBb AbbAB\", \"b\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "anagram(\"aaAAbAA\", \"AabAaAaa \")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "anagram(\"bb Aa\", \"aA bb\")",
+      "output": "True",
+      "hidden": true
+    },
+    {
+      "input": "anagram(\"aABaa aaa\", \" B A AAaBBa b\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "anagram(\"bbb aBBba\", \"aABa \")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "anagram(\" b \", \" b \")",
+      "output": "True",
+      "hidden": true
+    },
+    {
+      "input": "anagram(\" ABAa Ab \", \"Ba Baaa\")",
+      "output": "True",
+      "hidden": true
+    },
+    {
+      "input": "anagram(\"aaBBABAba\", \"abbBBaAAB\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "anagram(\"ab BBaA\", \"AaBB ba\")",
+      "output": "True",
+      "hidden": true
+    },
+    {
+      "input": "anagram(\"a A\", \"B BAaaA\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "anagram(\" BaAB aB bB\", \"BAAaAAbbB b\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "anagram(\"Abba   \", \"   abbA\")",
+      "output": "True",
+      "hidden": true
+    },
+    {
+      "input": "anagram(\" baBBBbaBbB\", \"b\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "anagram(\"A\", \"bB \")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "anagram(\"ABb\", \"bBA\")",
+      "output": "True",
+      "hidden": true
+    },
+    {
+      "input": "anagram(\" b aB bbA\", \" aBBB AB   \")",
+      "output": "True",
+      "hidden": true
+    },
+    {
+      "input": "anagram(\"  b BaAAbab\", \"baAba\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "anagram(\"b\", \"b\")",
+      "output": "True",
+      "hidden": true
+    },
+    {
+      "input": "anagram(\"bBb\", \" a Aa\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "anagram(\" bb BaBaa\", \"BAA bAB\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "anagram(\"A\", \"A\")",
+      "output": "True",
+      "hidden": true
+    },
+    {
+      "input": "anagram(\" AaabAA\", \"A\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "anagram(\" aB B\", \"a Aab aAb Bab\")",
+      "output": "False",
+      "hidden": true
+    }
+  ],
+  "shadow_merge": [
+    {
+      "input": "shadow_merge([], [])",
+      "output": "[]",
+      "hidden": true
+    },
+    {
+      "input": "shadow_merge([1,1], [1,1])",
+      "output": "[1,1,1,1]",
+      "hidden": true
+    },
+    {
+      "input": "shadow_merge([-4,-1], [-5,0])",
+      "output": "[-5,-4,-1,0]",
+      "hidden": true
+    },
+    {
+      "input": "shadow_merge([], [1,2])",
+      "output": "[1,2]",
+      "hidden": true
+    },
+    {
+      "input": "shadow_merge([-4,15], [-15,-12,-6,-5,5,9,13,13])",
+      "output": "[-15,-12,-6,-5,-4,5,9,13,13,15]",
+      "hidden": true
+    },
+    {
+      "input": "shadow_merge([10,15], [-15,-15,-15,-15,-12,-11,-9,-8,2,8,13,13,13])",
+      "output": "[-15,-15,-15,-15,-12,-11,-9,-8,2,8,10,13,13,13,15]",
+      "hidden": true
+    },
+    {
+      "input": "shadow_merge([-11,-11,-9,-9,-6,-5,-2,-2,2,7,7,11,13], [])",
+      "output": "[-11,-11,-9,-9,-6,-5,-2,-2,2,7,7,11,13]",
+      "hidden": true
+    },
+    {
+      "input": "shadow_merge([-14,-13,-11,-11,-5,-4,1,3,4,4,5,13], [-4,1,2,5])",
+      "output": "[-14,-13,-11,-11,-5,-4,-4,1,1,2,3,4,4,5,5,13]",
+      "hidden": true
+    },
+    {
+      "input": "shadow_merge([-5,2,2,10], [-10,-9,-7,-7,-7,-6,-4,-2,0,3,10,11,12])",
+      "output": "[-10,-9,-7,-7,-7,-6,-5,-4,-2,0,2,2,3,10,10,11,12]",
+      "hidden": true
+    },
+    {
+      "input": "shadow_merge([-12,-11,-9,-7,0,0,7,11,11,13,13], [-11,-5,-3,0,0,6,6,9,10,11,11])",
+      "output": "[-12,-11,-11,-9,-7,-5,-3,0,0,0,0,6,6,7,9,10,11,11,11,11,13,13]",
+      "hidden": true
+    },
+    {
+      "input": "shadow_merge([-8,-8,-3,-3,-3,0,1,3,6,11,15], [-15,-13,-11,-9,-7,-4,-2,4,7,10,11,13])",
+      "output": "[-15,-13,-11,-9,-8,-8,-7,-4,-3,-3,-3,-2,0,1,3,4,6,7,10,11,11,13,15]",
+      "hidden": true
+    },
+    {
+      "input": "shadow_merge([-9,-6,-5,-2,-1,-1,1,5,6,7,9,11,13,13], [-14,-14,-9,-5,-3,0,5,5,6,9,10,14])",
+      "output": "[-14,-14,-9,-9,-6,-5,-5,-3,-2,-1,-1,0,1,5,5,5,6,6,7,9,9,10,11,13,13,14]",
+      "hidden": true
+    },
+    {
+      "input": "shadow_merge([-5,-3,-2,-2,-1,2,4,5,6,11,11,13,14,15], [-10,-9,-9,-3,9])",
+      "output": "[-10,-9,-9,-5,-3,-3,-2,-2,-1,2,4,5,6,9,11,11,13,14,15]",
+      "hidden": true
+    },
+    {
+      "input": "shadow_merge([-12,-7,-2,3,7,9,14,15], [-11,-5,-1,8,9,10,15])",
+      "output": "[-12,-11,-7,-5,-2,-1,3,7,8,9,9,10,14,15,15]",
+      "hidden": true
+    },
+    {
+      "input": "shadow_merge([-13,-10,-10,-8,-4,0,7,9], [11,15])",
+      "output": "[-13,-10,-10,-8,-4,0,7,9,11,15]",
+      "hidden": true
+    },
+    {
+      "input": "shadow_merge([], [-8,-1,2,4,4,4,14])",
+      "output": "[-8,-1,2,4,4,4,14]",
+      "hidden": true
+    },
+    {
+      "input": "shadow_merge([-15,-15,-5,-2,0,3,4,6,14,15], [-14,-14,-11,-3,11])",
+      "output": "[-15,-15,-14,-14,-11,-5,-3,-2,0,3,4,6,11,14,15]",
+      "hidden": true
+    },
+    {
+      "input": "shadow_merge([-13,-8,-7,-5,-4,1,5,6,10,14,14], [-13,-11])",
+      "output": "[-13,-13,-11,-8,-7,-5,-4,1,5,6,10,14,14]",
+      "hidden": true
+    },
+    {
+      "input": "shadow_merge([-9,-9,-7,-7,-4,-3,-1,5,8,8,10], [-12,5,8,9])",
+      "output": "[-12,-9,-9,-7,-7,-4,-3,-1,5,5,8,8,8,9,10]",
+      "hidden": true
+    },
+    {
+      "input": "shadow_merge([6], [-12,-11,-8,-3,5,6,7,7,8,9,12,14,15])",
+      "output": "[-12,-11,-8,-3,5,6,6,7,7,8,9,12,14,15]",
+      "hidden": true
+    },
+    {
+      "input": "shadow_merge([-5,8,11,15], [-10,-9,1,6,13])",
+      "output": "[-10,-9,-5,1,6,8,11,13,15]",
+      "hidden": true
+    },
+    {
+      "input": "shadow_merge([-12,-5,-4,-2,-1,1,3,4,7,7,8,11,11], [-11,-6,-5,-3,0,2,6,7,7,11,12])",
+      "output": "[-12,-11,-6,-5,-5,-4,-3,-2,-1,0,1,2,3,4,6,7,7,7,7,8,11,11,11,12]",
+      "hidden": true
+    },
+    {
+      "input": "shadow_merge([], [-14,-7,-1,1,8,8,8,8,14])",
+      "output": "[-14,-7,-1,1,8,8,8,8,14]",
+      "hidden": true
+    },
+    {
+      "input": "shadow_merge([-5,11,15], [-15,-10,-4,8,9,11])",
+      "output": "[-15,-10,-5,-4,8,9,11,11,15]",
+      "hidden": true
+    },
+    {
+      "input": "shadow_merge([-15,-14,-11,-11,-8,-5,-4,-3,-2,2,4,10,15], [-13,-10,-10,-5,-3,-2,-1,3,4,4,9,13,13])",
+      "output": "[-15,-14,-13,-11,-11,-10,-10,-8,-5,-5,-4,-3,-3,-2,-2,-1,2,3,4,4,4,9,10,13,13,15]",
+      "hidden": true
+    },
+    {
+      "input": "shadow_merge([-6,-5,-1,9], [-15,-13,-13,-10,-9,-5,-5,-3,-2,-1,2,8,15])",
+      "output": "[-15,-13,-13,-10,-9,-6,-5,-5,-5,-3,-2,-1,-1,2,8,9,15]",
+      "hidden": true
+    },
+    {
+      "input": "shadow_merge([-6,-1,4,14], [-14,-10,10])",
+      "output": "[-14,-10,-6,-1,4,10,14]",
+      "hidden": true
+    },
+    {
+      "input": "shadow_merge([-2,-1,5,12], [-14,-12,-11,-9,0,1,5,10,14,15])",
+      "output": "[-14,-12,-11,-9,-2,-1,0,1,5,5,10,12,14,15]",
+      "hidden": true
+    },
+    {
+      "input": "shadow_merge([-11,-4,5,7,8,14], [-15,-14,3,14,14,14])",
+      "output": "[-15,-14,-11,-4,3,5,7,8,14,14,14,14]",
+      "hidden": true
+    },
+    {
+      "input": "shadow_merge([-13,-12,-10,-10,-8,-1,-1,3,3,6,7,12,13,13], [-14,-11,1,3,7])",
+      "output": "[-14,-13,-12,-11,-10,-10,-8,-1,-1,1,3,3,3,6,7,7,12,13,13]",
+      "hidden": true
+    },
+    {
+      "input": "shadow_merge([-12,-7,-5,-4,9,10,10], [-4,10])",
+      "output": "[-12,-7,-5,-4,-4,9,10,10,10]",
+      "hidden": true
+    },
+    {
+      "input": "shadow_merge([2,14], [13,14])",
+      "output": "[2,13,14,14]",
+      "hidden": true
+    },
+    {
+      "input": "shadow_merge([-14,-6,-5,-2,2,7], [-14,-14,-13,-4,-2,0,2,3,3,12,13])",
+      "output": "[-14,-14,-14,-13,-6,-5,-4,-2,-2,0,2,2,3,3,7,12,13]",
+      "hidden": true
+    },
+    {
+      "input": "shadow_merge([-11,-10,-9,-5,-4,-3,-2,1,4,10,12,15,15], [-15,-14,-14,-12,-3,-3,-2,3,6,9,10,11,15])",
+      "output": "[-15,-14,-14,-12,-11,-10,-9,-5,-4,-3,-3,-3,-2,-2,1,3,4,6,9,10,10,11,12,15,15,15]",
+      "hidden": true
+    },
+    {
+      "input": "shadow_merge([-14,-13,-10,-6,-5,-2,0,1,1,2,3,9,12,14], [-12,-6,-5,-3,0,0,1,6,7,9,14])",
+      "output": "[-14,-13,-12,-10,-6,-6,-5,-5,-3,-2,0,0,0,1,1,1,2,3,6,7,9,9,12,14,14]",
+      "hidden": true
+    },
+    {
+      "input": "shadow_merge([-9,-9,-1,0,2,6,7,10,10,11], [-13,-12,-10,-8,-7,-3,-1,-1,2,6,10,11,12,14])",
+      "output": "[-13,-12,-10,-9,-9,-8,-7,-3,-1,-1,-1,0,2,2,6,6,7,10,10,10,11,11,12,14]",
+      "hidden": true
+    },
+    {
+      "input": "shadow_merge([-11,-9,0,0,1,5], [3,8,14,15])",
+      "output": "[-11,-9,0,0,1,3,5,8,14,15]",
+      "hidden": true
+    },
+    {
+      "input": "shadow_merge([8], [-14,-8,1,2,6])",
+      "output": "[-14,-8,1,2,6,8]",
+      "hidden": true
+    },
+    {
+      "input": "shadow_merge([-14,-9,-8,-4,3,3,8,8,11,11,12], [-12,-9,-5,-5,2,4,5,9,13,13,14])",
+      "output": "[-14,-12,-9,-9,-8,-5,-5,-4,2,3,3,4,5,8,8,9,11,11,12,13,13,14]",
+      "hidden": true
+    },
+    {
+      "input": "shadow_merge([-14,-5], [-15,-10,-8,-2,1,3,3,4,5,14])",
+      "output": "[-15,-14,-10,-8,-5,-2,1,3,3,4,5,14]",
+      "hidden": true
+    },
+    {
+      "input": "shadow_merge([-13,-12,-11,-8,-7,-5,4,4,12,12], [-8,-6,-3,-2,2,3,4,10,11,11,11,13,13])",
+      "output": "[-13,-12,-11,-8,-8,-7,-6,-5,-3,-2,2,3,4,4,4,10,11,11,11,12,12,13,13]",
+      "hidden": true
+    },
+    {
+      "input": "shadow_merge([-13,13], [-13,-3,-1,2,3,3,5,12,15])",
+      "output": "[-13,-13,-3,-1,2,3,3,5,12,13,15]",
+      "hidden": true
+    },
+    {
+      "input": "shadow_merge([-12,-12,-11,-10,-9,-5,-3], [-11,-7,-1,1,3,9])",
+      "output": "[-12,-12,-11,-11,-10,-9,-7,-5,-3,-1,1,3,9]",
+      "hidden": true
+    },
+    {
+      "input": "shadow_merge([-13,-12,-11,-9,-8,-5,7,9], [-11,-6,-4,-2,3,6,6])",
+      "output": "[-13,-12,-11,-11,-9,-8,-6,-5,-4,-2,3,6,6,7,9]",
+      "hidden": true
+    },
+    {
+      "input": "shadow_merge([-14,-12,-6,-4,-3,-1,5,5,6,8,14,14], [-15,-7,-1,4,7,8,11,12,14])",
+      "output": "[-15,-14,-12,-7,-6,-4,-3,-1,-1,4,5,5,6,7,8,8,11,12,14,14,14]",
+      "hidden": true
+    },
+    {
+      "input": "shadow_merge([], [-3,9])",
+      "output": "[-3,9]",
+      "hidden": true
+    },
+    {
+      "input": "shadow_merge([-13,-9,-2,-2,0,4,7,14], [-14,-13,-10,-9,-6,-5,0,1,3,7,8,10])",
+      "output": "[-14,-13,-13,-10,-9,-9,-6,-5,-2,-2,0,0,1,3,4,7,7,8,10,14]",
+      "hidden": true
+    },
+    {
+      "input": "shadow_merge([-14,-9,-8,-7,-6,5,6], [-14,-7,-3,-2,3,3,5,9,14])",
+      "output": "[-14,-14,-9,-8,-7,-7,-6,-3,-2,3,3,5,5,6,9,14]",
+      "hidden": true
+    },
+    {
+      "input": "shadow_merge([-12,-10,-9,-7,-6,-3,2,7,7,8,8,10,14,15], [-8,-7,3,5,7,8,12,12,15])",
+      "output": "[-12,-10,-9,-8,-7,-7,-6,-3,2,3,5,7,7,7,8,8,8,10,12,12,14,15,15]",
+      "hidden": true
+    },
+    {
+      "input": "shadow_merge([-4,-4,-2,0,0,5,11], [-11,-5,-5,2,8,15])",
+      "output": "[-11,-5,-5,-4,-4,-2,0,0,2,5,8,11,15]",
+      "hidden": true
+    },
+    {
+      "input": "shadow_merge([-13,-13,-6,1,4,5,9,13], [-12,-12,-11,-3,-3,-2,1,6,8,10,14])",
+      "output": "[-13,-13,-12,-12,-11,-6,-3,-3,-2,1,1,4,5,6,8,9,10,13,14]",
+      "hidden": true
+    },
+    {
+      "input": "shadow_merge([-15,-10,-6,-4,2,5,9,14,15,15], [-13,-13,-8,-4,-1,5,5,9,11,14])",
+      "output": "[-15,-13,-13,-10,-8,-6,-4,-4,-1,2,5,5,5,9,9,11,14,14,15,15]",
+      "hidden": true
+    }
+  ],
+  "string_permutation_checker": [
+    {
+      "input": "string_permutation_checker(\"\", \"\")",
+      "output": "True",
+      "hidden": true
+    },
+    {
+      "input": "string_permutation_checker(\"Aa\", \"aa\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "string_permutation_checker(\"a \", \"a\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "string_permutation_checker(\"a!\", \"!a\")",
+      "output": "True",
+      "hidden": true
+    },
+    {
+      "input": "string_permutation_checker(\"aa\", \"a\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "string_permutation_checker(\"bab 3 ?!1!?!\", \"!?!1!? 3 bab\")",
+      "output": "True",
+      "hidden": true
+    },
+    {
+      "input": "string_permutation_checker(\"1!BaB!B!Ba1A\", \"2? ?ABA\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "string_permutation_checker(\"B BA121a?AbA\", \"23a1!\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "string_permutation_checker(\"1a?21A\", \"A12?a1\")",
+      "output": "True",
+      "hidden": true
+    },
+    {
+      "input": "string_permutation_checker(\"?212\", \"2\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "string_permutation_checker(\"bAB 1 BA\", \"A3 ?aBA121!3!\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "string_permutation_checker(\"bab b 1!3A3A\", \"A3A3!1 b bab\")",
+      "output": "True",
+      "hidden": true
+    },
+    {
+      "input": "string_permutation_checker(\"BaBAb!Ba1aba\", \"AB2Ba?!\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "string_permutation_checker(\"\", \" ?a1a?a\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "string_permutation_checker(\"1!32?a?2\", \"2?a?23!1\")",
+      "output": "True",
+      "hidden": true
+    },
+    {
+      "input": "string_permutation_checker(\"3!3 B!3 ba\", \"!?AbA\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "string_permutation_checker(\"1A\", \" B!3A\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "string_permutation_checker(\"?ABaBA3!12\", \"21!3ABaBA?\")",
+      "output": "True",
+      "hidden": true
+    },
+    {
+      "input": "string_permutation_checker(\"\", \" 1 1 bAB!\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "string_permutation_checker(\"ba3!1aB \", \" 3AB!? \")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "string_permutation_checker(\"\", \"\")",
+      "output": "True",
+      "hidden": true
+    },
+    {
+      "input": "string_permutation_checker(\"1a3a\", \"!1!b2323232\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "string_permutation_checker(\"?21 ?a\", \" 3 3!B B2B \")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "string_permutation_checker(\"?2b 323 \", \" 323 b2?\")",
+      "output": "True",
+      "hidden": true
+    },
+    {
+      "input": "string_permutation_checker(\"1 b2b \", \"aB ? b!1A\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "string_permutation_checker(\"?!?!\", \"a12\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "string_permutation_checker(\"12\", \"21\")",
+      "output": "True",
+      "hidden": true
+    },
+    {
+      "input": "string_permutation_checker(\"? ?2B!Ba\", \"2ba\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "string_permutation_checker(\"? 1A1aB baB2\", \"2\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "string_permutation_checker(\"b!? 32b!b!BA\", \"AB!b!b23 ?!b\")",
+      "output": "True",
+      "hidden": true
+    },
+    {
+      "input": "string_permutation_checker(\"1a3!Ba3!1 \", \"!bab!B!bAb23!\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "string_permutation_checker(\"baB 3AB2ba\", \" 1a3!ba12\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "string_permutation_checker(\"?2Ba3A\", \"A3aB2?\")",
+      "output": "True",
+      "hidden": true
+    },
+    {
+      "input": "string_permutation_checker(\"bA1!?A1a\", \"a?!32b!?A1!\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "string_permutation_checker(\"?!12b \", \" \")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "string_permutation_checker(\"B!b2\", \"2b!B\")",
+      "output": "True",
+      "hidden": true
+    },
+    {
+      "input": "string_permutation_checker(\"b \", \"A323 1a\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "string_permutation_checker(\"b 3A1!?A\", \" Ba\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "string_permutation_checker(\"Ba3A\", \"A3aB\")",
+      "output": "True",
+      "hidden": true
+    },
+    {
+      "input": "string_permutation_checker(\"?A?2?2\", \"23AbA3a?!bA\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "string_permutation_checker(\"1ABA1a? \", \"A3 b!1!1a?2\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "string_permutation_checker(\"bA?!\", \"!?Ab\")",
+      "output": "True",
+      "hidden": true
+    },
+    {
+      "input": "string_permutation_checker(\"3AB \", \" B!?2B \")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "string_permutation_checker(\"1ABa\", \"2B!?A\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "string_permutation_checker(\"? B 1a\", \"a1 B ?\")",
+      "output": "True",
+      "hidden": true
+    },
+    {
+      "input": "string_permutation_checker(\"B bab!?!b \", \"!1!\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "string_permutation_checker(\"12Ba\", \"a1a\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "string_permutation_checker(\"3!?A32B 1A\", \"A1 B23A?!3\")",
+      "output": "True",
+      "hidden": true
+    },
+    {
+      "input": "string_permutation_checker(\"bA?Ab2ba\", \" b!b2BA?2?a\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "string_permutation_checker(\"3A3A?a\", \"a\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "string_permutation_checker(\"1A\", \"A1\")",
+      "output": "True",
+      "hidden": true
+    },
+    {
+      "input": "string_permutation_checker(\"123!\", \" B2b b!3!b232\")",
+      "output": "False",
+      "hidden": true
+    },
+    {
+      "input": "string_permutation_checker(\"?2Ba12\", \"aBA3ABA3aBA?A\")",
+      "output": "False",
+      "hidden": true
+    }
+  ],
+  "string_sculptor": [
+    {
+      "input": "string_sculptor(\"\")",
+      "output": "\"\"",
+      "hidden": true
+    },
+    {
+      "input": "string_sculptor(\"hello world\")",
+      "output": "\"hElLo WoRlD\"",
+      "hidden": true
+    },
+    {
+      "input": "string_sculptor(\"abc123def\")",
+      "output": "\"aBc123DeF\"",
+      "hidden": true
+    },
+    {
+      "input": "string_sculptor(\"AB C D\")",
+      "output": "\"aB c D\"",
+      "hidden": true
+    },
+    {
+      "input": "string_sculptor(\" !A?B9C D\")",
+      "output": "\" !a?B9c D\"",
+      "hidden": true
+    },
+    {
+      "input": "string_sculptor(\"bab 3 ?!1!?!\")",
+      "output": "\"bAb 3 ?!1!?!\"",
+      "hidden": true
+    },
+    {
+      "input": "string_sculptor(\"1!BaB!B!Ba1A\")",
+      "output": "\"1!bAb!B!bA1a\"",
+      "hidden": true
+    },
+    {
+      "input": "string_sculptor(\"B BA121a?AbA\")",
+      "output": "\"b Ba121A?aBa\"",
+      "hidden": true
+    },
+    {
+      "input": "string_sculptor(\"1a?21A\")",
+      "output": "\"1a?21A\"",
+      "hidden": true
+    },
+    {
+      "input": "string_sculptor(\"?212\")",
+      "output": "\"?212\"",
+      "hidden": true
+    },
+    {
+      "input": "string_sculptor(\"bAB 1 BA\")",
+      "output": "\"bAb 1 Ba\"",
+      "hidden": true
+    },
+    {
+      "input": "string_sculptor(\"bab b 1!3A3A\")",
+      "output": "\"bAb B 1!3a3A\"",
+      "hidden": true
+    },
+    {
+      "input": "string_sculptor(\"BaBAb!Ba1aba\")",
+      "output": "\"bAbAb!Ba1AbA\"",
+      "hidden": true
+    },
+    {
+      "input": "string_sculptor(\"\")",
+      "output": "\"\"",
+      "hidden": true
+    },
+    {
+      "input": "string_sculptor(\"1!32?a?2\")",
+      "output": "\"1!32?a?2\"",
+      "hidden": true
+    },
+    {
+      "input": "string_sculptor(\"3!3 B!3 ba\")",
+      "output": "\"3!3 b!3 Ba\"",
+      "hidden": true
+    },
+    {
+      "input": "string_sculptor(\"1A\")",
+      "output": "\"1a\"",
+      "hidden": true
+    },
+    {
+      "input": "string_sculptor(\"?ABaBA3!12\")",
+      "output": "\"?aBaBa3!12\"",
+      "hidden": true
+    },
+    {
+      "input": "string_sculptor(\"\")",
+      "output": "\"\"",
+      "hidden": true
+    },
+    {
+      "input": "string_sculptor(\"ba3!1aB \")",
+      "output": "\"bA3!1aB \"",
+      "hidden": true
+    },
+    {
+      "input": "string_sculptor(\"\")",
+      "output": "\"\"",
+      "hidden": true
+    },
+    {
+      "input": "string_sculptor(\"1a3a\")",
+      "output": "\"1a3A\"",
+      "hidden": true
+    },
+    {
+      "input": "string_sculptor(\"?21 ?a\")",
+      "output": "\"?21 ?a\"",
+      "hidden": true
+    },
+    {
+      "input": "string_sculptor(\"?2b 323 \")",
+      "output": "\"?2b 323 \"",
+      "hidden": true
+    },
+    {
+      "input": "string_sculptor(\"1 b2b \")",
+      "output": "\"1 b2B \"",
+      "hidden": true
+    },
+    {
+      "input": "string_sculptor(\"?!?!\")",
+      "output": "\"?!?!\"",
+      "hidden": true
+    },
+    {
+      "input": "string_sculptor(\"12\")",
+      "output": "\"12\"",
+      "hidden": true
+    },
+    {
+      "input": "string_sculptor(\"? ?2B!Ba\")",
+      "output": "\"? ?2b!Ba\"",
+      "hidden": true
+    },
+    {
+      "input": "string_sculptor(\"? 1A1aB baB2\")",
+      "output": "\"? 1a1Ab BaB2\"",
+      "hidden": true
+    },
+    {
+      "input": "string_sculptor(\"b!? 32b!b!BA\")",
+      "output": "\"b!? 32B!b!Ba\"",
+      "hidden": true
+    },
+    {
+      "input": "string_sculptor(\"1a3!Ba3!1 \")",
+      "output": "\"1a3!Ba3!1 \"",
+      "hidden": true
+    },
+    {
+      "input": "string_sculptor(\"baB 3AB2ba\")",
+      "output": "\"bAb 3Ab2Ba\"",
+      "hidden": true
+    },
+    {
+      "input": "string_sculptor(\"?2Ba3A\")",
+      "output": "\"?2bA3a\"",
+      "hidden": true
+    },
+    {
+      "input": "string_sculptor(\"bA1!?A1a\")",
+      "output": "\"bA1!?a1A\"",
+      "hidden": true
+    },
+    {
+      "input": "string_sculptor(\"?!12b \")",
+      "output": "\"?!12b \"",
+      "hidden": true
+    },
+    {
+      "input": "string_sculptor(\"B!b2\")",
+      "output": "\"b!B2\"",
+      "hidden": true
+    },
+    {
+      "input": "string_sculptor(\"b \")",
+      "output": "\"b \"",
+      "hidden": true
+    },
+    {
+      "input": "string_sculptor(\"b 3A1!?A\")",
+      "output": "\"b 3A1!?a\"",
+      "hidden": true
+    },
+    {
+      "input": "string_sculptor(\"Ba3A\")",
+      "output": "\"bA3a\"",
+      "hidden": true
+    },
+    {
+      "input": "string_sculptor(\"?A?2?2\")",
+      "output": "\"?a?2?2\"",
+      "hidden": true
+    },
+    {
+      "input": "string_sculptor(\"1ABA1a? \")",
+      "output": "\"1aBa1A? \"",
+      "hidden": true
+    },
+    {
+      "input": "string_sculptor(\"bA?!\")",
+      "output": "\"bA?!\"",
+      "hidden": true
+    },
+    {
+      "input": "string_sculptor(\"3AB \")",
+      "output": "\"3aB \"",
+      "hidden": true
+    },
+    {
+      "input": "string_sculptor(\"1ABa\")",
+      "output": "\"1aBa\"",
+      "hidden": true
+    },
+    {
+      "input": "string_sculptor(\"? B 1a\")",
+      "output": "\"? b 1A\"",
+      "hidden": true
+    },
+    {
+      "input": "string_sculptor(\"B bab!?!b \")",
+      "output": "\"b BaB!?!b \"",
+      "hidden": true
+    },
+    {
+      "input": "string_sculptor(\"12Ba\")",
+      "output": "\"12bA\"",
+      "hidden": true
+    },
+    {
+      "input": "string_sculptor(\"3!?A32B 1A\")",
+      "output": "\"3!?a32B 1a\"",
+      "hidden": true
+    },
+    {
+      "input": "string_sculptor(\"bA?Ab2ba\")",
+      "output": "\"bA?aB2bA\"",
+      "hidden": true
+    },
+    {
+      "input": "string_sculptor(\"3A3A?a\")",
+      "output": "\"3a3A?a\"",
+      "hidden": true
+    },
+    {
+      "input": "string_sculptor(\"1A\")",
+      "output": "\"1a\"",
+      "hidden": true
+    },
+    {
+      "input": "string_sculptor(\"123!\")",
+      "output": "\"123!\"",
+      "hidden": true
+    },
+    {
+      "input": "string_sculptor(\"?2Ba12\")",
+      "output": "\"?2bA12\"",
+      "hidden": true
+    }
+  ],
+  "twist_sequence": [
+    {
+      "input": "twist_sequence([], 0)",
+      "output": "[]",
+      "hidden": true
+    },
+    {
+      "input": "twist_sequence([], 100)",
+      "output": "[]",
+      "hidden": true
+    },
+    {
+      "input": "twist_sequence([1], 999)",
+      "output": "[1]",
+      "hidden": true
+    },
+    {
+      "input": "twist_sequence([1,2,3], 0)",
+      "output": "[1,2,3]",
+      "hidden": true
+    },
+    {
+      "input": "twist_sequence([1,2,3], 3)",
+      "output": "[1,2,3]",
+      "hidden": true
+    },
+    {
+      "input": "twist_sequence([1,2,3], 100)",
+      "output": "[3,1,2]",
+      "hidden": true
+    },
+    {
+      "input": "twist_sequence([2], 81)",
+      "output": "[2]",
+      "hidden": true
+    },
+    {
+      "input": "twist_sequence([-4,3,-3], 26)",
+      "output": "[3,-3,-4]",
+      "hidden": true
+    },
+    {
+      "input": "twist_sequence([], 181)",
+      "output": "[]",
+      "hidden": true
+    },
+    {
+      "input": "twist_sequence([8,-6,-6,-15,3,-4,-15,14,8,-15,-9], 25)",
+      "output": "[8,-15,-9,8,-6,-6,-15,3,-4,-15,14]",
+      "hidden": true
+    },
+    {
+      "input": "twist_sequence([12,4,11,6,15,-15,4,-1,1,-1], 199)",
+      "output": "[4,11,6,15,-15,4,-1,1,-1,12]",
+      "hidden": true
+    },
+    {
+      "input": "twist_sequence([5], 117)",
+      "output": "[5]",
+      "hidden": true
+    },
+    {
+      "input": "twist_sequence([7,-4,3,2,-7,11,3,-13,8,8,6], 160)",
+      "output": "[11,3,-13,8,8,6,7,-4,3,2,-7]",
+      "hidden": true
+    },
+    {
+      "input": "twist_sequence([-4,-12,-10], 153)",
+      "output": "[-4,-12,-10]",
+      "hidden": true
+    },
+    {
+      "input": "twist_sequence([11,-8,-1,7], 7)",
+      "output": "[-8,-1,7,11]",
+      "hidden": true
+    },
+    {
+      "input": "twist_sequence([1,-2,-10,6,-6,-11,10,15,7,-12,10], 136)",
+      "output": "[15,7,-12,10,1,-2,-10,6,-6,-11,10]",
+      "hidden": true
+    },
+    {
+      "input": "twist_sequence([-10,8,2,7,-12,-6,-15,-15,-8,-14], 62)",
+      "output": "[-8,-14,-10,8,2,7,-12,-6,-15,-15]",
+      "hidden": true
+    },
+    {
+      "input": "twist_sequence([-15,10,-11,-14,6,-5,-3,-12,8,-7,-6], 104)",
+      "output": "[-3,-12,8,-7,-6,-15,10,-11,-14,6,-5]",
+      "hidden": true
+    },
+    {
+      "input": "twist_sequence([3,-1,-15,-1,2,-14,2], 58)",
+      "output": "[-14,2,3,-1,-15,-1,2]",
+      "hidden": true
+    },
+    {
+      "input": "twist_sequence([-8,-12,5,-4,-15], 136)",
+      "output": "[-15,-8,-12,5,-4]",
+      "hidden": true
+    },
+    {
+      "input": "twist_sequence([13,14,-7,1,12], 64)",
+      "output": "[14,-7,1,12,13]",
+      "hidden": true
+    },
+    {
+      "input": "twist_sequence([6], 97)",
+      "output": "[6]",
+      "hidden": true
+    },
+    {
+      "input": "twist_sequence([10,7,5,9,-8,-2,5,-8,2,-12], 111)",
+      "output": "[-12,10,7,5,9,-8,-2,5,-8,2]",
+      "hidden": true
+    },
+    {
+      "input": "twist_sequence([-3,0,12], 197)",
+      "output": "[0,12,-3]",
+      "hidden": true
+    },
+    {
+      "input": "twist_sequence([7,-12,-5,13,7,-4,-12,-5,-6,-11,8,12,-15], 46)",
+      "output": "[-12,-5,-6,-11,8,12,-15,7,-12,-5,13,7,-4]",
+      "hidden": true
+    },
+    {
+      "input": "twist_sequence([-2,-4,7,11], 65)",
+      "output": "[11,-2,-4,7]",
+      "hidden": true
+    },
+    {
+      "input": "twist_sequence([-7,-3,5,-12,-6,-4,3,1,2,7,0], 45)",
+      "output": "[0,-7,-3,5,-12,-6,-4,3,1,2,7]",
+      "hidden": true
+    },
+    {
+      "input": "twist_sequence([-13,14,-5,2,-15,3,-3,6,11,-8,9,4,-13,9], 139)",
+      "output": "[14,-5,2,-15,3,-3,6,11,-8,9,4,-13,9,-13]",
+      "hidden": true
+    },
+    {
+      "input": "twist_sequence([-15,5,-14,2,10,0,0,-14], 29)",
+      "output": "[2,10,0,0,-14,-15,5,-14]",
+      "hidden": true
+    },
+    {
+      "input": "twist_sequence([8,-3,9,8,7,15,-13,11,12,6,13,-12,-14,-8], 136)",
+      "output": "[7,15,-13,11,12,6,13,-12,-14,-8,8,-3,9,8]",
+      "hidden": true
+    },
+    {
+      "input": "twist_sequence([-9,-11], 22)",
+      "output": "[-9,-11]",
+      "hidden": true
+    },
+    {
+      "input": "twist_sequence([-13,-15,-14,-4], 1)",
+      "output": "[-4,-13,-15,-14]",
+      "hidden": true
+    },
+    {
+      "input": "twist_sequence([7,-9,4,-2,-1,8,-14,5,-14,-14,15,4,15,13], 171)",
+      "output": "[4,15,13,7,-9,4,-2,-1,8,-14,5,-14,-14,15]",
+      "hidden": true
+    },
+    {
+      "input": "twist_sequence([12,1,2,0,-3,-14,6,0,13], 13)",
+      "output": "[-14,6,0,13,12,1,2,0,-3]",
+      "hidden": true
+    },
+    {
+      "input": "twist_sequence([-5,4], 85)",
+      "output": "[4,-5]",
+      "hidden": true
+    },
+    {
+      "input": "twist_sequence([-5,-7,5], 183)",
+      "output": "[-5,-7,5]",
+      "hidden": true
+    },
+    {
+      "input": "twist_sequence([-1,11,3,2,2,-10,4,-6,-9], 74)",
+      "output": "[-6,-9,-1,11,3,2,2,-10,4]",
+      "hidden": true
+    },
+    {
+      "input": "twist_sequence([-1,-8], 24)",
+      "output": "[-1,-8]",
+      "hidden": true
+    },
+    {
+      "input": "twist_sequence([-14,6,-7,-6,5,12,-5,-6,-8,-13,-12,-7,4,-1], 68)",
+      "output": "[-7,-6,5,12,-5,-6,-8,-13,-12,-7,4,-1,-14,6]",
+      "hidden": true
+    },
+    {
+      "input": "twist_sequence([2], 165)",
+      "output": "[2]",
+      "hidden": true
+    },
+    {
+      "input": "twist_sequence([6,9,1,4,-5,-5,-15], 179)",
+      "output": "[4,-5,-5,-15,6,9,1]",
+      "hidden": true
+    },
+    {
+      "input": "twist_sequence([3,-10,-6,12,8,14,10,0,-12,-5,-15,-7], 80)",
+      "output": "[8,14,10,0,-12,-5,-15,-7,3,-10,-6,12]",
+      "hidden": true
+    },
+    {
+      "input": "twist_sequence([-13,7,1,-1,12], 64)",
+      "output": "[7,1,-1,12,-13]",
+      "hidden": true
+    },
+    {
+      "input": "twist_sequence([1,0,2], 44)",
+      "output": "[0,2,1]",
+      "hidden": true
+    },
+    {
+      "input": "twist_sequence([-15,-1,14,9,-8,8,6], 138)",
+      "output": "[14,9,-8,8,6,-15,-1]",
+      "hidden": true
+    },
+    {
+      "input": "twist_sequence([-5,11,-12,-13,-10,-4,0,-15,7], 128)",
+      "output": "[-15,7,-5,11,-12,-13,-10,-4,0]",
+      "hidden": true
+    },
+    {
+      "input": "twist_sequence([11,14,-10,0,-13,15,-15,6,-3,-1,-11,-8,-14,11], 51)",
+      "output": "[15,-15,6,-3,-1,-11,-8,-14,11,11,14,-10,0,-13]",
+      "hidden": true
+    },
+    {
+      "input": "twist_sequence([-13,-4,-7,2], 64)",
+      "output": "[-13,-4,-7,2]",
+      "hidden": true
+    },
+    {
+      "input": "twist_sequence([8,13,4,14,4,2,12,12,4,13,0], 23)",
+      "output": "[0,8,13,4,14,4,2,12,12,4,13]",
+      "hidden": true
+    },
+    {
+      "input": "twist_sequence([-7,0,-10,-11,-12,6,-11,-2], 170)",
+      "output": "[-11,-2,-7,0,-10,-11,-12,6]",
+      "hidden": true
+    },
+    {
+      "input": "twist_sequence([3,-15,7,8,-5,-13,-9,5,-12,14,-13], 184)",
+      "output": "[8,-5,-13,-9,5,-12,14,-13,3,-15,7]",
+      "hidden": true
+    },
+    {
+      "input": "twist_sequence([11,-12,-4,15,-5,11,-2,-6], 125)",
+      "output": "[15,-5,11,-2,-6,11,-12,-4]",
+      "hidden": true
+    },
+    {
+      "input": "twist_sequence([14,0,-7,8,5,-13,-12,7,4,14,-3,-4,2], 90)",
+      "output": "[0,-7,8,5,-13,-12,7,4,14,-3,-4,2,14]",
+      "hidden": true
+    },
+    {
+      "input": "twist_sequence([7,-1,3], 33)",
+      "output": "[7,-1,3]",
+      "hidden": true
+    }
+  ],
+  "whisper_cipher": [
+    {
+      "input": "whisper_cipher(\"\", 1)",
+      "output": "\"\"",
+      "hidden": true
+    },
+    {
+      "input": "whisper_cipher(\"ZzAa!?\", 1)",
+      "output": "\"AaBb!?\"",
+      "hidden": true
+    },
+    {
+      "input": "whisper_cipher(\"Aa\", -1)",
+      "output": "\"Zz\"",
+      "hidden": true
+    },
+    {
+      "input": "whisper_cipher(\"Hello!\", 52)",
+      "output": "\"Hello!\"",
+      "hidden": true
+    },
+    {
+      "input": "whisper_cipher(\"xyz\", -55)",
+      "output": "\"uvw\"",
+      "hidden": true
+    },
+    {
+      "input": "whisper_cipher(\"1a 0z0ZBZaYb\", -193)",
+      "output": "\"1p 0o0OQOpNq\"",
+      "hidden": true
+    },
+    {
+      "input": "whisper_cipher(\"9ZAYaZ0YA\", 178)",
+      "output": "\"9VWUwV0UW\"",
+      "hidden": true
+    },
+    {
+      "input": "whisper_cipher(\"Y0zbZbz0\", 67)",
+      "output": "\"N0oqOqo0\"",
+      "hidden": true
+    },
+    {
+      "input": "whisper_cipher(\"Z?!0\", -169)",
+      "output": "\"M?!0\"",
+      "hidden": true
+    },
+    {
+      "input": "whisper_cipher(\"yaY9\", -65)",
+      "output": "\"lnL9\"",
+      "hidden": true
+    },
+    {
+      "input": "whisper_cipher(\" AY0!b10 ? b\", 49)",
+      "output": "\" XV0!y10 ? y\"",
+      "hidden": true
+    },
+    {
+      "input": "whisper_cipher(\"a 91azB!aZB\", -26)",
+      "output": "\"a 91azB!aZB\"",
+      "hidden": true
+    },
+    {
+      "input": "whisper_cipher(\"!0!A1bY?Y9z0\", 25)",
+      "output": "\"!0!Z1aX?X9y0\"",
+      "hidden": true
+    },
+    {
+      "input": "whisper_cipher(\"!bZ0y0Zby?\", 197)",
+      "output": "\"!qO0n0Oqn?\"",
+      "hidden": true
+    },
+    {
+      "input": "whisper_cipher(\"AYB!B!bz9\", -25)",
+      "output": "\"BZC!C!ca9\"",
+      "hidden": true
+    },
+    {
+      "input": "whisper_cipher(\"?!9Ya1?\", 170)",
+      "output": "\"?!9Mo1?\"",
+      "hidden": true
+    },
+    {
+      "input": "whisper_cipher(\"0ZaYBYb\", 109)",
+      "output": "\"0EfDGDg\"",
+      "hidden": true
+    },
+    {
+      "input": "whisper_cipher(\"0zb\", -128)",
+      "output": "\"0bd\"",
+      "hidden": true
+    },
+    {
+      "input": "whisper_cipher(\"9Zby?yaYA 9 ?\", -6)",
+      "output": "\"9Tvs?suSU 9 ?\"",
+      "hidden": true
+    },
+    {
+      "input": "whisper_cipher(\"a ?!0YB!?1a\", 130)",
+      "output": "\"a ?!0YB!?1a\"",
+      "hidden": true
+    },
+    {
+      "input": "whisper_cipher(\"yayb1B\", -42)",
+      "output": "\"ikil1L\"",
+      "hidden": true
+    },
+    {
+      "input": "whisper_cipher(\"\", -163)",
+      "output": "\"\"",
+      "hidden": true
+    },
+    {
+      "input": "whisper_cipher(\" aYbzB\", 156)",
+      "output": "\" aYbzB\"",
+      "hidden": true
+    },
+    {
+      "input": "whisper_cipher(\"B\", 92)",
+      "output": "\"P\"",
+      "hidden": true
+    },
+    {
+      "input": "whisper_cipher(\"Za\", 81)",
+      "output": "\"Cd\"",
+      "hidden": true
+    },
+    {
+      "input": "whisper_cipher(\"\", -1)",
+      "output": "\"\"",
+      "hidden": true
+    },
+    {
+      "input": "whisper_cipher(\"ya1?\", -37)",
+      "output": "\"np1?\"",
+      "hidden": true
+    },
+    {
+      "input": "whisper_cipher(\"!?!01?\", -186)",
+      "output": "\"!?!01?\"",
+      "hidden": true
+    },
+    {
+      "input": "whisper_cipher(\"BZ0zbYa 0y?ZB\", -141)",
+      "output": "\"QO0oqNp 0n?OQ\"",
+      "hidden": true
+    },
+    {
+      "input": "whisper_cipher(\"0za!Ay9zaYB\", -115)",
+      "output": "\"0op!Pn9opNQ\"",
+      "hidden": true
+    },
+    {
+      "input": "whisper_cipher(\"YBYaZA!9 0\", 153)",
+      "output": "\"VYVxWX!9 0\"",
+      "hidden": true
+    },
+    {
+      "input": "whisper_cipher(\"\", 151)",
+      "output": "\"\"",
+      "hidden": true
+    },
+    {
+      "input": "whisper_cipher(\"!? bz9z? A B\", 159)",
+      "output": "\"!? ec9c? D E\"",
+      "hidden": true
+    },
+    {
+      "input": "whisper_cipher(\" B!A\", 90)",
+      "output": "\" N!M\"",
+      "hidden": true
+    },
+    {
+      "input": "whisper_cipher(\"YaZ9Y91B\", -179)",
+      "output": "\"BdC9B91E\"",
+      "hidden": true
+    },
+    {
+      "input": "whisper_cipher(\"Ay?!BZby0\", 94)",
+      "output": "\"Qo?!RPro0\"",
+      "hidden": true
+    },
+    {
+      "input": "whisper_cipher(\"BZB19z0Ya1A!b\", -79)",
+      "output": "\"AYA19y0Xz1Z!a\"",
+      "hidden": true
+    },
+    {
+      "input": "whisper_cipher(\"9zB!b 9\", 75)",
+      "output": "\"9wY!y 9\"",
+      "hidden": true
+    },
+    {
+      "input": "whisper_cipher(\"1?Z?\", 99)",
+      "output": "\"1?U?\"",
+      "hidden": true
+    },
+    {
+      "input": "whisper_cipher(\"zAza\", -196)",
+      "output": "\"lMlm\"",
+      "hidden": true
+    },
+    {
+      "input": "whisper_cipher(\"a19\", -190)",
+      "output": "\"s19\"",
+      "hidden": true
+    },
+    {
+      "input": "whisper_cipher(\"0\", -7)",
+      "output": "\"0\"",
+      "hidden": true
+    },
+    {
+      "input": "whisper_cipher(\"byb ?\", -72)",
+      "output": "\"heh ?\"",
+      "hidden": true
+    },
+    {
+      "input": "whisper_cipher(\"b ?z?y9\", 136)",
+      "output": "\"h ?f?e9\"",
+      "hidden": true
+    },
+    {
+      "input": "whisper_cipher(\"aYAy9!9Zaz?Z0\", 27)",
+      "output": "\"bZBz9!9Aba?A0\"",
+      "hidden": true
+    },
+    {
+      "input": "whisper_cipher(\"z919zAYA\", 117)",
+      "output": "\"m919mNLN\"",
+      "hidden": true
+    },
+    {
+      "input": "whisper_cipher(\"bZ?\", 149)",
+      "output": "\"uS?\"",
+      "hidden": true
+    },
+    {
+      "input": "whisper_cipher(\"Y9Ya10Za\", -6)",
+      "output": "\"S9Su10Tu\"",
+      "hidden": true
+    },
+    {
+      "input": "whisper_cipher(\"0Y?\", -26)",
+      "output": "\"0Y?\"",
+      "hidden": true
+    },
+    {
+      "input": "whisper_cipher(\"A1ayb 9\", 86)",
+      "output": "\"I1igj 9\"",
+      "hidden": true
+    },
+    {
+      "input": "whisper_cipher(\"ZA\", -112)",
+      "output": "\"RS\"",
+      "hidden": true
+    },
+    {
+      "input": "whisper_cipher(\"B1ByA!AZ0 bYa\", 188)",
+      "output": "\"H1HeG!GF0 hEg\"",
+      "hidden": true
+    },
+    {
+      "input": "whisper_cipher(\"\", -30)",
+      "output": "\"\"",
+      "hidden": true
+    }
+  ],
+  "cryptic_sorter_xornic": [
+    {
+      "input": "cryptic_sorter([])",
+      "output": "[]",
+      "hidden": true
+    },
+    {
+      "input": "cryptic_sorter([\"aaa\",\"AAA\",\"bbb\",\"BBB\"])",
+      "output": "[\"AAA\",\"aaa\",\"BBB\",\"bbb\"]",
+      "hidden": true
+    },
+    {
+      "input": "cryptic_sorter([\"a\",\"A\",\"a\",\"A\"])",
+      "output": "[\"A\",\"A\",\"a\",\"a\"]",
+      "hidden": true
+    },
+    {
+      "input": "cryptic_sorter([\"!\",\"a\",\"1\",\"B\"])",
+      "output": "[\"!\",\"1\",\"a\",\"B\"]",
+      "hidden": true
+    },
+    {
+      "input": "cryptic_sorter([\"?a2\",\"b\",\"B1?\",\"2\",\"\",\"!\",\"1?a2\"])",
+      "output": "[\"\",\"!\",\"2\",\"b\",\"?a2\",\"B1?\",\"1?a2\"]",
+      "hidden": true
+    },
+    {
+      "input": "cryptic_sorter([\"?a\",\"Ab!B\",\"?\"])",
+      "output": "[\"?\",\"?a\",\"Ab!B\"]",
+      "hidden": true
+    },
+    {
+      "input": "cryptic_sorter([\"2A\"])",
+      "output": "[\"2A\"]",
+      "hidden": true
+    },
+    {
+      "input": "cryptic_sorter([\"b!B\",\"?\",\"\"])",
+      "output": "[\"\",\"?\",\"b!B\"]",
+      "hidden": true
+    },
+    {
+      "input": "cryptic_sorter([\"\"])",
+      "output": "[\"\"]",
+      "hidden": true
+    },
+    {
+      "input": "cryptic_sorter([\"?\",\"\",\"A\",\"!B1\",\"a2\",\"b!\",\"\"])",
+      "output": "[\"\",\"\",\"?\",\"A\",\"a2\",\"b!\",\"!B1\"]",
+      "hidden": true
+    },
+    {
+      "input": "cryptic_sorter([\"2Ab!\"])",
+      "output": "[\"2Ab!\"]",
+      "hidden": true
+    },
+    {
+      "input": "cryptic_sorter([\"2Ab!\",\"\",\"?a\",\"Ab!\",\"\",\"?\",\"2Ab\",\"B\",\"\"])",
+      "output": "[\"\",\"\",\"\",\"?\",\"B\",\"?a\",\"2Ab\",\"Ab!\",\"2Ab!\"]",
+      "hidden": true
+    },
+    {
+      "input": "cryptic_sorter([\"B1?a\",\"Ab!\",\"1?\",\"2Ab!\",\"1?\",\"2\",\"b!\",\"\",\"?a2A\"])",
+      "output": "[\"\",\"2\",\"1?\",\"1?\",\"b!\",\"Ab!\",\"2Ab!\",\"?a2A\",\"B1?a\"]",
+      "hidden": true
+    },
+    {
+      "input": "cryptic_sorter([\"B1?\",\"2Ab\",\"B1?\",\"2\",\"b!B1\",\"a2A\",\"!B\",\"?a\",\"Ab!B\"])",
+      "output": "[\"2\",\"!B\",\"?a\",\"2Ab\",\"a2A\",\"B1?\",\"B1?\",\"Ab!B\",\"b!B1\"]",
+      "hidden": true
+    },
+    {
+      "input": "cryptic_sorter([\"b!B\",\"\",\"a2A\",\"!\",\"1?a2\",\"\",\"!B\"])",
+      "output": "[\"\",\"\",\"!\",\"!B\",\"a2A\",\"b!B\",\"1?a2\"]",
+      "hidden": true
+    },
+    {
+      "input": "cryptic_sorter([\"?a2\",\"b!B1\",\"a2Ab\",\"B1?\",\"2Ab\",\"B1\",\"a2\"])",
+      "output": "[\"a2\",\"B1\",\"2Ab\",\"?a2\",\"B1?\",\"a2Ab\",\"b!B1\"]",
+      "hidden": true
+    },
+    {
+      "input": "cryptic_sorter([\"?a2\",\"b!B\",\"?a2\",\"b!B\",\"?a\",\"A\",\"!\"])",
+      "output": "[\"!\",\"A\",\"?a\",\"?a2\",\"?a2\",\"b!B\",\"b!B\"]",
+      "hidden": true
+    },
+    {
+      "input": "cryptic_sorter([\"\",\"\",\"b\",\"B\",\"\"])",
+      "output": "[\"\",\"\",\"\",\"B\",\"b\"]",
+      "hidden": true
+    },
+    {
+      "input": "cryptic_sorter([\"?a\",\"Ab!\",\"1?a\"])",
+      "output": "[\"?a\",\"1?a\",\"Ab!\"]",
+      "hidden": true
+    },
+    {
+      "input": "cryptic_sorter([\"b\",\"\",\"1\",\"\",\"2Ab!\",\"1?\",\"2A\",\"!\",\"1?a2\",\"b!B1\",\"a\"])",
+      "output": "[\"\",\"\",\"!\",\"1\",\"a\",\"b\",\"1?\",\"2A\",\"1?a2\",\"2Ab!\",\"b!B1\"]",
+      "hidden": true
+    },
+    {
+      "input": "cryptic_sorter([\"b!\",\"1?a\",\"Ab\"])",
+      "output": "[\"Ab\",\"b!\",\"1?a\"]",
+      "hidden": true
+    },
+    {
+      "input": "cryptic_sorter([\"b!B\",\"?a2A\",\"!B1?\",\"\",\"Ab!\",\"1?\",\"2Ab!\",\"\",\"?a2\",\"\",\"\"])",
+      "output": "[\"\",\"\",\"\",\"\",\"1?\",\"?a2\",\"Ab!\",\"b!B\",\"!B1?\",\"2Ab!\",\"?a2A\"]",
+      "hidden": true
+    },
+    {
+      "input": "cryptic_sorter([\"B1\",\"\",\"2A\",\"!B1\",\"a\"])",
+      "output": "[\"\",\"a\",\"2A\",\"B1\",\"!B1\"]",
+      "hidden": true
+    },
+    {
+      "input": "cryptic_sorter([\"\",\"1?a\",\"\",\"b!\",\"1?a2\"])",
+      "output": "[\"\",\"\",\"b!\",\"1?a\",\"1?a2\"]",
+      "hidden": true
+    },
+    {
+      "input": "cryptic_sorter([\"2Ab!\",\"\",\"?a\",\"\",\"b!B\",\"?a2A\",\"!\",\"1?a2\",\"b!B1\"])",
+      "output": "[\"\",\"\",\"!\",\"?a\",\"b!B\",\"1?a2\",\"2Ab!\",\"?a2A\",\"b!B1\"]",
+      "hidden": true
+    },
+    {
+      "input": "cryptic_sorter([\"b!B\",\"?a2A\",\"!B1?\"])",
+      "output": "[\"b!B\",\"!B1?\",\"?a2A\"]",
+      "hidden": true
+    },
+    {
+      "input": "cryptic_sorter([\"2A\",\"!B\",\"?a\",\"Ab!\",\"1?a\"])",
+      "output": "[\"!B\",\"2A\",\"?a\",\"1?a\",\"Ab!\"]",
+      "hidden": true
+    },
+    {
+      "input": "cryptic_sorter([\"B1?\"])",
+      "output": "[\"B1?\"]",
+      "hidden": true
+    },
+    {
+      "input": "cryptic_sorter([\"B1\",\"a2A\",\"!B\",\"?\",\"2Ab!\",\"1\",\"\",\"2A\",\"!\"])",
+      "output": "[\"\",\"!\",\"1\",\"?\",\"!B\",\"2A\",\"B1\",\"a2A\",\"2Ab!\"]",
+      "hidden": true
+    },
+    {
+      "input": "cryptic_sorter([\"\"])",
+      "output": "[\"\"]",
+      "hidden": true
+    },
+    {
+      "input": "cryptic_sorter([\"?a\",\"A\",\"!B1\",\"a2A\",\"\",\"B\",\"?a\"])",
+      "output": "[\"\",\"A\",\"B\",\"?a\",\"?a\",\"!B1\",\"a2A\"]",
+      "hidden": true
+    },
+    {
+      "input": "cryptic_sorter([\"\",\"A\",\"!B1\",\"a2\",\"b!B\",\"?a\",\"Ab\",\"B1?\",\"2Ab\"])",
+      "output": "[\"\",\"A\",\"?a\",\"a2\",\"Ab\",\"!B1\",\"2Ab\",\"b!B\",\"B1?\"]",
+      "hidden": true
+    },
+    {
+      "input": "cryptic_sorter([\"?a\",\"Ab!\",\"1?a\",\"Ab\",\"\",\"1?a\",\"Ab!B\"])",
+      "output": "[\"\",\"?a\",\"Ab\",\"1?a\",\"1?a\",\"Ab!\",\"Ab!B\"]",
+      "hidden": true
+    },
+    {
+      "input": "cryptic_sorter([\"b!\",\"1\",\"a\",\"A\",\"\",\"B1?\",\"2\"])",
+      "output": "[\"\",\"1\",\"2\",\"A\",\"a\",\"b!\",\"B1?\"]",
+      "hidden": true
+    },
+    {
+      "input": "cryptic_sorter([\"b!\",\"1?a\",\"\",\"b\",\"B1?a\",\"A\",\"\",\"B1?a\",\"A\",\"!\",\"1\"])",
+      "output": "[\"\",\"\",\"!\",\"1\",\"A\",\"A\",\"b\",\"b!\",\"1?a\",\"B1?a\",\"B1?a\"]",
+      "hidden": true
+    },
+    {
+      "input": "cryptic_sorter([\"\",\"a2\",\"b!B\",\"?\",\"2Ab!\",\"1\",\"a2A\"])",
+      "output": "[\"\",\"1\",\"?\",\"a2\",\"a2A\",\"b!B\",\"2Ab!\"]",
+      "hidden": true
+    },
+    {
+      "input": "cryptic_sorter([\"?a2\",\"\",\"\",\"\",\"1\",\"a2\",\"b\"])",
+      "output": "[\"\",\"\",\"\",\"1\",\"b\",\"a2\",\"?a2\"]",
+      "hidden": true
+    },
+    {
+      "input": "cryptic_sorter([\"?a2A\",\"!B1?\",\"\",\"Ab!\",\"\",\"?a2A\",\"!\",\"1?a\",\"Ab\",\"B\",\"?a\"])",
+      "output": "[\"\",\"\",\"!\",\"B\",\"?a\",\"Ab\",\"1?a\",\"Ab!\",\"!B1?\",\"?a2A\",\"?a2A\"]",
+      "hidden": true
+    },
+    {
+      "input": "cryptic_sorter([\"?\",\"\",\"Ab!\",\"1?a\",\"Ab\",\"B\",\"?a\",\"Ab\",\"B\",\"?\",\"2A\"])",
+      "output": "[\"\",\"?\",\"?\",\"B\",\"B\",\"2A\",\"?a\",\"Ab\",\"Ab\",\"1?a\",\"Ab!\"]",
+      "hidden": true
+    },
+    {
+      "input": "cryptic_sorter([\"\",\"\",\"?a\",\"Ab\",\"\"])",
+      "output": "[\"\",\"\",\"\",\"?a\",\"Ab\"]",
+      "hidden": true
+    },
+    {
+      "input": "cryptic_sorter([\"\",\"!B1\",\"a2\",\"b!\",\"1\",\"a\",\"A\"])",
+      "output": "[\"\",\"1\",\"A\",\"a\",\"a2\",\"b!\",\"!B1\"]",
+      "hidden": true
+    },
+    {
+      "input": "cryptic_sorter([\"2A\",\"!\",\"1\",\"a\",\"Ab!\"])",
+      "output": "[\"!\",\"1\",\"a\",\"2A\",\"Ab!\"]",
+      "hidden": true
+    },
+    {
+      "input": "cryptic_sorter([\"b!B1\",\"a\",\"Ab\",\"B\",\"?a2A\",\"!B\",\"?a\"])",
+      "output": "[\"a\",\"B\",\"!B\",\"?a\",\"Ab\",\"?a2A\",\"b!B1\"]",
+      "hidden": true
+    },
+    {
+      "input": "cryptic_sorter([\"b!B\",\"\",\"a2\",\"b!\",\"1?a\",\"Ab!\",\"1?\",\"2A\",\"\",\"B1?\",\"2Ab!\"])",
+      "output": "[\"\",\"\",\"1?\",\"2A\",\"a2\",\"b!\",\"1?a\",\"Ab!\",\"b!B\",\"B1?\",\"2Ab!\"]",
+      "hidden": true
+    },
+    {
+      "input": "cryptic_sorter([\"b!\",\"\",\"?\",\"2\",\"b!B1\",\"\",\"\"])",
+      "output": "[\"\",\"\",\"\",\"2\",\"?\",\"b!\",\"b!B1\"]",
+      "hidden": true
+    },
+    {
+      "input": "cryptic_sorter([\"2A\",\"!B1?\",\"2\",\"b!B1\",\"a\",\"\",\"\",\"!B1?\",\"2\"])",
+      "output": "[\"\",\"\",\"2\",\"2\",\"a\",\"2A\",\"!B1?\",\"!B1?\",\"b!B1\"]",
+      "hidden": true
+    },
+    {
+      "input": "cryptic_sorter([\"?\",\"2\",\"b\",\"\",\"\",\"?\",\"2Ab!\"])",
+      "output": "[\"\",\"\",\"2\",\"?\",\"?\",\"b\",\"2Ab!\"]",
+      "hidden": true
+    },
+    {
+      "input": "cryptic_sorter([\"2Ab!\",\"\",\"?a2A\",\"!\",\"1?a2\"])",
+      "output": "[\"\",\"!\",\"1?a2\",\"2Ab!\",\"?a2A\"]",
+      "hidden": true
+    },
+    {
+      "input": "cryptic_sorter([\"\",\"!\",\"1?a2\",\"b!B1\",\"\",\"\",\"A\"])",
+      "output": "[\"\",\"\",\"\",\"!\",\"A\",\"1?a2\",\"b!B1\"]",
+      "hidden": true
+    },
+    {
+      "input": "cryptic_sorter([\"\",\"\",\"2\",\"b!\",\"1?a2\",\"b!\",\"1?\"])",
+      "output": "[\"\",\"\",\"2\",\"1?\",\"b!\",\"b!\",\"1?a2\"]",
+      "hidden": true
+    },
+    {
+      "input": "cryptic_sorter([\"B1?a\",\"Ab!\",\"1?a\",\"Ab!\",\"\"])",
+      "output": "[\"\",\"1?a\",\"Ab!\",\"Ab!\",\"B1?a\"]",
+      "hidden": true
+    },
+    {
+      "input": "cryptic_sorter([\"b!\",\"1?\",\"2Ab!\",\"1?a\",\"\",\"b!B\",\"?a2A\"])",
+      "output": "[\"\",\"1?\",\"b!\",\"1?a\",\"b!B\",\"2Ab!\",\"?a2A\"]",
+      "hidden": true
+    }
+  ],
+  "string_sculptor_examshell": [
+    {
+      "input": "string_sculptor(\"\")",
+      "output": "\"\"",
+      "hidden": true
+    },
+    {
+      "input": "string_sculptor(\"hello world\")",
+      "output": "\"hElLo wOrLd\"",
+      "hidden": true
+    },
+    {
+      "input": "string_sculptor(\"abc123def\")",
+      "output": "\"aBc123DeF\"",
+      "hidden": true
+    },
+    {
+      "input": "string_sculptor(\"AB C D\")",
+      "output": "\"aB c d\"",
+      "hidden": true
+    },
+    {
+      "input": "string_sculptor(\" !A?B9C D\")",
+      "output": "\" !a?B9c d\"",
+      "hidden": true
+    },
+    {
+      "input": "string_sculptor(\"bab 3 ?!1!?!\")",
+      "output": "\"bAb 3 ?!1!?!\"",
+      "hidden": true
+    },
+    {
+      "input": "string_sculptor(\"1!BaB!B!Ba1A\")",
+      "output": "\"1!bAb!B!bA1a\"",
+      "hidden": true
+    },
+    {
+      "input": "string_sculptor(\"B BA121a?AbA\")",
+      "output": "\"b bA121a?AbA\"",
+      "hidden": true
+    },
+    {
+      "input": "string_sculptor(\"1a?21A\")",
+      "output": "\"1a?21A\"",
+      "hidden": true
+    },
+    {
+      "input": "string_sculptor(\"?212\")",
+      "output": "\"?212\"",
+      "hidden": true
+    },
+    {
+      "input": "string_sculptor(\"bAB 1 BA\")",
+      "output": "\"bAb 1 bA\"",
+      "hidden": true
+    },
+    {
+      "input": "string_sculptor(\"bab b 1!3A3A\")",
+      "output": "\"bAb b 1!3a3A\"",
+      "hidden": true
+    },
+    {
+      "input": "string_sculptor(\"BaBAb!Ba1aba\")",
+      "output": "\"bAbAb!Ba1AbA\"",
+      "hidden": true
+    },
+    {
+      "input": "string_sculptor(\"\")",
+      "output": "\"\"",
+      "hidden": true
+    },
+    {
+      "input": "string_sculptor(\"1!32?a?2\")",
+      "output": "\"1!32?a?2\"",
+      "hidden": true
+    },
+    {
+      "input": "string_sculptor(\"3!3 B!3 ba\")",
+      "output": "\"3!3 b!3 bA\"",
+      "hidden": true
+    },
+    {
+      "input": "string_sculptor(\"1A\")",
+      "output": "\"1a\"",
+      "hidden": true
+    },
+    {
+      "input": "string_sculptor(\"?ABaBA3!12\")",
+      "output": "\"?aBaBa3!12\"",
+      "hidden": true
+    },
+    {
+      "input": "string_sculptor(\"\")",
+      "output": "\"\"",
+      "hidden": true
+    },
+    {
+      "input": "string_sculptor(\"ba3!1aB \")",
+      "output": "\"bA3!1aB \"",
+      "hidden": true
+    },
+    {
+      "input": "string_sculptor(\"\")",
+      "output": "\"\"",
+      "hidden": true
+    },
+    {
+      "input": "string_sculptor(\"1a3a\")",
+      "output": "\"1a3A\"",
+      "hidden": true
+    },
+    {
+      "input": "string_sculptor(\"?21 ?a\")",
+      "output": "\"?21 ?a\"",
+      "hidden": true
+    },
+    {
+      "input": "string_sculptor(\"?2b 323 \")",
+      "output": "\"?2b 323 \"",
+      "hidden": true
+    },
+    {
+      "input": "string_sculptor(\"1 b2b \")",
+      "output": "\"1 b2B \"",
+      "hidden": true
+    },
+    {
+      "input": "string_sculptor(\"?!?!\")",
+      "output": "\"?!?!\"",
+      "hidden": true
+    },
+    {
+      "input": "string_sculptor(\"12\")",
+      "output": "\"12\"",
+      "hidden": true
+    },
+    {
+      "input": "string_sculptor(\"? ?2B!Ba\")",
+      "output": "\"? ?2b!Ba\"",
+      "hidden": true
+    },
+    {
+      "input": "string_sculptor(\"? 1A1aB baB2\")",
+      "output": "\"? 1a1Ab bAb2\"",
+      "hidden": true
+    },
+    {
+      "input": "string_sculptor(\"b!? 32b!b!BA\")",
+      "output": "\"b!? 32b!B!bA\"",
+      "hidden": true
+    },
+    {
+      "input": "string_sculptor(\"1a3!Ba3!1 \")",
+      "output": "\"1a3!Ba3!1 \"",
+      "hidden": true
+    },
+    {
+      "input": "string_sculptor(\"baB 3AB2ba\")",
+      "output": "\"bAb 3aB2bA\"",
+      "hidden": true
+    },
+    {
+      "input": "string_sculptor(\"?2Ba3A\")",
+      "output": "\"?2bA3a\"",
+      "hidden": true
+    },
+    {
+      "input": "string_sculptor(\"bA1!?A1a\")",
+      "output": "\"bA1!?a1A\"",
+      "hidden": true
+    },
+    {
+      "input": "string_sculptor(\"?!12b \")",
+      "output": "\"?!12b \"",
+      "hidden": true
+    },
+    {
+      "input": "string_sculptor(\"B!b2\")",
+      "output": "\"b!B2\"",
+      "hidden": true
+    },
+    {
+      "input": "string_sculptor(\"b \")",
+      "output": "\"b \"",
+      "hidden": true
+    },
+    {
+      "input": "string_sculptor(\"b 3A1!?A\")",
+      "output": "\"b 3a1!?A\"",
+      "hidden": true
+    },
+    {
+      "input": "string_sculptor(\"Ba3A\")",
+      "output": "\"bA3a\"",
+      "hidden": true
+    },
+    {
+      "input": "string_sculptor(\"?A?2?2\")",
+      "output": "\"?a?2?2\"",
+      "hidden": true
+    },
+    {
+      "input": "string_sculptor(\"1ABA1a? \")",
+      "output": "\"1aBa1A? \"",
+      "hidden": true
+    },
+    {
+      "input": "string_sculptor(\"bA?!\")",
+      "output": "\"bA?!\"",
+      "hidden": true
+    },
+    {
+      "input": "string_sculptor(\"3AB \")",
+      "output": "\"3aB \"",
+      "hidden": true
+    },
+    {
+      "input": "string_sculptor(\"1ABa\")",
+      "output": "\"1aBa\"",
+      "hidden": true
+    },
+    {
+      "input": "string_sculptor(\"? B 1a\")",
+      "output": "\"? b 1a\"",
+      "hidden": true
+    },
+    {
+      "input": "string_sculptor(\"B bab!?!b \")",
+      "output": "\"b bAb!?!B \"",
+      "hidden": true
+    },
+    {
+      "input": "string_sculptor(\"12Ba\")",
+      "output": "\"12bA\"",
+      "hidden": true
+    },
+    {
+      "input": "string_sculptor(\"3!?A32B 1A\")",
+      "output": "\"3!?a32B 1a\"",
+      "hidden": true
+    },
+    {
+      "input": "string_sculptor(\"bA?Ab2ba\")",
+      "output": "\"bA?aB2bA\"",
+      "hidden": true
+    },
+    {
+      "input": "string_sculptor(\"3A3A?a\")",
+      "output": "\"3a3A?a\"",
+      "hidden": true
+    },
+    {
+      "input": "string_sculptor(\"1A\")",
+      "output": "\"1a\"",
+      "hidden": true
+    },
+    {
+      "input": "string_sculptor(\"123!\")",
+      "output": "\"123!\"",
+      "hidden": true
+    },
+    {
+      "input": "string_sculptor(\"?2Ba12\")",
+      "output": "\"?2bA12\"",
+      "hidden": true
+    }
+  ]
+}

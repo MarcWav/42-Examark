@@ -1,0 +1,137 @@
+[
+  {
+    "id": 2,
+    "level": 1,
+    "difficulty": "easy",
+    "name": "py_cryptic_sorter",
+    "file": "py_cryptic_sorter.py",
+    "forbidden": [
+      "sorted()",
+      ".sort()"
+    ],
+    "description": {
+      "en": "Write a function that sorts a list of strings according to multiple criteria:\n1. Primary sort: By string length (shortest first)\n2. Secondary sort: ASCII order, except letters are compared case-insensitively\n   (for strings of same length)\n3. Tertiary sort: By number of vowels (ascending, for same length and lexically equal)\n4. Equal strings will appear in the same order as in the input list.\n\n**Forbidden functions: sorted(), list.sort()**",
+      "de": "Schreibe eine Funktion, die eine Liste von Strings mit dreistufiger Priorität sortiert:\n1. Primär: nach Länge (aufsteigend)\n2. Sekundär: lexikographisch (alphabetisch, ohne Groß-/Kleinschreibung, aufsteigend)\n3. Tertiär: nach Anzahl der Vokale (aufsteigend bei gleicher Länge und lexikalischer Gleichheit)\n\nDie Funktion muss:\n- Leere Strings und leere Listen verarbeiten\n- Gemischte Groß-/Kleinschreibung (für Sortierung wie Kleinbuchstaben behandeln)\n- Sonderzeichen (für Vokalzählung ignorieren)\n\n**Verbotene Funktionen: sorted(), list.sort()**",
+      "fr": "Écris une fonction qui trie une liste de chaînes avec une priorité à trois niveaux :\n1. Tri principal : par longueur (croissant)\n2. Tri secondaire : lexicographique (alphabétique, insensible à la casse, croissant)\n3. Tri tertiaire : par nombre de voyelles (croissant, si longueur et ordre lexicographique égaux)\n\nLa fonction doit gérer :\n- Chaînes vides et listes vides\n- Casses mixtes (traiter comme des minuscules pour le tri)\n- Caractères spéciaux (les ignorer pour compter les voyelles)\n\n**Fonctions interdites : sorted(), list.sort()**",
+      "es": "Escribe una función que ordene una lista de cadenas con prioridad en tres niveles:\n1. Primario: por longitud (ascendente)\n2. Secundario: lexicográfico (alfabético, sin distinguir mayúsculas, ascendente)\n3. Terciario: por número de vocales (ascendente si la longitud y el orden léxico coinciden)\n\nLa función debe manejar:\n- Cadenas vacías y listas vacías\n- Mayúsculas y minúsculas mezcladas (tratar como minúsculas al ordenar)\n- Caracteres especiales (ignorarlos al contar vocales)\n\n**Funciones prohibidas: sorted(), list.sort()**",
+      "it": "Scrivi una funzione che ordini una lista di stringhe con priorità a tre livelli:\n1. Primario: per lunghezza (crescente)\n2. Secondario: lessicografico (alfabetico, case-insensitive, crescente)\n3. Terziario: per numero di vocali (crescente a parità di lunghezza e ordine lessicale)\n\nLa funzione deve gestire:\n- Stringhe vuote e liste vuote\n- Maiuscole e minuscole miste (per l’ordinamento trattare come minuscole)\n- Caratteri speciali (ignorarli nel conteggio delle vocali)\n\n**Funzioni vietate: sorted(), list.sort()**",
+      "ru": "Напишите функцию, которая сортирует список строк по нескольким критериям:\n1. Первичная сортировка: по длине строки (самые короткие сначала)\n2. Вторичная сортировка: в кодировке ASCII, но буквы сравниваются без учета регистра (для строк одинаковой длины)\n3. Третичная сортировка: по количеству гласных букв (по возрастанию, для строк одинаковой длины и лексически равных)\n4. Одинаковые строки должны сохранять свой исходный порядок, как во входном списке.\n\nЗапрещенные функции: sorted(), list.sort()",
+      "tr": "Bir dize listesini birden çok kritere göre sıralayan bir fonksiyon yazın:\n1. Birincil sıralama: Dize uzunluğuna göre (en kısa önce)\n2. İkincil sıralama: ASCII sırası, ancak harfler büyük/küçük harf duyarsız karşılaştırılır (aynı uzunluktaki dizeler için)\n3. Üçüncül sıralama: Sesli harf sayısına göre (artan sırada, aynı uzunlukta ve sözcüksel olarak eşitse)\n4. Eşit dizeler girdi listesindeki sırayla kalmalıdır.\n\n**Yasak fonksiyonlar: sorted(), list.sort()**",
+      "zh": "编写一个函数，根据多个条件对字符串列表进行排序：\n1. 主要排序：按字符串长度（短的排在前面）\n2. 次要排序：ASCII 顺序，字母不区分大小写（针对长度相同的字符串）\n3. 第三排序：按元音字母数量（升序，针对长度相同且字典序相等的字符串）\n4. 相等的字符串在结果中保持其在输入列表中的原始相对顺序。\n\n**禁用函数：sorted()、list.sort()**",
+      "ar": "اكتب دالة تقوم بفرز قائمة من السلاسل النصية وفقاً لمعايير متعددة:\n1. الفرز الأساسي: حسب طول السلسلة (الأقصر أولاً)\n2. الفرز الثانوي: بترتيب ASCII، مع مقارنة الحروف دون مراعاة حالة الأحرف (للسلاسل ذات الطول نفسه)\n3. الفرز الثالث: حسب عدد أحرف العلة (تصاعدياً، للسلاسل ذات الطول المتساوي والمتطابقة معجمياً)\n4. السلاسل المتطابقة تظهر بنفس الترتيب الذي وردت به في القائمة المدخلة.\n\n**الوظائف الممنوعة: ()sorted و ()list.sort**"
+    },
+    "signature": "def cryptic_sorter(strings: list[str]) -> list[str]:",
+    "examples": [
+      {
+        "input": "cryptic_sorter([\"apple\",\"cat\",\"banana\",\"dog\",\"elephant\"])",
+        "output": "[\"cat\",\"dog\",\"apple\",\"banana\",\"elephant\"]"
+      },
+      {
+        "input": "cryptic_sorter([\"aaa\",\"bbb\",\"AAA\",\"BBB\"])",
+        "output": "[\"aaa\", \"AAA\", \"bbb\", \"BBB\"]"
+      },
+      {
+        "input": "cryptic_sorter([\"hello\",\"world\",\"hi\",\"test\"])",
+        "output": "[\"hi\",\"test\",\"hello\",\"world\"]"
+      },
+      {
+        "input": "cryptic_sorter([])",
+        "output": "[]"
+      },
+      {
+        "input": "cryptic_sorter([\"\"])",
+        "output": "[\"\"]"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "level": 2,
+    "difficulty": "easy",
+    "name": "py_echo_validator",
+    "file": "py_echo_validator.py",
+    "description": {
+      "en": "Write a function that checks if a string is a palindrome,\nignoring spaces and case, only consider alphabetic characters\nfor the comparison.",
+      "de": "Schreibe eine Funktion, die prüft, ob ein String ein Palindrom ist - Leerzeichen und Groß-/Kleinschreibung ignorieren; nur alphabetische Zeichen für den Vergleich berücksichtigen.",
+      "fr": "Écris une fonction qui vérifie si une chaîne est un palindrome, en ignorant espaces et casse, et en ne considérant que les caractères alphabétiques pour la comparaison.",
+      "es": "Escribe una función que compruebe si una cadena es un palíndromo, ignorando espacios y mayúsculas/minúsculas, y considerando solo caracteres alfabéticos en la comparación.",
+      "it": "Scrivi una funzione che verifichi se una stringa è palindroma, ignorando spazi e maiuscole/minuscole e considerando solo i caratteri alfabetici nel confronto.",
+      "ru": "Напишите функцию, которая проверяет, является ли строка палиндромом, игнорируя пробелы и регистр. Для сравнения учитывайте только буквы.",
+      "tr": "Bir dizenin palindrom olup olmadığını kontrol eden bir fonksiyon yazın. Boşlukları ve büyük/küçük harfleri yok sayın, karşılaştırma için yalnızca alfabetik karakterleri dikkate alın.",
+      "zh": "编写一个函数，检查字符串是否为回文串。忽略空格和大小写，仅比较字母字符。",
+      "ar": "اكتب دالة تتحقق مما إذا كانت السلسلة النصية متناظرة (Palindrome)، مع تجاهل المسافات وحالة الأحرف، ومراعاة الأحرف الهجائية فقط أثناء المقارنة."
+    },
+    "signature": "def echo_validator(text: str) -> bool:",
+    "examples": [
+      {
+        "input": "echo_validator(\"racecar\")",
+        "output": "True"
+      },
+      {
+        "input": "echo_validator(\"A man a plan a canal Panama\")",
+        "output": "True"
+      },
+      {
+        "input": "echo_validator(\"race a car\")",
+        "output": "False"
+      },
+      {
+        "input": "echo_validator(\"Was it a car or a cat I saw\")",
+        "output": "True"
+      },
+      {
+        "input": "echo_validator(\"hello\")",
+        "output": "False"
+      },
+      {
+        "input": "echo_validator(\"Madam Im Adam\")",
+        "output": "True"
+      },
+      {
+        "input": "echo_validator(\"\")",
+        "output": "False"
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "level": 5,
+    "difficulty": "hard",
+    "name": "py_string_sculptor",
+    "file": "py_string_sculptor.py",
+    "description": {
+      "en": "Write a function that transforms a string by alternating the case of\nalphabetic characters only.\nNon-alphabetic characters remain unchanged and are NOT counted in the\nalternation index.\nThe first alphabetic character should be lowercase, the second uppercase, etc.\nSpaces reset the alternation (next alpha after a space is lowercase again).",
+      "de": "Schreibe eine Funktion, die einen String transformiert, indem nur alphabetische Zeichen abwechselnd groß/klein geschrieben werden. Nicht-alphabetische Zeichen bleiben unverändert und zählen nicht für die Abwechslung. Das erste alphabetische Zeichen soll klein, das zweite groß, das dritte klein usw. sein. Leerzeichen setzen die Abwechslung zurück (das nächste alphabetische Zeichen nach einem Leerzeichen wird wieder kleingeschrieben).",
+      "fr": "Écris une fonction qui transforme une chaîne en alternant la casse des seuls caractères alphabétiques. Les autres caractères restent inchangés et ne comptent pas pour l’alternance. Le premier caractère alphabétique doit être en minuscule, le second en majuscule, le troisième en minuscule, etc. Les espaces réinitialisent l’alternance (la lettre suivante après un espace est à nouveau en minuscule).",
+      "es": "Escribe una función que transforme una cadena alternando mayúsculas y minúsculas solo en caracteres alfabéticos. Los demás permanecen igual y no cuentan para la corporación/alternancia. El primer carácter alfabético debe ser minúscula, el segundo mayúscula, el tercero minúscula, y así sucesivamente. Los espacios reinician la alternancia (la siguiente letra después de un espacio vuelve a ser minúscula).",
+      "it": "Scrivi una funzione che trasformi una stringa alternando maiuscole e minuscole solo per i caratteri alfabetici. Gli altri restano invariati e non contano per l’alternanza. Il primo carattere alfabetico deve essere minuscolo, il secondo maiuscolo, il terzo minuscolo, e così via. Gli spazi ripristinano l'alternanza (la lettera successiva dopo uno spazio è di nuovo minuscola).",
+      "ru": "Напишите функцию, которая преобразует строку, чередуя регистр только для букв.\n\nНебуквенные символы остаются неизменными и НЕ учитываются при чередовании.\nПервая буква должна быть строчной (маленькой), вторая — прописной (большой) и т. д.\nПробелы сбрасывают чередование (первая буква после пробела снова становится строчной).",
+      "tr": "Yalnızca alfabetik karakterlerin büyük/küçük harf durumunu değiştirerek bir dizeyi dönüştüren bir fonksiyon yazın.\nAlfabetik olmayan karakterler değişmeden kalır ve değişim indeksinde sayılmaz.\nİlk alfabetik karakter küçük, ikincisi büyük olmalıdır, vb.\nBoşluklar değişimi sıfırlar (bir boşluktan sonraki ilk harf yine küçük harfle başlar).",
+      "zh": "编写一个函数，仅通过交替转换字母字符的大小写来转换字符串。\n非字母字符保持不变，且不计入交替索引。\n第一个字母应为小写，第二个字母为大写，依此类推。\n空格会重置交替（空格后的第一个字母重新从小写开始）。",
+      "ar": "اكتب دالة تقوم بتحويل سلسلة نصية عن طريق التناوب بين حالة الأحرف الهجائية فقط.\nتبقى الأحرف غير الهجائية دون تغيير ولا تُحسب في فهرس التناوب.\nيجب أن يكون الحرف الهجائي الأول صغيراً (Lowercase)، والثاني كبيراً (Uppercase)، وهكذا.\nالمسافات تعيد ضبط التناوب (أي أن أول حرف هجائي بعد المسافة يعود صغيراً مرة أخرى)."
+    },
+    "signature": "def string_sculptor(text: str) -> str:",
+    "examples": [
+      {
+        "input": "string_sculptor(\"hello\")",
+        "output": "\"hElLo\""
+      },
+      {
+        "input": "string_sculptor(\"Hello World\")",
+        "output": "\"hElLo wOrLd\""
+      },
+      {
+        "input": "string_sculptor(\"abc123def\")",
+        "output": "\"aBc123DeF\""
+      },
+      {
+        "input": "string_sculptor(\"Python3.9!\")",
+        "output": "\"pYtHoN3.9!\""
+      },
+      {
+        "input": "string_sculptor(\"\")",
+        "output": "\"\""
+      }
+    ]
+  }
+]

@@ -1,0 +1,177 @@
+{
+  "runtime": "Pyodide 0.27.7 / CPython 3.12 WASM",
+  "reference": [
+    {
+      "id": "bracket_validator",
+      "passed": 63,
+      "total": 63
+    },
+    {
+      "id": "cryptic_sorter",
+      "passed": 57,
+      "total": 57
+    },
+    {
+      "id": "echo_validator",
+      "passed": 63,
+      "total": 63
+    },
+    {
+      "id": "mirror_matrix",
+      "passed": 57,
+      "total": 57
+    },
+    {
+      "id": "hidenp",
+      "passed": 62,
+      "total": 62
+    },
+    {
+      "id": "inter",
+      "passed": 58,
+      "total": 58
+    },
+    {
+      "id": "number_base_converter",
+      "passed": 63,
+      "total": 63
+    },
+    {
+      "id": "pattern_tracker",
+      "passed": 62,
+      "total": 62
+    },
+    {
+      "id": "anagram",
+      "passed": 59,
+      "total": 59
+    },
+    {
+      "id": "shadow_merge",
+      "passed": 57,
+      "total": 57
+    },
+    {
+      "id": "string_permutation_checker",
+      "passed": 61,
+      "total": 61
+    },
+    {
+      "id": "string_sculptor",
+      "passed": 59,
+      "total": 59
+    },
+    {
+      "id": "twist_sequence",
+      "passed": 59,
+      "total": 59
+    },
+    {
+      "id": "whisper_cipher",
+      "passed": 59,
+      "total": 59
+    },
+    {
+      "id": "cryptic_sorter_xornic",
+      "passed": 52,
+      "total": 52
+    },
+    {
+      "id": "string_sculptor_examshell",
+      "passed": 58,
+      "total": 58
+    }
+  ],
+  "mutations": [
+    {
+      "id": "bracket_validator",
+      "rejected": true
+    },
+    {
+      "id": "cryptic_sorter",
+      "rejected": true
+    },
+    {
+      "id": "echo_validator",
+      "rejected": true
+    },
+    {
+      "id": "mirror_matrix",
+      "rejected": true
+    },
+    {
+      "id": "hidenp",
+      "rejected": true
+    },
+    {
+      "id": "inter",
+      "rejected": true
+    },
+    {
+      "id": "number_base_converter",
+      "rejected": true
+    },
+    {
+      "id": "pattern_tracker",
+      "rejected": true
+    },
+    {
+      "id": "anagram",
+      "rejected": true
+    },
+    {
+      "id": "shadow_merge",
+      "rejected": true
+    },
+    {
+      "id": "string_permutation_checker",
+      "rejected": true
+    },
+    {
+      "id": "string_sculptor",
+      "rejected": true
+    },
+    {
+      "id": "twist_sequence",
+      "rejected": true
+    },
+    {
+      "id": "whisper_cipher",
+      "rejected": true
+    },
+    {
+      "id": "cryptic_sorter_xornic",
+      "rejected": true
+    },
+    {
+      "id": "string_sculptor_examshell",
+      "rejected": true
+    }
+  ],
+  "checks": [
+    "Memorized public examples rejected: bracket_validator",
+    "Memorized public examples rejected: cryptic_sorter",
+    "Memorized public examples rejected: echo_validator",
+    "Memorized public examples rejected: mirror_matrix",
+    "Memorized public examples rejected: hidenp",
+    "Memorized public examples rejected: inter",
+    "Memorized public examples rejected: number_base_converter",
+    "Memorized public examples rejected: pattern_tracker",
+    "Memorized public examples rejected: anagram",
+    "Memorized public examples rejected: shadow_merge",
+    "Memorized public examples rejected: string_permutation_checker",
+    "Memorized public examples rejected: string_sculptor",
+    "Memorized public examples rejected: twist_sequence",
+    "Memorized public examples rejected: whisper_cipher",
+    "Memorized public examples rejected: cryptic_sorter_xornic",
+    "Memorized public examples rejected: string_sculptor_examshell",
+    "bool != int",
+    "stdout is not return",
+    "exceptions captured",
+    "stdout and stderr captured",
+    "fresh namespace per test",
+    "forbidden aliases rejected",
+    "infinite loop terminated by worker owner",
+    "worker recovery after infinite loop"
+  ]
+}

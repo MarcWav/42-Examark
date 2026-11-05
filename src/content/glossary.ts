@@ -1,0 +1,23 @@
+export const glossary:Record<string,{meaning:string;example:string}>={
+'Índice':{meaning:'Número que identifica uma posição. Em Python, a primeira posição é zero.',example:'Em "abc", texto[0] é "a" e texto[2] é "c".'},
+'Iteração':{meaning:'Uma passagem pelo bloco de um loop.',example:'for char in "ab" faz duas iterações: uma com a e outra com b.'},
+'Acumulador':{meaning:'Variável que guarda um resultado parcial, atualizado aos poucos.',example:'count começa em 0; cada count += 1 aumenta o total em uma unidade.'},
+'Pilha':{meaning:'Uma lista usada de modo que o último item a entrar seja o primeiro a sair.',example:'["(", "["] → pop() devolve "["; fica ["("].'},
+'Ponteiro':{meaning:'Nestes exercícios, é um índice que acompanha uma posição. Não é um endereço de memória de C.',example:'Em hidenp Python, i aponta para a próxima letra de small que falta encontrar.'},
+'Dicionário':{meaning:'Relaciona uma chave a um valor. Pode guardar quantidades de cada letra.',example:'{"a": 2} registra duas ocorrências de a; get("b", 0) devolve zero se b não existe.'},
+'Fatiamento':{meaning:'Copia uma parte de uma sequência. O limite final não entra na fatia.',example:'[1, 2, 3, 4][1:3] resulta em [2, 3]. arr[i:] copia a partir de i até o final.'},
+'Comparação':{meaning:'Uma pergunta que compara valores e produz True ou False.',example:'2 == 2 é True; 2 != 2 é False. = atribui um valor; == compara.'},
+'Booleano':{meaning:'Tipo bool: os valores True e False representam sim e não.',example:'len([]) == 0 produz True. O corretor distingue True (bool) de 1 (int).'},
+'for':{meaning:'Repete um bloco para cada item de uma sequência.',example:'for char in "ab": char recebe "a" na primeira rodada e "b" na segunda.'},
+'while':{meaning:'Repete enquanto uma condição for verdadeira. Alguma variável precisa avançar para o loop terminar.',example:'while i < 3 com i += 1 passa pelos índices 0, 1 e 2.'},
+'if':{meaning:'Escolhe um caminho conforme uma condição. O bloco indentado só roda quando a condição é verdadeira.',example:'if not stack: entra quando a lista está vazia.'},
+'and / or':{meaning:'and exige as duas condições; or aceita qualquer uma. Ambos podem parar antes de avaliar a parte direita.',example:'Se not stack é True, not stack or stack.pop() não chama pop().'},
+'Lista':{meaning:'Sequência de valores que mantém uma ordem e pode ser alterada.',example:'append(3) em [1,2] deixa [1,2,3]. pop() remove e devolve o último valor.'},
+'String':{meaning:'Sequência de caracteres. Uma string não é modificada por posição; construímos outra.',example:'"a" + "B" produz uma nova string "aB". "A".lower() produz "a".'},
+'Módulo':{meaning:'O operador % calcula o resto. É útil para circular por posições e conferir paridade.',example:'5 % 3 é 2; -1 % 26 é 25. index % 2 distingue pares de ímpares.'},
+'Tupla':{meaning:'Sequência usada aqui como chave de comparação, item por item, da esquerda para a direita.',example:'(2, "ab") vem antes de (3, "a") porque 2 < 3, sem precisar comparar as strings.'},
+'Ordenação estável':{meaning:'Mantém a ordem de chegada de itens que empatam em todos os critérios.',example:'Na versão padrão de cryptic_sorter, ["aaa", "AAA"] continua nessa ordem.'},
+'Subsequência':{meaning:'Caracteres que aparecem em ordem dentro de outro texto, mesmo separados.',example:'"abc" é subsequência de "a1b2c"; "acb" não é.'},
+'ord / chr':{meaning:'ord converte um caractere para seu código; chr faz a conversão inversa.',example:'ord("a") é 97; chr(98) é "b". whisper_cipher soma o deslocamento à posição da letra.'},
+'Retorno':{meaning:'Valor entregue pela função com return. Imprimir no console é um efeito separado.',example:'return True entrega um bool. print(True) escreve texto e, sozinho, não devolve esse bool.'}
+};

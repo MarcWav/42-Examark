@@ -1,0 +1,12 @@
+node_modules/
+dist/
+.cache/
+*.log
+release/
+public/runtime/
+docs/qa-progress.json
+.env
+.env.*
+!.env.example
+**/42 Exam Trainer Dados/
+**/42-Exam-Trainer-Dados/
