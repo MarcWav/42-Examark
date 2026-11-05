@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "platform": "linux",
+  "arch": "x64",
+  "checks": [
+    {
+      "format": "AppImage",
+      "opened": true,
+      "portableStorage": true,
+      "noSandboxFlag": false
+    },
+    {
+      "format": "tar.gz",
+      "opened": true,
+      "portableStorage": true,
+      "noSandboxFlag": false
+    }
+  ]
+}

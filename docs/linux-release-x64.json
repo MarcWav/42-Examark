@@ -1,0 +1,20 @@
+{
+  "version": "1.3.1",
+  "platform": "Linux",
+  "arch": "x64",
+  "artifacts": [
+    {
+      "file": "42-Exam-Trainer-1.3.1-Linux-x64-Portatil.AppImage",
+      "bytes": 131832331,
+      "sha256": "6478babbb976258cdad32e7733dd6d7bb95be34124ad501c1dddeda866e81ce3"
+    },
+    {
+      "file": "42-Exam-Trainer-1.3.1-Linux-x64-Portatil.tar.gz",
+      "bytes": 132912118,
+      "sha256": "14c0ba01246d97a2ee369698848f14574ac83ff8976f2fa4608f474c591793e8"
+    }
+  ],
+  "packageFiles": 63,
+  "personalDataIncluded": false,
+  "licensesIncluded": true
+}

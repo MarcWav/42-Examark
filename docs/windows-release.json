@@ -1,20 +1,20 @@
 {
-  "version": "1.2.0",
+  "version": "1.3.1",
   "platform": "Windows x64",
   "electron": "45.2.2",
   "artifacts": [
     {
-      "file": "42-Exam-Trainer-1.2.0-Windows-x64-Portatil.exe",
-      "bytes": 131453803,
-      "sha256": "26046b4b8c7e5d6d57467eb54fdaf6cac1f2260781192d54443810a7508a3845"
+      "file": "42-Exam-Trainer-1.3.1-Windows-x64-Portatil.exe",
+      "bytes": 131453787,
+      "sha256": "6c13b3fd6eb2e691bbb1508ce79df4d15410f2f0386ee07f20b807f7547950b2"
     },
     {
-      "file": "42-Exam-Trainer-1.2.0-Windows-x64-Instalador.exe",
-      "bytes": 136013526,
-      "sha256": "7de81182c460eafa57506ec174e0e0c98fc30c08bbbf476bcf970eaccf59cbcf"
+      "file": "42-Exam-Trainer-1.3.1-Windows-x64-Instalador.exe",
+      "bytes": 136014329,
+      "sha256": "a690f725b6f3653f73e72cd0de6d3caf2bf2701b9325a57179644344f6137968"
     }
   ],
-  "packageFiles": 61,
+  "packageFiles": 63,
   "personalDataIncluded": false,
   "licensesIncluded": true
 }
