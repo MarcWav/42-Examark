@@ -13,5 +13,5 @@ const header=Buffer.alloc(13);header.writeUInt32BE(size,0);header.writeUInt32BE(
 const scan=Buffer.alloc((size*4+1)*size);for(let y=0;y<size;y++)pixels.copy(scan,y*(size*4+1)+1,y*size*4,(y+1)*size*4);
 const png=Buffer.concat([Buffer.from([137,80,78,71,13,10,26,10]),chunk('IHDR',header),chunk('IDAT',zlib.deflateSync(scan)),chunk('IEND',Buffer.alloc(0))]);
 const ico=Buffer.alloc(22);ico.writeUInt16LE(1,2);ico.writeUInt16LE(1,4);ico.writeUInt16LE(1,10);ico.writeUInt16LE(32,12);ico.writeUInt32LE(png.length,14);ico.writeUInt32LE(22,18);
-fs.mkdirSync('build',{recursive:true});fs.writeFileSync('build/icon.ico',Buffer.concat([ico,png]));fs.writeFileSync('electron/icon.ico',Buffer.concat([ico,png]));fs.writeFileSync('build/icon.png',png);
+fs.mkdirSync('build',{recursive:true});fs.writeFileSync('build/icon.ico',Buffer.concat([ico,png]));fs.writeFileSync('electron/icon.ico',Buffer.concat([ico,png]));fs.writeFileSync('build/icon.png',png);fs.writeFileSync('electron/icon.png',png);
 console.log('Ícone original criado para o aplicativo.');

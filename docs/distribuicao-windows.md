@@ -1,11 +1,11 @@
 # Distribuir o 42 Exam Trainer para Windows
 
-Versão: 1.3.0 · Windows 10/11 de 64 bits (Intel/AMD x64).
+Versão: 1.3.1 · Windows 10/11 de 64 bits (Intel/AMD x64).
 
 ## Qual arquivo enviar
 
-- **Portátil:** `release/42-Exam-Trainer-1.3.0-Windows-x64-Portatil.exe`. Envie esse arquivo. O outro estudante abre com dois cliques; não precisa instalar Node.js, Python, navegador separado nem baixar bibliotecas.
-- **Instalador:** `release/42-Exam-Trainer-1.3.0-Windows-x64-Instalador.exe`. Para quem prefere instalar e ter atalhos no menu Iniciar e na área de trabalho. A instalação é por usuário.
+- **Portátil:** `release/42-Exam-Trainer-1.3.1-Windows-x64-Portatil.exe`. Envie esse arquivo. O outro estudante abre com dois cliques; não precisa instalar Node.js, Python, navegador separado nem baixar bibliotecas.
+- **Instalador:** `release/42-Exam-Trainer-1.3.1-Windows-x64-Instalador.exe`. Para quem prefere instalar e ter atalhos no menu Iniciar e na área de trabalho. A instalação é por usuário.
 
 Não é necessário enviar o código-fonte, node_modules, iniciar.bat ou a pasta win-unpacked. Não há publicação automática nem cadastro.
 

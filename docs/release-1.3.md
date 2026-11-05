@@ -1,4 +1,4 @@
-# 42 Exam Trainer 1.3.0
+# 42 Exam Trainer 1.3.1
 
 Versão portátil para Linux, mantendo as melhorias didáticas da versão 1.2.
 
