@@ -9,7 +9,12 @@ module.exports=async function revisionQA(window){
  const assert=(ok,message)=>{if(!ok)throw Error(message)};
  const wait=async(fn,label,timeout=15000)=>{for(let t=0;t<timeout;t+=100){if(await run(fn))return;await pause(100)}throw Error('Esperando '+label+': '+await run(()=>document.body.innerText.slice(-1800)))};
  const click=selector=>run(selector=>{const el=document.querySelector(selector);if(!el)throw Error('Elemento ausente: '+selector);el.click()},selector);
- const setCode=async code=>{await run(()=>document.querySelector('.cm-content').focus());wc.sendInputEvent({type:'keyDown',keyCode:'A',modifiers:['control']});wc.sendInputEvent({type:'keyUp',keyCode:'A',modifiers:['control']});await wc.insertText(code);await pause(120)};
+ const setCode=async code=>{
+  await run(code=>{const content=document.querySelector('.cm-content');content.focus();if(!document.execCommand('selectAll')||!document.execCommand('insertText',false,code))throw Error('Não foi possível editar o documento pelo fluxo de entrada do Chromium')},code);
+  let actual;
+  for(let i=0;i<100;i++){actual=await run(()=>{const p=JSON.parse(localStorage.getItem('42-exam-trainer-v1'));return p.records[p.selected]?.code});if(actual===code)return;await pause(50)}
+  throw Error('O editor não salvou exatamente o texto inserido: '+JSON.stringify({expected:code,actual}));
+ };
  const {variants}=JSON.parse(fs.readFileSync('.cache/catalog.json','utf8'));
  const {assertNoSlogans}=require('../scripts/verify-ui-language.cjs');
  const {getSolutions}=await import(require('node:url').pathToFileURL(path.resolve('.cache/review-exports.mjs')).href);
@@ -47,7 +52,7 @@ module.exports=async function revisionQA(window){
  await click('[data-tab="subject"]');await setCode('def bracket_validator(s: str) -> bool:\n    return 1\n');await click('#grade');
  await wait(()=>!!document.querySelector('.result-summary')&&!document.querySelector('#grade').disabled,'correção detalhada');
  assert(await run(()=>document.querySelectorAll('[data-test-result]').length===63),'Transparência dos 63 casos');
- assert(await run(()=>document.querySelector('.primary-diagnosis')?.textContent.includes('True ou False')&&document.querySelector('.primary-diagnosis')?.textContent.includes('inteiro')),'Diagnóstico simples de tipo');
+ assert(await run(()=>document.querySelector('.primary-diagnosis')?.textContent.includes('True ou False')&&document.querySelector('.primary-diagnosis')?.textContent.includes('inteiro')),'Diagnóstico simples de tipo: '+JSON.stringify(await run(()=>({diagnosis:document.querySelector('.primary-diagnosis')?.textContent,code:JSON.parse(localStorage.getItem('42-exam-trainer-v1')).records.bracket_validator.code}))));
  await click('#exercise-history-console');await wait(()=>!!document.querySelector('[data-review-attempt]'),'histórico');
  await click('[data-review-attempt]');
  assert(await run(()=>document.querySelector('.cm-content').getAttribute('contenteditable')==='false'),'Revisão somente leitura');

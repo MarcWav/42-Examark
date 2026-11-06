@@ -2,11 +2,11 @@
 
 Treinamento local, em português, dos 14 subjects públicos conhecidos de Python Rank 03. Material comunitário, **não oficial**. Os testes locais não reproduzem os testes privados da 42.
 
-## Versão 1.4.0
+## Versão 1.4.1
 
-A interface foi compactada e recebeu explicações simples, gabaritos com duas soluções por exercício, comparação entre abordagens e visualização da implementação escolhida. A versão 1.4.0 inclui esta revisão nos novos executáveis, com linguagem objetiva e sem slogans. A publicação verifica tanto as telas quanto a interface empacotada.
+A interface foi compactada e recebeu explicações simples, gabaritos com duas soluções por exercício, comparação entre abordagens e visualização da implementação escolhida. A versão 1.4.1 inclui esta revisão nos novos executáveis, com linguagem objetiva e sem slogans. A publicação verifica tanto as telas quanto a interface empacotada.
 
-No Windows x64, envie **42-Examark-1.4.0-Windows-x64-Portatil.exe** para outra pessoa testar. Para executar pelo código-fonte, use `npm ci` e `npm run dev`, ou `npm run desktop`. O nome visível passou a **42 Examark**; chaves e pastas de dados anteriores foram mantidas para preservar o progresso.
+No Windows x64, envie **42-Examark-1.4.1-Windows-x64-Portatil.exe** para outra pessoa testar. Para executar pelo código-fonte, use `npm ci` e `npm run dev`, ou `npm run desktop`. O nome visível passou a **42 Examark**; chaves e pastas de dados anteriores foram mantidas para preservar o progresso.
 
 [Detalhes e validação da revisão](docs/interface-revision.md).
 

@@ -1,4 +1,4 @@
-# Linux portátil — 1.3.1
+# Linux portátil — 1.4.1
 
 Baixe os arquivos em [Releases](https://github.com/MarcWav/42-Examark/releases/latest). O aplicativo inclui Chromium, Python/Pyodide, exercícios e fontes; estudar e corrigir funcionam offline.
 
@@ -15,8 +15,8 @@ Os binários ARM64 são empacotados e inspecionados, mas o teste de execução d
 Depois de baixar:
 
 ```sh
-chmod +x 42-Exam-Trainer-1.3.1-Linux-x64-Portatil.AppImage
-./42-Exam-Trainer-1.3.1-Linux-x64-Portatil.AppImage
+chmod +x 42-Examark-1.4.1-Linux-x64-Portatil.AppImage
+./42-Examark-1.4.1-Linux-x64-Portatil.AppImage
 ```
 
 Para ARM64, use o nome do arquivo ARM64. Não use sudo.
@@ -26,8 +26,8 @@ Para ARM64, use o nome do arquivo ARM64. Não use sudo.
 Se a distribuição não tiver FUSE compatível com AppImage, prefira o arquivo `.tar.gz`. Extraia pelo gerenciador de arquivos e abra `iniciar.sh`, ou use:
 
 ```sh
-tar -xzf 42-Exam-Trainer-1.3.1-Linux-x64-Portatil.tar.gz
-cd 42-Exam-Trainer-1.3.1-Linux-x64-Portatil
+tar -xzf 42-Examark-1.4.1-Linux-x64-Portatil.tar.gz
+cd 42-Examark-1.4.1-Linux-x64-Portatil
 ./iniciar.sh
 ```
 
