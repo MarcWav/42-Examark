@@ -66,7 +66,7 @@ Os scripts de empacotamento continuam preparados para Windows x64, Linux x64 e A
 
 ## Validação executada
 
-- `npm test`: **36 testes aprovados**.
+- `npm test`: **40 testes aprovados** (incluindo regressões de linguagem e inicialização em computador novo).
 - `npm run test:answers`: **32/32 soluções**, 1.898 casos, 192 rastreamentos.
 - `npm run test:python`: **949/949 casos**, 16 algoritmos errados e 16 memorizadores de exemplos reprovados.
 - `npm run test:learning`: **127 rastreamentos**, 3.457 eventos e 12 verificações didáticas.
@@ -78,9 +78,9 @@ Os scripts de empacotamento continuam preparados para Windows x64, Linux x64 e A
 
 ## Limites e pendências
 
-A validação desktop desta revisão foi executada no Windows. A tentativa de reutilizar o runtime Linux no Ubuntu/WSL local encontrou ausência de `libnspr4.so`; não foi declarada aprovação de execução Linux desta revisão nem feita alteração no sistema para contornar isso. A validação anterior dos pacotes Linux 1.3.1 permanece documentada separadamente. Não houve execução em hardware ARM64.
+A versão 1.4.1 foi publicada após o [workflow completo](https://github.com/MarcWav/42-Examark/actions/runs/42250133949) passar. A interface desktop foi validada em [Windows](desktop-validation-windows-1.4.1.json) e [Linux x64](desktop-validation-linux-1.4.1.json). Os pacotes Linux x64 AppImage e tar.gz também foram abertos com armazenamento portátil. ARM64 foi empacotado e inspecionado, sem execução em hardware ARM64.
 
-Uma captura de 1920×1080 do Electron encontrou erro transitório de captura gráfica. A verificação de layout nessa resolução passou; o erro de captura está registrado no relatório, separado dos resultados funcionais. As outras capturas e a conferência visual no navegador foram realizadas.
+Os testes da release 1.4.1 concluíram as capturas sem erro e verificaram as quatro resoluções no Windows e no Linux. Os seis downloads tiveram tamanho e SHA-256 conferidos contra o manifesto e os digests do GitHub. O conteúdo de interface foi novamente extraído do EXE portátil e aprovado pela verificação das 23 frases antigas: [relatório da release](release-validation-1.4.1.json).
 
 O rastreamento continua limitado a 800 eventos e entradas pequenas, e acompanha referências, não o código do estudante. Funções prontas podem executar seu trabalho dentro de uma única linha. Os resultados locais não garantem aprovação na prova oficial.
 

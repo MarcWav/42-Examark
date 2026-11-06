@@ -1,20 +1,25 @@
 {
-  "version": "1.3.1",
+  "version": "1.4.1",
   "platform": "Linux",
   "arch": "x64",
   "artifacts": [
     {
-      "file": "42-Exam-Trainer-1.3.1-Linux-x64-Portatil.AppImage",
-      "bytes": 131832331,
-      "sha256": "6478babbb976258cdad32e7733dd6d7bb95be34124ad501c1dddeda866e81ce3"
+      "file": "42-Examark-1.4.1-Linux-x64-Portatil.AppImage",
+      "bytes": 131853168,
+      "sha256": "57bc36c7aa6abf0085b4c7b205bd2976f34c91650518d3ec3824cae3cb48ab85"
     },
     {
-      "file": "42-Exam-Trainer-1.3.1-Linux-x64-Portatil.tar.gz",
-      "bytes": 132912118,
-      "sha256": "14c0ba01246d97a2ee369698848f14574ac83ff8976f2fa4608f474c591793e8"
+      "file": "42-Examark-1.4.1-Linux-x64-Portatil.tar.gz",
+      "bytes": 132923791,
+      "sha256": "fafac48744ad096840d0d5599da9fa7d1d6002f30226148d4bfe6fa3b84ff620"
     }
   ],
   "packageFiles": 63,
   "personalDataIncluded": false,
-  "licensesIncluded": true
+  "licensesIncluded": true,
+  "uiLanguage": {
+    "passed": true,
+    "checkedFiles": 10,
+    "forbiddenPhrases": 23
+  }
 }

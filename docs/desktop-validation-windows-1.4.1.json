@@ -1,0 +1,127 @@
+{
+  "passed": true,
+  "origin": "trainer://app",
+  "checks": [
+    "Interface de produção abriu no protocolo local",
+    "Renderer sem Node.js",
+    "localStorage no protocolo local",
+    "IndexedDB disponível para histórico no protocolo desktop",
+    "Runtime e fontes locais",
+    "Todas as referências executadas no Web Worker do Electron",
+    "949 resultados individuais transmitidos pelo worker",
+    "Exemplos didáticos de todos os exercícios e variantes rastreados no Electron",
+    "Worker com loop infinito encerrado e recuperado"
+  ],
+  "grades": [
+    {
+      "id": "bracket_validator",
+      "passed": 63
+    },
+    {
+      "id": "cryptic_sorter",
+      "passed": 57
+    },
+    {
+      "id": "echo_validator",
+      "passed": 63
+    },
+    {
+      "id": "mirror_matrix",
+      "passed": 57
+    },
+    {
+      "id": "hidenp",
+      "passed": 62
+    },
+    {
+      "id": "inter",
+      "passed": 58
+    },
+    {
+      "id": "number_base_converter",
+      "passed": 63
+    },
+    {
+      "id": "pattern_tracker",
+      "passed": 62
+    },
+    {
+      "id": "anagram",
+      "passed": 59
+    },
+    {
+      "id": "shadow_merge",
+      "passed": 57
+    },
+    {
+      "id": "string_permutation_checker",
+      "passed": 61
+    },
+    {
+      "id": "string_sculptor",
+      "passed": 59
+    },
+    {
+      "id": "twist_sequence",
+      "passed": 59
+    },
+    {
+      "id": "whisper_cipher",
+      "passed": 59
+    },
+    {
+      "id": "cryptic_sorter_xornic",
+      "passed": 52
+    },
+    {
+      "id": "string_sculptor_examshell",
+      "passed": 58
+    }
+  ],
+  "referenceCases": 949,
+  "referenceStreamEvents": 949,
+  "teachingTraces": 31,
+  "revision": {
+    "passed": true,
+    "checks": [
+      "32 soluções selecionadas na interface, com linhas corretas e código do estudante preservado",
+      "Gabarito ocultado ao trocar de exercício e rastreamento vinculado à solução escolhida",
+      "63 casos inspecionáveis, diagnóstico de tipo em português e histórico com código somente leitura",
+      "Interrupção manual, timeout e nova correção 63/63 sem congelar a interface",
+      "Notas e códigos persistem; simulado isola códigos, oculta respostas e permite revisão sem mudar o resultado",
+      "Quatro resoluções sem rolagem horizontal da página; editor e navegação entre abas por teclado funcionam"
+    ],
+    "layouts": [
+      {
+        "width": 1920,
+        "height": 1080,
+        "documentWidth": 1920,
+        "editor": 944.765625,
+        "tabs": 5
+      },
+      {
+        "width": 1280,
+        "height": 720,
+        "documentWidth": 1280,
+        "editor": 590.84375,
+        "tabs": 5
+      },
+      {
+        "width": 900,
+        "height": 650,
+        "documentWidth": 900,
+        "editor": 378.40625,
+        "tabs": 5
+      },
+      {
+        "width": 540,
+        "height": 800,
+        "documentWidth": 534,
+        "editor": 534,
+        "tabs": 5
+      }
+    ],
+    "screenshotErrors": []
+  },
+  "consoleErrors": []
+}

@@ -1,0 +1,44 @@
+{
+  "version": "1.4.1",
+  "workflow": "https://github.com/MarcWav/42-Examark/actions/runs/42250133949",
+  "passed": true,
+  "published": "https://github.com/MarcWav/42-Examark/releases/tag/v1.4.1",
+  "portableExeContentInspection": {
+    "passed": true,
+    "checkedFiles": 10,
+    "forbiddenPhrases": 23
+  },
+  "githubDigestsVerified": true,
+  "artifacts": [
+    {
+      "file": "42-Examark-1.4.1-Linux-arm64-Portatil.AppImage",
+      "bytes": 133056509,
+      "sha256": "c80644c21c3df45c37ab82a490b859416cff4400b912062eb04d2c56d75aaaa1"
+    },
+    {
+      "file": "42-Examark-1.4.1-Linux-arm64-Portatil.tar.gz",
+      "bytes": 132810577,
+      "sha256": "a623936594c50fa96484ad07520ed99bf587faa00fe46c742d8cceb86443f1ee"
+    },
+    {
+      "file": "42-Examark-1.4.1-Linux-x64-Portatil.AppImage",
+      "bytes": 131853168,
+      "sha256": "57bc36c7aa6abf0085b4c7b205bd2976f34c91650518d3ec3824cae3cb48ab85"
+    },
+    {
+      "file": "42-Examark-1.4.1-Linux-x64-Portatil.tar.gz",
+      "bytes": 132923791,
+      "sha256": "fafac48744ad096840d0d5599da9fa7d1d6002f30226148d4bfe6fa3b84ff620"
+    },
+    {
+      "file": "42-Examark-1.4.1-Windows-x64-Instalador.exe",
+      "bytes": 136025887,
+      "sha256": "13e372beef051a82c3c1e06d1363321e44f93a108539b1af9bccee61a144e656"
+    },
+    {
+      "file": "42-Examark-1.4.1-Windows-x64-Portatil.exe",
+      "bytes": 131464732,
+      "sha256": "063b24f1072264c30173bb582810e2997ab8cc09893b2dfb88dbbf03f5a42617"
+    }
+  ]
+}
