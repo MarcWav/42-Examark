@@ -4,6 +4,8 @@ import crypto from 'node:crypto';
 import {spawnSync} from 'node:child_process';
 const pkg=JSON.parse(fs.readFileSync('package.json','utf8'));
 const tag=process.argv[2];
+const releaseNotes=path.join('docs','releases',pkg.version+'.md');
+if(!fs.existsSync(releaseNotes))throw Error('Notas da versão ausentes: '+releaseNotes);
 if(tag!=='v'+pkg.version)throw Error('A tag deve corresponder à versão do package.json.');
 const run=args=>{const r=spawnSync('gh',args,{stdio:'inherit'});if(r.error)throw r.error;if(r.status!==0)throw Error('Falha em gh '+args[0]);};
 const files=[];
@@ -13,6 +15,6 @@ const expected=['Windows-x64-Portatil.exe','Windows-x64-Instalador.exe','Linux-x
 if(files.length!==expected.length||!expected.every(suffix=>files.some(file=>path.basename(file)===`42-Examark-${pkg.version}-${suffix}`)))throw Error('Conjunto de seis pacotes incompleto.');
 files.sort();
 fs.writeFileSync('artifacts/SHA256SUMS.txt',files.map(file=>crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex')+'  '+path.basename(file)).join('\n')+'\n');
-run(['release','create',tag,'--verify-tag','--draft','--title','42 Examark '+pkg.version+' · Windows e Linux','--notes-file','docs/release-1.3.md']);
+run(['release','create',tag,'--verify-tag','--draft','--title','42 Examark '+pkg.version+' · Windows e Linux','--notes-file',releaseNotes]);
 run(['release','upload',tag,...files,'artifacts/SHA256SUMS.txt']);
 run(['release','edit',tag,'--draft=false','--latest']);

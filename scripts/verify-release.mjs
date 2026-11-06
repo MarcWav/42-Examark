@@ -6,6 +6,7 @@ const asar=require('@electron/asar');
 const pkg=JSON.parse(fs.readFileSync('package.json','utf8'));
 const archive='release/win-unpacked/resources/app.asar';
 const files=asar.listPackage(archive).map(file=>file.replaceAll('\\','/'));
+const uiLanguage=require('./verify-ui-language.cjs').assertPackagedUI(asar,archive);
 if(files.some(file=>/node_modules|qa-progress|qa\.cjs|test-profile|storage\.json/.test(file)))throw Error('O pacote contém arquivos que não devem ser distribuídos.');
 for(const required of ['/dist/index.html','/dist/python-worker.js','/dist/runtime/pyodide.asm.wasm','/dist/runtime/python_stdlib.zip','/electron/main.cjs','/electron/portable.cjs','/electron/icon.png','/dist/licenses/PYODIDE-LICENSE.txt','/dist/licenses/CPYTHON-LICENSE.txt'])if(!files.includes(required))throw Error('Arquivo ausente no pacote: '+required);
 const artifacts=['Portatil','Instalador'].map(type=>{
@@ -16,5 +17,5 @@ const artifacts=['Portatil','Instalador'].map(type=>{
 });
 fs.writeFileSync('release/SHA256SUMS.txt',artifacts.map(a=>`${a.sha256}  ${a.file}`).join('\n')+'\n');
 fs.writeFileSync('release/LEIA-ME.txt',`42 EXAMARK ${pkg.version} - WINDOWS 10/11 x64\n\nPORTATIL: abra o arquivo terminado em Portatil.exe. Nao precisa instalar.\nINSTALADOR: abra o arquivo terminado em Instalador.exe para instalar com atalhos.\n\nPode compartilhar apenas o .exe escolhido. Nao precisa de Node.js, Python nem internet para praticar.\nO portatil salva na pasta "42 Exam Trainer Dados" ao lado do executavel.\nPara levar seu progresso, feche o aplicativo e copie tambem essa pasta, ou exporte/importe JSON nas configuracoes.\nPara enviar uma copia limpa, nao envie sua pasta de dados pessoais.\n\nA versao web nao migra os dados automaticamente: use Exportar/Importar JSON.\nExecutaveis sem assinatura digital de certificado. O Windows pode indicar editor desconhecido.\nNao oficial da Ecole 42; testes locais nao garantem aprovacao no exame.\n`);
-fs.writeFileSync('docs/windows-release.json',JSON.stringify({version:pkg.version,platform:'Windows x64',electron:pkg.devDependencies.electron,artifacts,packageFiles:files.length,personalDataIncluded:false,licensesIncluded:true},null,2));
+fs.writeFileSync('docs/windows-release.json',JSON.stringify({version:pkg.version,platform:'Windows x64',electron:pkg.devDependencies.electron,artifacts,packageFiles:files.length,personalDataIncluded:false,licensesIncluded:true,uiLanguage},null,2));
 console.log(JSON.stringify(artifacts,null,2));

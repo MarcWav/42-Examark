@@ -2,7 +2,7 @@
 
 Trabalho aplicado ao projeto existente em 05/11/2026. O escopo continua sendo **Python Exam Rank 03**, com 14 exercícios e duas variantes. Não foram implementados os Exams 04 ou 05.
 
-Esta revisão está no código-fonte da branch main do repositório. O envio do código foi autorizado em 06/11/2026. Não foi criada tag nem publicada release. Os executáveis 1.3.1 já distribuídos continuam correspondendo à versão anterior.
+Esta revisão está no código-fonte da branch main do repositório. O envio do código foi autorizado em 06/11/2026. A geração e a publicação de novos executáveis foram autorizadas em 06/11/2026, na versão 1.4.0. Os executáveis 1.3.1 correspondem à interface anterior; consulte as [notas da versão 1.4.0](releases/1.4.0.md).
 
 ## Mudanças no uso
 
@@ -84,7 +84,7 @@ Uma captura de 1920×1080 do Electron encontrou erro transitório de captura gr�
 
 O rastreamento continua limitado a 800 eventos e entradas pequenas, e acompanha referências, não o código do estudante. Funções prontas podem executar seu trabalho dentro de uma única linha. Os resultados locais não garantem aprovação na prova oficial.
 
-Não há funcionalidades solicitadas deixadas como placeholders. A publicação de uma nova versão e seus executáveis fica pendente de autorização; esta tarefa não criou release ou tag.
+Não há funcionalidades solicitadas deixadas como placeholders. A versão 1.4.0 gera os novos executáveis desta revisão, com autorização de 06/11/2026 e verificação da ausência das frases antigas nos arquivos empacotados.
 
 ## Experimentar
 

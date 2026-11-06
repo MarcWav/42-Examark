@@ -107,10 +107,10 @@
         "tabs": 5
       },
       {
-        "width": 1280,
-        "height": 720,
-        "documentWidth": 1280,
-        "editor": 590.84375,
+        "width": 900,
+        "height": 650,
+        "documentWidth": 900,
+        "editor": 378.40625,
         "tabs": 5
       },
       {
@@ -121,12 +121,7 @@
         "tabs": 5
       }
     ],
-    "screenshotErrors": [
-      {
-        "file": "docs/revision-learning.png",
-        "error": "Error: UnknownVizError"
-      }
-    ]
+    "screenshotErrors": []
   },
   "consoleErrors": []
 }

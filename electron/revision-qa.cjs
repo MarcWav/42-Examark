@@ -11,6 +11,7 @@ module.exports=async function revisionQA(window){
  const click=selector=>run(selector=>{const el=document.querySelector(selector);if(!el)throw Error('Elemento ausente: '+selector);el.click()},selector);
  const setCode=async code=>{await run(()=>document.querySelector('.cm-content').focus());wc.sendInputEvent({type:'keyDown',keyCode:'A',modifiers:['control']});wc.sendInputEvent({type:'keyUp',keyCode:'A',modifiers:['control']});await wc.insertText(code);await pause(120)};
  const {variants}=JSON.parse(fs.readFileSync('.cache/catalog.json','utf8'));
+ const {assertNoSlogans}=require('../scripts/verify-ui-language.cjs');
  const {getSolutions}=await import(require('node:url').pathToFileURL(path.resolve('.cache/review-exports.mjs')).href);
  const solutions=variants.map(e=>({id:e.id,name:e.name,signature:e.signature,solutions:getSolutions(e)}));
  assert(await run(()=>document.title==='42 Examark'),'Título visível');
@@ -28,6 +29,7 @@ module.exports=async function revisionQA(window){
    await run(id=>{const el=document.querySelector('#answer-solution');el.value=id;el.dispatchEvent(new Event('change',{bubbles:true}))},option.id);
    const displayed=await run(()=>Array.from(document.querySelectorAll('.solution-line code')).map(el=>el.textContent).join('\n'));
    assert(displayed===option.code.trimEnd(),'Código selecionado: '+entry.id+'/'+option.id);
+   assertNoSlogans(await run(()=>document.body.innerText),entry.id+'/'+option.id);
    const line=Math.min(2,option.notes.length-1);await click('[data-line="'+line+'"]');
    assert(await run(note=>document.querySelector('.line-detail').textContent.includes(note),option.notes[line].text),'Explicação da linha selecionada');
   }

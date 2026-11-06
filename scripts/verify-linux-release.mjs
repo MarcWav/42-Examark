@@ -11,6 +11,7 @@ const root=path.join('release',arch==='x64'?'linux-unpacked':'linux-arm64-unpack
 const binary=fs.readFileSync(path.join(root,'42-exam-trainer'));
 if(!binary.subarray(0,4).equals(Buffer.from([127,69,76,70]))||binary.readUInt16LE(18)!==(arch==='x64'?62:183))throw Error('Binário ELF/arquitetura incorretos.');
 const files=asar.listPackage(path.join(root,'resources/app.asar')).map(f=>f.replaceAll('\\','/'));
+const uiLanguage=require('./verify-ui-language.cjs').assertPackagedUI(asar,path.join(root,'resources/app.asar'));
 for(const required of ['/dist/index.html','/dist/python-worker.js','/dist/runtime/pyodide.asm.wasm','/dist/runtime/python_stdlib.zip','/electron/portable.cjs','/electron/icon.png','/dist/licenses/PYODIDE-LICENSE.txt','/dist/licenses/CPYTHON-LICENSE.txt'])if(!files.includes(required))throw Error('Ausente no pacote: '+required);
 if(files.some(f=>/node_modules|qa-progress|qa\.cjs|test-profile|storage\.json/.test(f)))throw Error('Dados de QA/pessoais no pacote.');
 for(const file of ['iniciar.sh','portable.flag','AppRun'])if(!fs.existsSync(path.join(root,file)))throw Error('Ausente: '+file);
@@ -38,5 +39,5 @@ const artifacts=['AppImage','tar.gz'].map(ext=>{
  return {file,bytes:bytes.length,sha256:crypto.createHash('sha256').update(bytes).digest('hex')};
 });
 fs.writeFileSync(`release/SHA256SUMS-Linux-${arch}.txt`,artifacts.map(a=>`${a.sha256}  ${a.file}`).join('\n')+'\n');
-fs.writeFileSync(`docs/linux-release-${arch}.json`,JSON.stringify({version:pkg.version,platform:'Linux',arch,artifacts,packageFiles:files.length,personalDataIncluded:false,licensesIncluded:true},null,2));
+fs.writeFileSync(`docs/linux-release-${arch}.json`,JSON.stringify({version:pkg.version,platform:'Linux',arch,artifacts,packageFiles:files.length,personalDataIncluded:false,licensesIncluded:true,uiLanguage},null,2));
 console.log(JSON.stringify(artifacts,null,2));

@@ -7,7 +7,9 @@ const {portableDirectory} = require('./portable.cjs');
 const HOME = 'trainer://app/';
 app.setName('42 Examark');
 // Keep the installed profile path used before the visible name change.
-app.setPath('userData',path.join(app.getPath('appData'),'42 Exam Trainer'));
+const legacyProfile=path.join(app.getPath('appData'),'42 Exam Trainer');
+fs.mkdirSync(legacyProfile,{recursive:true});
+app.setPath('userData',legacyProfile);
 app.setAppUserModelId('org.examtrainer42.desktop');
 protocol.registerSchemesAsPrivileged([{scheme:'trainer',privileges:{standard:true,secure:true,supportFetchAPI:true,allowServiceWorkers:true,corsEnabled:true}}]);
 
