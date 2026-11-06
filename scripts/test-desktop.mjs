@@ -3,6 +3,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import {createRequire} from 'node:module';
 import './export-learning.mjs';
+import './export-answers.mjs';
 const require=createRequire(import.meta.url);
 const binary=require('electron');
 const report=path.resolve('docs/desktop-validation.json');

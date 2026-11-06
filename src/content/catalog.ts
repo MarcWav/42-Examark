@@ -1,6 +1,6 @@
-import subjects from './subjects.json';
-import extra from './additional-tests.json';
-import oldSubjects from '../../docs/sources/secondary/examshell-selected.json';
+import subjects from './subjects.json' with {type:'json'};
+import extra from './additional-tests.json' with {type:'json'};
+import oldSubjects from '../../docs/sources/secondary/examshell-selected.json' with {type:'json'};
 import {solutions} from './solutions.ts';
 import {lessons} from './lessons.ts';
 import {enrichTests} from '../learning/test-metadata.ts';

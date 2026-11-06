@@ -81,5 +81,52 @@
   "referenceCases": 949,
   "referenceStreamEvents": 949,
   "teachingTraces": 31,
+  "revision": {
+    "passed": true,
+    "checks": [
+      "32 soluções selecionadas na interface, com linhas corretas e código do estudante preservado",
+      "Gabarito ocultado ao trocar de exercício e rastreamento vinculado à solução escolhida",
+      "63 casos inspecionáveis, diagnóstico de tipo em português e histórico com código somente leitura",
+      "Interrupção manual, timeout e nova correção 63/63 sem congelar a interface",
+      "Notas e códigos persistem; simulado isola códigos, oculta respostas e permite revisão sem mudar o resultado",
+      "Quatro resoluções sem rolagem horizontal da página; editor e navegação entre abas por teclado funcionam"
+    ],
+    "layouts": [
+      {
+        "width": 1920,
+        "height": 1080,
+        "documentWidth": 1920,
+        "editor": 944.765625,
+        "tabs": 5
+      },
+      {
+        "width": 1280,
+        "height": 720,
+        "documentWidth": 1280,
+        "editor": 590.84375,
+        "tabs": 5
+      },
+      {
+        "width": 1280,
+        "height": 720,
+        "documentWidth": 1280,
+        "editor": 590.84375,
+        "tabs": 5
+      },
+      {
+        "width": 540,
+        "height": 800,
+        "documentWidth": 534,
+        "editor": 534,
+        "tabs": 5
+      }
+    ],
+    "screenshotErrors": [
+      {
+        "file": "docs/revision-learning.png",
+        "error": "Error: UnknownVizError"
+      }
+    ]
+  },
   "consoleErrors": []
 }

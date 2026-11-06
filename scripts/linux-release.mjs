@@ -12,5 +12,5 @@ run(['node_modules/typescript/bin/tsc','--noEmit']);
 run(['node_modules/vite/bin/vite.js','build']);
 run(['scripts/stage-desktop.mjs']);
 const pkg=JSON.parse(fs.readFileSync('package.json','utf8'));
-run(['node_modules/electron-builder/cli.js','--config','electron-builder.cjs',`--config.appImage.artifactName=42-Exam-Trainer-${pkg.version}-Linux-${arch}-Portatil.AppImage`,'--linux',`--${arch}`,'--publish','never']);
+run(['node_modules/electron-builder/cli.js','--config','electron-builder.cjs',`--config.appImage.artifactName=42-Examark-${pkg.version}-Linux-${arch}-Portatil.AppImage`,'--linux',`--${arch}`,'--publish','never']);
 run(['scripts/verify-linux-release.mjs',arch]);

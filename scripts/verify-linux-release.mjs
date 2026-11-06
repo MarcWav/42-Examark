@@ -17,7 +17,7 @@ for(const file of ['iniciar.sh','portable.flag','AppRun'])if(!fs.existsSync(path
 if(!(fs.statSync(path.join(root,'iniciar.sh')).mode&0o111))throw Error('Launcher sem permissão de execução.');
 if(fs.readFileSync(path.join(root,'AppRun'),'utf8').includes('--no-sandbox'))throw Error('Launcher não deve desligar o sandbox.');
 const artifacts=['AppImage','tar.gz'].map(ext=>{
- const file=`42-Exam-Trainer-${pkg.version}-Linux-${arch}-Portatil.${ext}`;
+ const file=`42-Examark-${pkg.version}-Linux-${arch}-Portatil.${ext}`;
  const bytes=fs.readFileSync('release/'+file);
  if(bytes.length<1000000)throw Error('Pacote incompleto: '+file);
  if(ext==='AppImage'&&(!bytes.subarray(0,4).equals(Buffer.from([127,69,76,70]))||bytes.readUInt16LE(18)!==(arch==='x64'?62:183)))throw Error('AppImage com arquitetura incorreta.');

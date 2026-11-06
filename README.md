@@ -1,6 +1,14 @@
-# 42 Exam Trainer
+# 42 Examark
 
 Treinamento local, em português, dos 14 subjects públicos conhecidos de Python Rank 03. Material comunitário, **não oficial**. Os testes locais não reproduzem os testes privados da 42.
+
+## Revisão atual do código-fonte
+
+A interface foi compactada e recebeu explicações simples, gabaritos com duas soluções por exercício, comparação entre abordagens e visualização da implementação escolhida. Esta revisão ainda não foi publicada como release: os executáveis da versão 1.3.1 abaixo mantêm a interface anterior.
+
+Para experimentar esta revisão, execute `npm ci` e `npm run dev`, ou `npm run desktop`. O nome visível passou a **42 Examark**; chaves e pastas de dados anteriores foram mantidas para preservar o progresso.
+
+[Detalhes e validação da revisão](docs/interface-revision.md).
 
 ## Baixar e usar
 
@@ -19,7 +27,7 @@ O progresso portátil fica em **42 Exam Trainer Dados** ao lado do EXE/AppImage 
 
 Use Exportar/Importar JSON para transferir dados entre Windows, Linux e navegador. Os executáveis Windows não possuem certificado digital.
 
-Guias: [Windows](docs/distribuicao-windows.md) · [Linux portátil](docs/distribuicao-linux.md) · [Novidades didáticas](docs/aprendizado-1.2.md).
+Guias: [Windows](docs/distribuicao-windows.md) · [Linux portátil](docs/distribuicao-linux.md) · [Interface e aprendizado atuais](docs/interface-revision.md).
 
 ### Executar pelo código-fonte
 
@@ -39,12 +47,12 @@ npm run dev -- --open
 
 ## Usar
 
-Veja o guia das novas funções em [Aprendizado didático 1.2](docs/aprendizado-1.2.md).
+Veja o guia atual em [Interface e aprendizado](docs/interface-revision.md). O documento de [aprendizado 1.2](docs/aprendizado-1.2.md) descreve a implementação anterior.
 
 - Escolha um exercício, implemente a assinatura e use **Ctrl+Enter** para rodar o exemplo selecionado. Escolha “Código livre” para executar apenas seu script, com stdout/stderr.
-- **Corrigir** avalia todos os exemplos públicos e os casos adicionais da versão selecionada. A comparação preserva tipos: `True` não equivale a `1`; imprimir não substitui retornar. Saídas extras são reportadas como efeitos colaterais.
-- Abra dicas progressivas e visualizações da referência. A solução completa exige confirmação e não substitui seu código.
-- Registre notas e “entendi o conceito” separadamente da aprovação nos testes.
+- **Corrigir** avalia todos os exemplos públicos e os casos adicionais da versão selecionada. A comparação preserva tipos: `True` não equivale a `1`; imprimir não substitui retornar. Saídas extras são reportadas como saída extra no console.
+- Abra dicas progressivas e visualizações da referência. Na aba Gabarito, clique uma vez em Ver gabarito e selecione a solução desejada. Isso não substitui seu código.
+- Registre notas e marque Ainda não entendi, Entendi parcialmente ou Entendi, separadamente da aprovação nos testes.
 - Progresso, códigos e notas continuam no **localStorage deste navegador/origem**. Os resultados detalhados ficam no **IndexedDB local**, para não esgotar o limite do localStorage. O JSON exportado inclui os dois. A importação aceita backups anteriores e pede confirmação antes de substituir os dados.
 - O simulado sorteia um exercício por nível e usa códigos separados do Aprendizado. O prazo continua ao atualizar a página. O histórico conserva os códigos de cada tentativa.
 - O painel de fontes mostra a versão selecionada. Há variantes de `cryptic_sorter` e `string_sculptor`; a seleção muda testes, solução e regras.
@@ -55,6 +63,7 @@ Veja o guia das novas funções em [Aprendizado didático 1.2](docs/aprendizado-
 npm test
 npm run test:python
 npm run test:learning
+npm run test:answers
 npm run build
 npm run preview
 ```
@@ -91,14 +100,18 @@ O empacotamento usa Electron 45.2.2 e electron-builder 26.18.0. Pode precisar de
 | `src/content/subjects.json` | Snapshot íntegro dos subjects públicos |
 | `src/content/catalog.ts` | Contratos e versões selecionáveis |
 | `src/content/lessons.ts` | Dicas, estratégias, conceitos e passos visuais |
-| `src/content/solutions.ts` | Referências Python comentadas |
+| `src/content/solutions.ts` | Referências Python preservadas |
+| `src/content/explanations.ts` | Explicações simples, parâmetros e regras |
+| `src/content/answer-key.ts`, `answer-validation.json` | Soluções por versão, notas por linha e validação real |
+| `src/ui/subject.ts`, `overview.ts`, `education.ts` | Enunciado, progresso, simulado e gabarito |
+| `src/ui/compact.css` | Ajustes de densidade e responsividade |
 | `src/content/additional-tests.json` | Casos adicionais gerados por oráculos JS independentes |
 | `src/runner.ts`, `public/python-worker.js` | Executor, timeout, cancelamento e reinicialização |
 | `src/python/evaluator.py` | Comparação estrita e restrições de treino |
 | `src/storage.ts`, `src/exam.ts` | Persistência e simulados |
 | `src/statistics.ts` | Métricas e priorização da revisão |
 | `tests/`, `scripts/` | Testes de estado, catálogo e execução real |
-| `docs/source-audit.md` | Auditoria principal e limitações dos contratos |
+| `docs/source-audit.md` | Auditoria principal e limitações das regras consultadas |
 | `docs/secondary-audit.md` | Evidências e conflitos nas fontes secundárias |
 | `docs/validation.md` | Verificações efetivamente realizadas |
 

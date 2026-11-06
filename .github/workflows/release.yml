@@ -19,6 +19,7 @@ jobs:
           node-version: '22'
           cache: npm
       - run: npm ci
+      - run: npm run test:answers
       - run: npm test
       - run: npm run test:python
       - run: npm run test:learning
@@ -30,6 +31,7 @@ jobs:
           path: |
             docs/python-validation.json
             docs/learning-validation.json
+            docs/answer-validation.json
             docs/desktop-validation.json
             docs/desktop-validation.png
   linux:

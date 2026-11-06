@@ -5,7 +5,9 @@ const {createAssetHandler} = require('./assets.cjs');
 const {portableDirectory} = require('./portable.cjs');
 
 const HOME = 'trainer://app/';
-app.setName('42 Exam Trainer');
+app.setName('42 Examark');
+// Keep the installed profile path used before the visible name change.
+app.setPath('userData',path.join(app.getPath('appData'),'42 Exam Trainer'));
 app.setAppUserModelId('org.examtrainer42.desktop');
 protocol.registerSchemesAsPrivileged([{scheme:'trainer',privileges:{standard:true,secure:true,supportFetchAPI:true,allowServiceWorkers:true,corsEnabled:true}}]);
 
@@ -34,7 +36,7 @@ function openSource(address) {
 function localAddress(address) {try{const url=new URL(address);return url.protocol==='trainer:'&&url.hostname==='app'}catch{return false}}
 
 function createWindow() {
-  mainWindow = new BrowserWindow({width:1440,height:940,minWidth:850,minHeight:620,title:'42 Exam Trainer',backgroundColor:'#13161d',show:false,
+  mainWindow = new BrowserWindow({width:1440,height:940,minWidth:850,minHeight:620,title:'42 Examark',backgroundColor:'#13161d',show:false,
     icon:path.join(__dirname,process.platform==='linux'?'icon.png':'icon.ico'),
     webPreferences:{nodeIntegration:false,nodeIntegrationInWorker:false,contextIsolation:true,sandbox:true,webSecurity:true,devTools:!app.isPackaged,spellcheck:false}
   });
@@ -42,7 +44,7 @@ function createWindow() {
   mainWindow.webContents.setWindowOpenHandler(({url})=>{openSource(url);return {action:'deny'}});
   mainWindow.webContents.on('will-navigate',(event,url)=>{if(!localAddress(url)){event.preventDefault();openSource(url)}});
   mainWindow.webContents.on('will-attach-webview',event=>event.preventDefault());
-  mainWindow.webContents.on('render-process-gone',()=>dialog.showMessageBox(mainWindow,{type:'error',title:'42 Exam Trainer',message:'A janela foi encerrada inesperadamente.',detail:'Feche e abra o aplicativo novamente. O progresso salvo permanece no seu perfil.'}));
+  mainWindow.webContents.on('render-process-gone',()=>dialog.showMessageBox(mainWindow,{type:'error',title:'42 Examark',message:'A janela foi encerrada inesperadamente.',detail:'Feche e abra o aplicativo novamente. O progresso salvo permanece no seu perfil.'}));
   void mainWindow.loadURL(HOME);
 }
 
@@ -58,13 +60,13 @@ else {
       const url=new URL(details.url);callback({cancel:!['trainer:','blob:','data:','devtools:'].includes(url.protocol)});
     });
     session.defaultSession.on('will-download',(_event,item)=>{
-      item.setSaveDialogOptions({title:'Salvar arquivo · 42 Exam Trainer',defaultPath:path.join(app.getPath('downloads'),path.basename(item.getFilename()))});
+      item.setSaveDialogOptions({title:'Salvar arquivo · 42 Examark',defaultPath:path.join(app.getPath('downloads'),path.basename(item.getFilename()))});
     });
     Menu.setApplicationMenu(Menu.buildFromTemplate([
       {label:'Arquivo',submenu:[{label:'Abrir pasta do progresso',click:()=>void shell.openPath(app.getPath('userData'))},{type:'separator'},{role:'quit',label:'Sair'}]},
       {label:'Editar',submenu:[{role:'undo',label:'Desfazer'},{role:'redo',label:'Refazer'},{type:'separator'},{role:'cut',label:'Recortar'},{role:'copy',label:'Copiar'},{role:'paste',label:'Colar'},{role:'selectAll',label:'Selecionar tudo'}]},
       {label:'Exibir',submenu:[{role:'reload',label:'Recarregar'},{role:'resetZoom',label:'Zoom padrão'},{role:'zoomIn',label:'Ampliar'},{role:'zoomOut',label:'Reduzir'},{role:'togglefullscreen',label:'Tela cheia'}]},
-      {label:'Ajuda',submenu:[{label:'Sobre o 42 Exam Trainer',click:()=>dialog.showMessageBox(mainWindow,{type:'info',title:'42 Exam Trainer',message:`42 Exam Trainer ${app.getVersion()}`,detail:'Treinamento comunitário de Python Rank 03. Não oficial. Python e fontes incluídos para uso offline.\n\nUse Exportar/Importar JSON para transferir progresso entre a versão web, instalada e portátil.'})}]}
+      {label:'Ajuda',submenu:[{label:'Sobre o 42 Examark',click:()=>dialog.showMessageBox(mainWindow,{type:'info',title:'42 Examark',message:`42 Examark ${app.getVersion()}`,detail:'Treinamento comunitário de Python Rank 03. Não oficial. Python e fontes incluídos para uso offline.\n\nUse Exportar/Importar JSON para transferir progresso entre a versão web, instalada e portátil.'})}]}
     ]));
     createWindow();
     if(profileWarning)await dialog.showMessageBox(mainWindow,{type:'info',message:profileWarning});
@@ -74,6 +76,6 @@ else {
       try {await runDesktopQA(mainWindow,path.resolve(qaReport));app.exit(0)}
       catch(error){fs.writeFileSync(path.resolve(qaReport),JSON.stringify({passed:false,error:String(error),stack:error.stack},null,2));app.exit(1)}
     }
-  }).catch(error=>{dialog.showErrorBox('Não foi possível abrir o 42 Exam Trainer',String(error));app.exit(1)});
+  }).catch(error=>{dialog.showErrorBox('Não foi possível abrir o 42 Examark',String(error));app.exit(1)});
 }
 app.on('window-all-closed',()=>app.quit());

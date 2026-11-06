@@ -33,8 +33,9 @@ async function runDesktopQA(window,reportFile){
    worker.postMessage({harness:data.harness,payload:{code:'while True:\n    pass',tests:[],restricted:false}});await new Promise(resolve=>setTimeout(resolve,300));worker.terminate();await boot();const recovered=await grade(data.variants[0]);assert(recovered.results.every(t=>t.passed),'recuperação');worker.terminate();checks.push('Worker com loop infinito encerrado e recuperado');
    return {passed:true,origin:location.origin,checks,grades,referenceCases:grades.reduce((n,e)=>n+e.passed,0),referenceStreamEvents,teachingTraces:data.samples.length};
  }} )(${JSON.stringify(payload)})`);
+ result.revision=await require('./revision-qa.cjs')(window);
  result.consoleErrors=errors;
  fs.mkdirSync(path.dirname(reportFile),{recursive:true});fs.writeFileSync(reportFile,JSON.stringify(result,null,2));
- fs.writeFileSync(reportFile.replace(/\.json$/,'.png'),(await wc.capturePage()).toPNG());
+ try{fs.writeFileSync(reportFile.replace(/\.json$/,'.png'),(await wc.capturePage()).toPNG())}catch(error){result.screenshotError=String(error);fs.writeFileSync(reportFile,JSON.stringify(result,null,2))}
 }
 module.exports={runDesktopQA};

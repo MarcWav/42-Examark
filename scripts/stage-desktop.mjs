@@ -11,8 +11,8 @@ fs.mkdirSync(path.join(root,'electron'),{recursive:true});
 for(const file of ['main.cjs','assets.cjs','portable.cjs'])fs.copyFileSync(`electron/${file}`,path.join(root,'electron',file));
 fs.copyFileSync('build/icon.ico',path.join(root,'electron/icon.ico'));
 fs.copyFileSync('build/icon.png',path.join(root,'electron/icon.png'));
-fs.writeFileSync(path.join(root,'package.json'),JSON.stringify({name:pkg.name,productName:'42 Exam Trainer',version:pkg.version,description:'Pratique os subjects públicos de Python Rank 03 offline.',main:'electron/main.cjs',author:'42 Exam Trainer — projeto comunitário',license:'UNLICENSED',private:true,dependencies:{}},null,2));
-fs.writeFileSync(path.join(root,'LICENSES.txt'),`42 Exam Trainer — ferramenta comunitária, não oficial da École 42.
+fs.writeFileSync(path.join(root,'package.json'),JSON.stringify({name:pkg.name,productName:'42 Examark',version:pkg.version,description:'Pratique os subjects públicos de Python Rank 03 offline.',main:'electron/main.cjs',author:'42 Examark — projeto comunitário',license:'UNLICENSED',private:true,dependencies:{}},null,2));
+fs.writeFileSync(path.join(root,'LICENSES.txt'),`42 Examark — ferramenta comunitária, não oficial da École 42.
 Os subjects públicos têm atribuição em docs/source-audit.md do projeto-fonte.
 Electron: MIT, inclui Chromium e suas licenças em LICENSE.electron.txt e LICENSES.chromium.html.
 Pyodide: Mozilla Public License 2.0; CPython: Python Software Foundation License.
