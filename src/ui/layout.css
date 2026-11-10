@@ -1,0 +1,31 @@
+/* Independent, persistent workspace panel controls. Imported after compact.css. */
+#app.nav-hidden .sidebar{display:none}
+#app.nav-hidden .workspace{margin-left:0;width:100%}
+.topbar-start{display:flex;align-items:center;gap:15px;min-width:0;flex:1}
+.topbar-start .breadcrumb{min-width:0;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+.layout-toolbar{display:flex;align-items:center;gap:5px;flex-shrink:0}
+.layout-toggle{min-width:30px;height:30px;padding:5px 8px;border:1px solid #343b46;border-radius:5px;color:#8e9aab;font-size:10px;font-weight:600;white-space:nowrap}
+.layout-toggle svg{width:14px;height:14px;flex-shrink:0}
+.layout-toggle[aria-pressed="true"]{color:#bddbcb;background:#21312d;border-color:#315545}
+.layout-toggle:hover,.layout-toggle:focus-visible{background:#2b3440;color:#edf4f3}
+.split.subject-hidden,.split.expanded{grid-template-columns:minmax(0,1fr)}
+.split.subject-hidden .subject-pane,.split.subject-hidden .resizer,
+.split.expanded .subject-pane,.split.expanded .resizer{display:none}
+.editor-pane #editor{min-height:95px}
+.editor-pane>.console-resizer{flex:none;height:9px;cursor:row-resize;touch-action:none;position:relative;background:#222b35;border-top:1px solid #394552;border-bottom:1px solid #10141b}
+.console-resizer:after{content:"";position:absolute;width:38px;height:3px;border-radius:4px;background:#84919c;left:calc(50% - 19px);top:2px}
+.console-resizer:hover,.console-resizer:focus-visible{background:#345244;outline:2px solid #a5efc3;outline-offset:-2px}
+.editor-pane>.console{flex:0 0 auto;height:clamp(150px,var(--console-height,30%),calc(100% - 230px));min-height:0;max-height:none;overflow:hidden}
+.editor-pane>.console.expanded-results{height:clamp(150px,65%,calc(100% - 230px))}
+.editor-pane>.console[hidden],.editor-pane>.console-resizer[hidden]{display:none!important}
+@media(max-width:1300px){.layout-toggle span{display:none}.topbar-start{gap:10px}}
+@media(max-width:700px){
+ #app.nav-hidden .sidebar{display:none}
+ #app.nav-hidden .workspace{margin:0;width:100%}
+ .topbar-start{gap:6px}
+ .topbar-start .breadcrumb{display:none}
+ .layout-toolbar{gap:4px}
+ .layout-toggle{width:29px;height:29px;min-width:29px;padding:5px}
+ .editor-pane>.console{height:clamp(180px,var(--console-height,30%),calc(100% - 230px))}
+ .editor-pane>.console.expanded-results{height:clamp(180px,65%,calc(100% - 230px))}
+}
