@@ -1,0 +1,36 @@
+name: Build updated Linux AppImage
+on:
+  push:
+    branches: [release-layout-linux-20261110]
+    paths: ['.github/workflows/layout-linux.yml']
+permissions:
+  contents: write
+jobs:
+  build-linux:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - run: npm run test:answers
+      - run: npm test
+      - run: npm run test:python
+      - run: npm run test:learning
+      - run: xvfb-run -a npm run test:desktop
+      - run: npm run release:linux -- x64
+      - run: xvfb-run -a node scripts/smoke-linux-package.mjs
+      - name: Publish Linux portable executable
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create v1.4.1-layout-20261110 \
+            release/*Linux-x64-Portatil.AppImage \
+            release/*Linux-x64-Portatil.tar.gz \
+            --target "$GITHUB_SHA" \
+            --title "42 Examark · Linux com layout ajustável (10/11/2026)" \
+            --notes "Build Linux x64 do Examark com console redimensionável, controles independentes para ocultar Menu, Enunciado e Console e preferências persistentes. Inclui AppImage e tar.gz. Testes automatizados e smoke test de execução foram realizados antes da publicação." \
+            --latest
